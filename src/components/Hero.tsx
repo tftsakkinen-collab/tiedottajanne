@@ -6,22 +6,22 @@ export default function Hero() {
   const stats = [
     {
       label: SITE_CONFIG.stats.youtubeViews,
-      sublabel: "Orgaanista Katselukertaa",
+      sublabel: "Orgaanista katselukertaa",
       icon: Eye,
     },
     {
       label: SITE_CONFIG.stats.youtubeSubscribers,
-      sublabel: "Suomalaista Tilaajaa",
+      sublabel: "Suomalaista tilaajaa",
       icon: Users,
     },
     {
       label: SITE_CONFIG.stats.channelsCount,
-      sublabel: "Valmiit Tuotantoputket",
+      sublabel: "Valmiit tuotantoputket",
       icon: Video,
     },
     {
       label: "Oulun yliopisto",
-      sublabel: "Hammaslääketiede & Koulutus (2017–)",
+      sublabel: "Hammaslääketiede & koulutus (2017–)",
       icon: GraduationCap,
     },
   ];
@@ -39,14 +39,14 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6 text-left">
             
             {/* SOTE Category Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0C66B4]/30 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0C66B4]/30 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold tracking-wider backdrop-blur-md">
               <Video className="w-4 h-4 text-[#00AEEF]" />
-              <span>SOTE-ALAN VIDEOTUOTANTO &amp; AI-INDEKSOINTI</span>
+              <span>SOTE-alan videotuotanto &amp; AI-indeksointi</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display font-normal text-white tracking-wide leading-[1.15] break-words">
-              MITEN <span className="text-[#00AEEF]">SOTE-ALAN AMMATTILAISET</span> RAKENTAVAT VAIKUTTAVAA SOMEA
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-display font-medium text-white tracking-normal leading-[1.2] break-words">
+              Miten <span className="text-[#00AEEF]">SOTE-alan ammattilaiset</span> rakentavat vaikuttavaa somea
             </h1>
 
             {/* Subtitle */}
@@ -58,7 +58,7 @@ export default function Hero() {
             <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-gray-300">
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
                 <ShieldCheck className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                <span>Valvira / Terhikki -rekisteröity OMT-Fysioterapeutti</span>
+                <span>Valvira / Terhikki -rekisteröity OMT-fysioterapeutti</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
                 <GraduationCap className="w-4 h-4 text-[#00AEEF] shrink-0" />
@@ -66,7 +66,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000d21] border border-[#0C66B4]/50">
                 <FileCode2 className="w-4 h-4 text-[#00AEEF] shrink-0" />
-                <span>ChatGPT / Perplexity AI-Metatiedot</span>
+                <span>ChatGPT / Perplexity AI-metatiedot</span>
               </div>
             </div>
 
@@ -76,7 +76,7 @@ export default function Hero() {
                 href="/referenssit"
                 className="px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow flex items-center justify-center gap-2 group text-center"
               >
-                <span>Katso Referenssikanavat</span>
+                <span>Katso referenssikanavat</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
 
@@ -85,7 +85,7 @@ export default function Hero() {
                 className="px-8 py-4 rounded-xl bg-[#000d21] border border-[#0C66B4] text-white font-bold text-base hover:border-[#00AEEF] hover:bg-[#001533] transition-all flex items-center justify-center gap-2 text-center"
               >
                 <Send className="w-4 h-4 text-[#00AEEF]" />
-                <span>Pyydä Koulutustarjous</span>
+                <span>Pyydä koulutustarjous</span>
               </Link>
             </div>
 
@@ -99,16 +99,16 @@ export default function Hero() {
                 {/* Top Badge */}
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] text-xs font-mono font-bold">
-                    REFERENSSIKANAVAT
+                    Referenssikanavat
                   </span>
                   <Video className="w-6 h-6 text-[#00AEEF]" />
                 </div>
 
                 {/* Main Content */}
                 <div className="space-y-4 my-auto">
-                  <div className="p-4 rounded-2xl bg-[#00a18] border border-[#0C66B4]/40 space-y-2">
+                  <div className="p-4 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-2">
                     <div className="text-xs text-[#00AEEF] font-mono font-bold">YouTube: @ft_sakkinen</div>
-                    <div className="text-lg font-bold text-white">Yli 1,1M+ Katselukertaa</div>
+                    <div className="text-lg font-bold text-white">Yli 1,1M+ katselukertaa</div>
                     <div className="text-xs text-gray-300">
                       Suomalainen fysioterapia- ja purentaelimistön (TMD) terveyskanava ilman maksettua mainontaa.
                     </div>
@@ -116,7 +116,7 @@ export default function Hero() {
 
                   <div className="p-4 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-2">
                     <div className="text-xs text-[#00AEEF] font-mono font-bold">YouTube: @pt_sakkinen</div>
-                    <div className="text-lg font-bold text-white">Kansainvälinen Kanava (EN)</div>
+                    <div className="text-lg font-bold text-white">Kansainvälinen kanava (EN)</div>
                     <div className="text-xs text-gray-300">
                       Englanninkielinen TMJ joint &amp; spinal physical therapy -kanava kansainvälisellä tavoittavuudella.
                     </div>
@@ -124,7 +124,7 @@ export default function Hero() {
 
                   <div className="p-4 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-2">
                     <div className="text-xs text-[#00AEEF] font-mono font-bold">YouTube: @tiedottajanne</div>
-                    <div className="text-lg font-bold text-white">Viestintä &amp; Tekoäly (FI/EN)</div>
+                    <div className="text-lg font-bold text-white">Viestintä &amp; tekoäly (FI/EN)</div>
                     <div className="text-xs text-gray-300">
                       SOTE-alan videotuotannon, AI-käsikirjoituksen ja hakukonemeta-arkkitehtuurin asiantuntijakanava.
                     </div>

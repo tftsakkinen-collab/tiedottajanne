@@ -1,5 +1,5 @@
 import { CASE_STUDIES } from "@/data/case-studies";
-import { Youtube, Instagram, ExternalLink, CheckCircle2, Video, Globe } from "lucide-react";
+import { Youtube, Instagram, ExternalLink, CheckCircle2, Video } from "lucide-react";
 
 export default function ChannelReferences() {
   return (
@@ -8,12 +8,12 @@ export default function ChannelReferences() {
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold tracking-wider">
             <Video className="w-4 h-4" />
-            <span>KÄYTÄNNÖN NÄYTÖT &amp; REFERENSSIT</span>
+            <span>Käytännön näytöt &amp; referenssit</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-wide">
-            OPETA SOTEA <span className="text-[#00AEEF]">AIDOILLA REFERENSSIKANAVILLA</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-normal leading-[1.2]">
+            Opeta SOTEa <span className="text-[#00AEEF]">aidoilla referenssikanavilla</span>
           </h2>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
             Teoria ei yksin riitä terveydenhuollossa. Tiedottajanne Oy:n opit ja videostrategiat perustuvat aitoihin, satojatuhansia ihmisiä tavoittaneisiin suomen- ja englanninkielisiin videokanaviin.
@@ -60,7 +60,7 @@ export default function ChannelReferences() {
 
                 {/* Key Learnings list */}
                 <div className="p-4 rounded-2xl bg-[#000a18] border border-[#0C66B4]/30 space-y-2">
-                  <div className="text-xs font-bold text-white uppercase tracking-wider">Mitä tästä oppii SOTE-ammattilaiselle:</div>
+                  <div className="text-xs font-bold text-white tracking-wider">Mitä tästä oppii SOTE-ammattilaiselle:</div>
                   <ul className="space-y-1.5 text-xs text-gray-300">
                     {c.keyLearnings.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2">
@@ -79,9 +79,9 @@ export default function ChannelReferences() {
                   href={c.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-xl bg-[#000a18] border border-[#0C66B4] text-white font-bold text-xs uppercase tracking-wider hover:border-[#00AEEF] hover:bg-[#0C66B4]/20 transition-all flex items-center justify-center gap-2 group"
+                  className="w-full py-3 px-4 rounded-xl bg-[#000a18] border border-[#0C66B4] text-white font-bold text-xs hover:border-[#00AEEF] hover:bg-[#0C66B4]/20 transition-all flex items-center justify-center gap-2 group"
                 >
-                  <span>Avaa Kanava ({c.handle})</span>
+                  <span>Avaa kanava ({c.handle})</span>
                   <ExternalLink className="w-4 h-4 text-[#00AEEF] group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
