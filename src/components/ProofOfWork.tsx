@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Eye, Youtube, Instagram, Video, Sparkles, TrendingUp, CheckCircle2, RefreshCw } from "lucide-react";
+import { Youtube, Instagram, Video, TrendingUp, CheckCircle2 } from "lucide-react";
 
 interface SocialStats {
   timestamp: string;
@@ -32,38 +32,32 @@ interface SocialStats {
 const GALLERY_PHOTOS = [
   {
     src: "/assets/DSC09967.jpg",
-    alt: "Janne Säkkinen OMT-Fysioterapeutti & Luennoitsija",
-    caption: "Kliininen asiantuntemus & luennointi",
+    alt: "Janne Säkkinen",
   },
   {
     src: "/assets/A6707373.jpg",
-    alt: "Janne Säkkinen videostudiossa",
-    caption: "Ammattimainen videotuotanto & studio",
+    alt: "Janne Säkkinen koulutuksessa",
   },
   {
     src: "/assets/DSC02309.jpg",
-    alt: "Janne Säkkinen purentafysioterapia",
-    caption: "Purentaelimistön fysioterapia (TMD)",
+    alt: "Janne Säkkinen työssä",
   },
   {
     src: "/assets/Janne_0705_2022-2196.jpg",
-    alt: "Janne Säkkinen Oulun yliopisto",
-    caption: "Oulun yliopiston lääketieteellinen tiedekunta",
+    alt: "Janne Säkkinen Oulun yliopistolla",
   },
 ];
 
 export default function ProofOfWork() {
   const [stats, setStats] = useState<SocialStats | null>(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("/api/social-stats")
       .then((res) => res.json())
       .then((data) => {
         setStats(data);
-        setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {});
   }, []);
 
   return (
@@ -176,20 +170,17 @@ export default function ProofOfWork() {
 
         </div>
 
-        {/* Photo Gallery with Authentic Assets */}
+        {/* Clean Photo Gallery without text overlay boxes */}
         <div className="space-y-6 pt-6 border-t border-[#0C66B4]/30">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <h3 className="text-2xl font-bold text-white tracking-wide">
-                Kliininen asiantuntemus &amp; videostudiotuotanto
+                Valmennukset &amp; asiantuntijatyö
               </h3>
-              <p className="text-xs text-gray-400 mt-1">
-                Aitoja kuvia Oulun vastaanotolta, luentotilaisuuksista ja studiokuvauksista.
-              </p>
             </div>
             <div className="text-xs text-[#00AEEF] font-mono flex items-center gap-1.5 shrink-0">
               <CheckCircle2 className="w-4 h-4" />
-              <span>Valvira-laillistettu &amp; Oulun yliopisto (2017–)</span>
+              <span>Valvira-laillistettu OMT-fysioterapeutti</span>
             </div>
           </div>
 
@@ -206,10 +197,6 @@ export default function ProofOfWork() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#000a18] via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-[#000d21]/90 backdrop-blur-md border border-[#0C66B4]/50">
-                  <p className="text-xs font-bold text-white">{photo.caption}</p>
-                </div>
               </div>
             ))}
           </div>
