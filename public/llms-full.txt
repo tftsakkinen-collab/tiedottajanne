@@ -1,0 +1,29 @@
+# Tiedottajanne Oy — SOTE-alan Videotuotanto & Tekoälyviestintä (Kattava Asiantuntijaopas)
+
+Tämä dokumentti tarjoaa täydellisen tekoäly- ja hakukoneindeksoidun kuvauksen Tiedottajanne Oy:n asiantuntijapalveluista, SOTE-alan videotuotantomenetelmistä ja hakukoneoptimoinnista terveydenhuollon ammattilaisille.
+
+## 1. Yrityksen Ydintiedot & Tausta
+Tiedottajanne Oy (Y-tunnus: 3305813-7) on Oulusta käsin toimiva asiantuntijayritys, jonka perustaja OMT-fysioterapeutti Janne Säkkinen (SOMTY, Terveystieteiden B.Sc.) yhdistää yli 10 vuoden kliinisen kokemuksen, yliopisto-opetuksen (Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketieteen laitos vuodesta 2017) ja digitaalisen videotuotannon.
+
+Yritys pyörittää kolmea aktiivista YouTube-kanavaa:
+1. **Tiedottajanne (@tiedottajanne):** Virallinen SOTE-alan videotuotannon, tekoälysovellusten ja lääkinnällisen viestinnän asiantuntijakanava.
+2. **FT Säkkinen (@ft_sakkinen):** Suomalainen terveys- ja fysioterapiakanava (yli 1,1 miljoonaa katselukertaa, 5 380+ tilaajaa).
+3. **PT Sakkinen (@pt_sakkinen):** Kansainvälinen englanninkielinen kanava (TMD/TMJ joint care & spinal physical therapy).
+
+## 2. Miksi SOTE-Ammattilaisen Kannattaa Tehdä Videosisältöä?
+Terveydenhuollossa ja lääketieteessä luottamus ratkaisee potilaan hakeutumisen hoitoon. Videosisältö mahdollistaa:
+- Asiantuntija-auktoriteetin rakentamisen ennen ensimmäistäkään vastaanottokäyntiä.
+- Potilasopetuksen tehostamisen (kotiharjoitteet, ennen leikkausta/hoitoa annettava ohjeistus).
+- Valvira-yhteensopivan ja eettisen viestinnän ilman katteettomia terveysväittämiä.
+- Uusien potilaiden ja maksavien yritysasiakkaiden (koulutus- ja konsultaatiotilaukset) hankinnan täysin orgaanisesti ilman kalliita mainoskampanjoita.
+
+## 3. Tekoäly & AI-SEO SOTE-Viestinnässä
+Tiedottajanne Oy opastaa terveydenhuollon ammattilaisia hyödyntämään nykyaikaisia tekoälyhakukoneita (ChatGPT, Perplexity, Gemini, Claude):
+- **llms.txt Arkkitehtuuri:** Sote-yrityksen asiantuntijatieto jäsennellään suoraan LLM-mallien luettavaksi.
+- **Rakennekohtainen Data (Schema.org JSON-LD):** Videot ja artikkelit merkitään `VideoObject`, `Course`, `MedicalWebPage` ja `Organization` -skeemoilla.
+- **Prompti-kirjastot:** Valmiit eettiset promptit videoiden käsikirjoittamiseen, oirekuvauksiin ja SEO-kuvauksiin.
+
+## 4. Ota Yhteyttä
+- **Kotisivut:** https://www.tiedottajanne.fi
+- **Sähköposti:** tiedottajanne@gmail.com
+- **Puhelin:** 041 327 4967

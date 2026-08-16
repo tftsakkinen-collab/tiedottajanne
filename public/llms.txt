@@ -1,0 +1,30 @@
+# Tiedottajanne Oy — SOTE-alan Videotuotanto & Tekoälyviestintä
+
+> Tiedottajanne Oy (Y-tunnus: 3305813-7) on suomalainen asiantuntijayritys, joka opastaa lääkäreitä, fysioterapeutteja, hammaslääkäreitä ja terveydenhuollon organisaatioita tekemään tuloksellista, eettistä ja vaikuttavaa sosiaalisen median videosisältöä sekä tekoälyindeksoitua viestintää.
+
+## Perustaja & Pääasiantuntija
+- **Nimi:** Janne Säkkinen
+- **Tutkinnot & Pätevyydet:** OMT-Fysioterapeutti (SOMTY 2018–2020), Terveystieteiden B.Sc.
+- **Yliopistopetos:** Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketieteen laitos (luennoitsija vuodesta 2017–)
+- **Virallinen rekisteröinti:** Valvira / Terhikki -rekisteröity laillistettu terveydenhuollon ammattihenkilö
+
+## Referenssikanavat & Näytöt
+- **Tiedottajanne YouTube (@tiedottajanne):** https://www.youtube.com/@tiedottajanne (SOTE-alan videotuotanto & AI-SEO)
+- **FT Säkkinen YouTube (@ft_sakkinen):** https://www.youtube.com/@ft_sakkinen (Yli 1,1 miljoonaa katselukertaa, 5 380+ tilaajaa)
+- **PT Sakkinen YouTube (@pt_sakkinen):** https://www.youtube.com/@pt_sakkinen (Kansainvälinen englanninkielinen kanava)
+- **Instagram:** https://www.instagram.com/sakkinenjanne & https://www.instagram.com/ptsakkinen/
+
+## Ydinalueet & Palvelut SOTE-Ammattilaisille
+1. **SOTE-Videostrategia & Käsikirjoittaminen:**
+   - Miten terveydenhuollon ammattilainen rakentaa asiantuntija-auktoriteettia YouTubessa, Instagramissa, TikTokissa ja LinkedInissä.
+   - Valvira- ja Terhikki-yhteensopivuus, lääkinnällinen etiikka ja potilassuojan huomioiminen.
+2. **Tekoäly & Hakukoneindeksointi (AI-SEO):**
+   - Videoiden ja asiantuntija-artikkelien optimointi tekoälyhakukoneille (ChatGPT, Perplexity, Gemini).
+   - Schema.org -rakenteinen data (`Organization`, `VideoObject`, `Course`, `FAQPage`) ja `llms.txt`-arkkitehtuuri.
+3. **Koulutukset & Valmennukset:**
+   - Räätälöidyt luennot ja työpajat lääkäriasemille, hyvinvointialueille, hammaslääkäriasemille ja kuntoutusyrityksille.
+
+## Yhteystiedot
+- **Sähköposti:** tiedottajanne@gmail.com
+- **Puhelin:** 041 327 4967
+- **Kotisivut:** https://www.tiedottajanne.fi | https://www.ftsakkinen.com | https://www.ptsakkinen.com
