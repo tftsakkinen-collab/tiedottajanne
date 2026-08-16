@@ -6,14 +6,14 @@ import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
   title: "Tiedottajanne Oy | SOTE-alan Videotuotanto & Tekoälyviestintä",
-  description: "Opastusta lääkäreille, fysioterapeuteille ja terveydenhuollon ammattilaisille tulokselliseen videotuotantoon, Valvira-yhteensopivaan viestintään ja AI-SEO-optimointiin.",
+  description: "Opastusta SOTE-alan ammattilaisille ja terveydenhuollon asiantuntijoille tulokselliseen videotuotantoon, Valvira-yhteensopivaan viestintään ja AI-SEO-optimointiin.",
   metadataBase: new URL("https://www.tiedottajanne.fi"),
   alternates: {
     canonical: "https://www.tiedottajanne.fi",
   },
   openGraph: {
     title: "Tiedottajanne Oy | SOTE-alan Videotuotanto & AI-Viestintä",
-    description: "Miten lääkärit ja terveydenhuollon ammattilaiset rakentavat asiantuntija-auktoriteettia YouTubessa, Instagramissa ja TikTokissa.",
+    description: "Miten SOTE-alan ammattilaiset ja terveydenhuollon asiantuntijat rakentavat asiantuntija-auktoriteettia YouTubessa, Instagramissa ja TikTokissa.",
     url: "https://www.tiedottajanne.fi",
     siteName: "Tiedottajanne Oy",
     locale: "fi_FI",

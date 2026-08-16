@@ -21,7 +21,7 @@ export default function Hero() {
     },
     {
       label: "Oulun yliopisto",
-      sublabel: "Lääketiede & Hammaslääketiede (2017–)",
+      sublabel: "Hammaslääketiede & Koulutus (2017–)",
       icon: GraduationCap,
     },
   ];
@@ -46,12 +46,12 @@ export default function Hero() {
 
             {/* Main Heading */}
             <h1 className="text-2xl sm:text-4xl lg:text-6xl font-display font-normal text-white tracking-wide leading-[1.15] break-words">
-              MITEN <span className="text-[#00AEEF]">LÄÄKÄRIT &amp; SOTE-AMMATTILAISET</span> RAKENTAVAT VAIKUTTAVAA SOMEA
+              MITEN <span className="text-[#00AEEF]">SOTE-ALAN AMMATTILAISET</span> RAKENTAVAT VAIKUTTAVAA SOMEA
             </h1>
 
             {/* Subtitle */}
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-              Tiedottajanne Oy opastaa terveydenhuollon asiantuntijoita ja organisaatioita tekemään luotettavaa, Valvira-yhteensopivaa ja tekoälyindeksoitua videosisältöä YouTubessa, Instagramissa, TikTokissa ja LinkedInissä.
+              Tiedottajanne Oy opastaa terveydenhuollon ja SOTE-alan ammattilaisia sekä organisaatioita tekemään luotettavaa, Valvira-yhteensopivaa ja tekoälyindeksoitua videosisältöä YouTubessa, Instagramissa, TikTokissa ja LinkedInissä.
             </p>
 
             {/* Credibility Pills */}
@@ -106,7 +106,7 @@ export default function Hero() {
 
                 {/* Main Content */}
                 <div className="space-y-4 my-auto">
-                  <div className="p-4 rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 space-y-2">
+                  <div className="p-4 rounded-2xl bg-[#00a18] border border-[#0C66B4]/40 space-y-2">
                     <div className="text-xs text-[#00AEEF] font-mono font-bold">YouTube: @ft_sakkinen</div>
                     <div className="text-lg font-bold text-white">Yli 1,1M+ Katselukertaa</div>
                     <div className="text-xs text-gray-300">
@@ -126,7 +126,7 @@ export default function Hero() {
                     <div className="text-xs text-[#00AEEF] font-mono font-bold">YouTube: @tiedottajanne</div>
                     <div className="text-lg font-bold text-white">Viestintä &amp; Tekoäly (FI/EN)</div>
                     <div className="text-xs text-gray-300">
-                      Terveydenhuollon videotuotannon, AI-käsikirjoituksen ja hakukonemeta-arkkitehtuurin asiantuntijakanava.
+                      SOTE-alan videotuotannon, AI-käsikirjoituksen ja hakukonemeta-arkkitehtuurin asiantuntijakanava.
                     </div>
                   </div>
                 </div>
