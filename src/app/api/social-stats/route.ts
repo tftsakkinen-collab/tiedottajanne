@@ -5,8 +5,9 @@ export const revalidate = 3600; // Revalidate every 1 hour
 export async function GET() {
   try {
     const channels = [
-      { name: "FT Säkkinen (FI)", handle: "@ft_sakkinen", channelId: "UCz0XuTDgzskIDlzSrZFxsBg", platform: "YouTube" },
-      { name: "PT Sakkinen (EN)", handle: "@pt_sakkinen", channelId: "UCbIWSnSD_k3YoTQSqrzi5Bw", platform: "YouTube" },
+      { name: "Tiedottajanne Oy", handle: "@tiedottajanne", channelId: "UC1Duj0lp5i-LVWhH2LwfAcg", platform: "YouTube", role: "SOTE Videotuotanto & AI" },
+      { name: "FT Säkkinen (FI)", handle: "@ft_sakkinen", channelId: "UCz0XuTDgzskIDlzSrZFxsBg", platform: "YouTube", role: "Suomenkielinen pääkanava" },
+      { name: "PT Sakkinen (EN)", handle: "@pt_sakkinen", channelId: "UCbIWSnSD_k3YoTQSqrzi5Bw", platform: "YouTube", role: "Kansainvälinen fysioterapian kanava" },
     ];
 
     const results = await Promise.all(
@@ -16,9 +17,10 @@ export async function GET() {
           const res = await fetch(rssUrl, { next: { revalidate: 3600 } });
           const xmlText = await res.text();
           
-          // Match video count & recent titles
-          const titleMatches = [...xmlText.matchAll(/<title>(.*?)<\/title>/g)].slice(1, 4).map((m) => m[1]);
-          const videoIdMatches = [...xmlText.matchAll(/<yt:videoId>(.*?)<\/yt:videoId>/g)].slice(0, 3).map((m) => m[1]);
+          // Match video count & recent titles, IDs, published dates, and descriptions
+          const titleMatches = [...xmlText.matchAll(/<title>(.*?)<\/title>/g)].slice(1, 5).map((m) => m[1]);
+          const videoIdMatches = [...xmlText.matchAll(/<yt:videoId>(.*?)<\/yt:videoId>/g)].slice(0, 4).map((m) => m[1]);
+          const publishedMatches = [...xmlText.matchAll(/<published>(.*?)<\/published>/g)].slice(0, 4).map((m) => m[1]);
 
           return {
             ...ch,
@@ -26,6 +28,9 @@ export async function GET() {
               title,
               id: videoIdMatches[i] || "",
               url: `https://www.youtube.com/watch?v=${videoIdMatches[i] || ""}`,
+              thumbnail: `https://img.youtube.com/vi/${videoIdMatches[i] || ""}/hqdefault.jpg`,
+              publishedAt: publishedMatches[i] || new Date().toISOString(),
+              aeoCategory: "SOTE-alan videotuotanto & asiantuntijaviestintä",
             })),
           };
         } catch {

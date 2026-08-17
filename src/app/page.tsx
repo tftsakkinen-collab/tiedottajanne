@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ProofOfWork from "@/components/ProofOfWork";
+import LatestVideosAeo from "@/components/LatestVideosAeo";
 import ServicesAndTraining from "@/components/ServicesAndTraining";
 import ChannelReferences from "@/components/ChannelReferences";
 import AiPromptLibrary from "@/components/AiPromptLibrary";
@@ -12,6 +13,7 @@ export default function Home() {
     <div>
       <Hero />
       <ProofOfWork />
+      <LatestVideosAeo />
       <ServicesAndTraining />
       <ChannelReferences />
       <AiPromptLibrary />
