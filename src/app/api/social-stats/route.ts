@@ -38,19 +38,27 @@ export async function GET() {
       timestamp: new Date().toISOString(),
       youtube: {
         totalViews: "1 150 000+",
+        viewsGrowth: "+145 %",
         subscribers: "5 380+",
+        subscribersGrowth: "+85 %",
+        searchSeoShare: "92 %",
+        engagementRate: "8.4 %",
         channels: results,
       },
       instagram: {
         handle: "@sakkinenjanne",
         handleEn: "@ptsakkinen",
         estimatedMonthlyReach: "150 000+",
+        reachGrowth: "+120 %",
+        profileVisitsGrowth: "+65 %",
         contentType: "Reels & Kliiniset mikro-oppaat",
       },
       tiktok: {
         handle: "@sakkinenjanne",
         handleEn: "@ptsakkinen",
         estimatedMonthlyViews: "200 000+",
+        viewsGrowth: "+210 %",
+        savesGrowth: "+180 %",
         contentType: "Shorts & Ergonomiavinkit",
       },
     };
