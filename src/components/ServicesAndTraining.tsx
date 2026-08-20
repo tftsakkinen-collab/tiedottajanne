@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Sparkles, Video, Users, GraduationCap, CheckCircle2, ArrowRight, ShieldCheck, FileText, Send } from "lucide-react";
+import { Sparkles, GraduationCap, CheckCircle2, ArrowRight, Send } from "lucide-react";
 
 export default function ServicesAndTraining() {
   const packages = [
     {
-      badge: "Ammatinharjoittajille",
+      badge: "Ammatinharjoittajille & Yksinyrittäjille",
       title: "1. Somestartti — Puhelinkuvaus & Rutiini",
       price: "800 € (+ alv) / päivä",
       desc: "Avaimet käteen -koulutus ammatinharjoittajille ja kliinikoille. Opitte tuottamaan luotettavaa ja optimoitua videosisältöä heti omilla välineillänne.",
@@ -20,22 +20,8 @@ export default function ServicesAndTraining() {
       link: "/yhteystiedot",
     },
     {
-      badge: "Työnantajille & HR:lle",
-      title: "2. Työhyvinvointiluento: Leuka, Niska & Ergonomia",
-      price: "1 490 € (+ alv) / päivä",
-      desc: "Suosittu ja interaktiivinen 90 min keynote-luento yrityksille. OMT-fysioterapeutti Janne Säkkinen opastaa miten tietotyön aiheuttama purenta- ja niskakuormitus laannutetaan.",
-      features: [
-        "Purentaelimistön & niskakivun yhteys tietotyöhön",
-        "Käytännön 3 minuutin koti- ja toimistotestimatriisi",
-        "Työpiste-ergonomia & tauotuslaitteet",
-        "Osallistujille ilmaiset PDF-kuntoutusoppaat (Suosittelu 98 %)",
-      ],
-      ctaText: "Varaa yritysluento",
-      link: "/yhteystiedot",
-    },
-    {
       badge: "Yrityksille & Asiantuntijoille",
-      title: "3. Videostrategia & Henkilöbrändi",
+      title: "2. Videostrategia & Henkilöbrändi",
       price: "1 990 € (+ alv) / päivä",
       desc: "Yksilöllinen sparraus ja strategiapaketti asiantuntijoille ja yrityksille, jotka haluavat rakentaa 1.1M+ katselukerran orgaanisen auktoriteetin.",
       features: [
@@ -60,15 +46,15 @@ export default function ServicesAndTraining() {
             <span>Koulutus- &amp; Valmennuspaketit</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-normal leading-[1.2]">
-            Valmiit tuotteistetut <span className="text-[#00AEEF]">SOTE- &amp; Videopaketit</span>
+            Valmiit tuotteistetut <span className="text-[#00AEEF]">Videopaketit</span>
           </h2>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            Valitse organisaatiollesi sopivin koulutuskokonaisuus. Tiedottajanne Oy tarjoaa selkeästi tuotteistetut valmennukset yrityksille, työyhteisöille ja ammatinharjoittajille.
+            Valitse organisaatiollesi sopivin koulutuskokonaisuus. Tiedottajanne Oy tarjoaa selkeästi tuotteistetut valmennukset yrityksille ja ammatinharjoittajille.
           </p>
         </div>
 
-        {/* Packages Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Packages Grid (2 pakettia) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {packages.map((pkg, idx) => (
             <div
               key={idx}
