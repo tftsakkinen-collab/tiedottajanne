@@ -6,42 +6,45 @@ import { Sparkles, Video, Users, GraduationCap, CheckCircle2, ArrowRight, Shield
 export default function ServicesAndTraining() {
   const packages = [
     {
-      badge: "SOTE-Yrityksille & Klinikoille",
-      title: "1. SOTE-Somestartti — 1 Päivän tai 4 Viikon Valmennus",
-      desc: "Avaimet käteen -koulutus sote-yrityksille ja klinikoille. Opitte tuottamaan luotettavaa, Valvira-yhteensopivaa ja tekoäly-optimoitua videosisältöä heti omilla välineillänne.",
+      badge: "Ammatinharjoittajille",
+      title: "1. Somestartti — Puhelinkuvaus & Rutiini",
+      price: "800 € (+ alv) / päivä",
+      desc: "Avaimet käteen -koulutus ammatinharjoittajille ja kliinikoille. Opitte tuottamaan luotettavaa ja optimoitua videosisältöä heti omilla välineillänne.",
       features: [
         "Kamerakammion voittaminen & Esiintymisvalmennus",
-        "Valvira- ja Terhikki-yhteensopiva viestintä",
-        "Aihesuunnitelma & 12 valmista kuvausskriptiä",
-        "Valmiit ChatGPT & Perplexity SOTE-promptit",
+        "Puhelinkuvaus, mikrofonit & valaistus-setup",
+        "Aihesuunnitelma & 4 valmista kuvausskriptiä",
+        "Esiintymisvarmuuden nopeuttaminen",
       ],
-      ctaText: "Pyydä SOTE-Somestartti tarjous",
+      ctaText: "Pyydä Somestartti tarjous",
       link: "/yhteystiedot",
     },
     {
-      badge: "Yrityksille & Työyhteisöille",
-      title: "2. Työhyvinvointiluento: Tietotyöläisen Leuka, Niska & Ergonomia",
-      desc: "Suosittu ja interaktiivinen keynote-luento yrityksille. OMT-fysioterapeutti ja yliopistokouluttaja Janne Säkkinen opastaa miten tietotyön aiheuttama purenta- ja niskakuormitus laannutetaan.",
+      badge: "Työnantajille & HR:lle",
+      title: "2. Työhyvinvointiluento: Leuka, Niska & Ergonomia",
+      price: "1 490 € (+ alv) / päivä",
+      desc: "Suosittu ja interaktiivinen 90 min keynote-luento yrityksille. OMT-fysioterapeutti Janne Säkkinen opastaa miten tietotyön aiheuttama purenta- ja niskakuormitus laannutetaan.",
       features: [
         "Purentaelimistön & niskakivun yhteys tietotyöhön",
         "Käytännön 3 minuutin koti- ja toimistotestimatriisi",
         "Työpiste-ergonomia & tauotuslaitteet",
-        "Osallistujille ilmaiset PDF-kuntoutusoppaat",
+        "Osallistujille ilmaiset PDF-kuntoutusoppaat (Suosittelu 98 %)",
       ],
       ctaText: "Varaa yritysluento",
       link: "/yhteystiedot",
     },
     {
-      badge: "Asiantuntijoille & Ammattilaisille",
-      title: "3. Henkilöbrändi & Asiantuntijan Videostrategia",
-      desc: "Yksilöllinen sparraus ja strategiapaketti asiantuntijoille (lääkärit, fysioterapeutit, osteopaatit), jotka haluavat rakentaa 1.1M+ katselukerran orgaanisen auktoriteetin.",
+      badge: "Yrityksille & Asiantuntijoille",
+      title: "3. Videostrategia & Henkilöbrändi",
+      price: "1 990 € (+ alv) / päivä",
+      desc: "Yksilöllinen sparraus ja strategiapaketti asiantuntijoille ja yrityksille, jotka haluavat rakentaa 1.1M+ katselukerran orgaanisen auktoriteetin.",
       features: [
         "Nollasta 1.1M+ katseluun orgaaninen strategia",
-        "Henkilöbrändin AEO-hakukonenäkyvyys",
+        "Holy Trifecta -käsikirjoitukset & Show not tell visualisoinnit",
         "Kuvaustekniikka, mikrofonit & valaistus",
         "Yksilöllinen 1-on-1 videonäytteiden auditointi",
       ],
-      ctaText: "Varaa henkilöbrändi-sparraus",
+      ctaText: "Varaa videostrategia",
       link: "/yhteystiedot",
     },
   ];
@@ -57,10 +60,10 @@ export default function ServicesAndTraining() {
             <span>Koulutus- &amp; Valmennuspaketit</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-normal leading-[1.2]">
-            Valmiit tuotteistetut <span className="text-[#00AEEF]">SOTE-koulutuspaketit</span>
+            Valmiit tuotteistetut <span className="text-[#00AEEF]">SOTE- &amp; Videopaketit</span>
           </h2>
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            Valitse organisaatiollesi sopivin koulutuskokonaisuus. Tiedottajanne Oy tarjoaa selkeästi tuotteistetut valmennukset sote-yrityksille, työyhteisöille ja asiantuntijoille.
+            Valitse organisaatiollesi sopivin koulutuskokonaisuus. Tiedottajanne Oy tarjoaa selkeästi tuotteistetut valmennukset yrityksille, työyhteisöille ja ammatinharjoittajille.
           </p>
         </div>
 
@@ -72,12 +75,17 @@ export default function ServicesAndTraining() {
               className="p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 space-y-6 shadow-panel hover:border-[#00AEEF] transition-all flex flex-col justify-between group"
             >
               <div className="space-y-4">
-                <span className="inline-block px-3 py-1 rounded-full bg-[#014489]/40 border border-[#0C66B4] text-[#00AEEF] text-xs font-semibold uppercase tracking-wider">
-                  {pkg.badge}
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="inline-block px-3 py-1 rounded-full bg-[#014489]/40 border border-[#0C66B4] text-[#00AEEF] text-xs font-semibold uppercase tracking-wider">
+                    {pkg.badge}
+                  </span>
+                </div>
                 <h3 className="text-xl font-bold text-white group-hover:text-[#00AEEF] transition-colors leading-snug">
                   {pkg.title}
                 </h3>
+                <div className="text-lg font-black text-[#00AEEF] bg-[#000a18] py-2 px-3 rounded-xl border border-[#0C66B4]/40 inline-block">
+                  {pkg.price}
+                </div>
                 <p className="text-xs text-gray-300 leading-relaxed">{pkg.desc}</p>
 
                 <div className="pt-2 space-y-2 border-t border-[#0C66B4]/30">
@@ -95,7 +103,7 @@ export default function ServicesAndTraining() {
 
               <Link
                 href={pkg.link}
-                className="w-full py-3.5 px-4 rounded-xl bg-[#000814] border border-[#0C66B4] text-[#00AEEF] font-bold text-xs hover:bg-[#00AEEF] hover:text-black transition-all flex items-center justify-center gap-2 group/btn text-center"
+                className="w-full py-3.5 px-4 rounded-xl bg-[#000814] border border-[#0C66B4] text-[#00AEEF] font-bold text-xs hover:bg-[#00AEEF] hover:text-black transition-all flex items-center justify-center gap-2 group/btn text-center mt-4"
               >
                 <span>{pkg.ctaText}</span>
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -104,7 +112,7 @@ export default function ServicesAndTraining() {
           ))}
         </div>
 
-        {/* Story Case Study Box: Nollasta 1.1 miljoonaan katseluun (#9) */}
+        {/* Story Case Study Box */}
         <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#000d21] via-[#014489]/30 to-[#000d21] border border-[#00AEEF]/50 shadow-glow grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-bold uppercase tracking-wider">
@@ -115,7 +123,7 @@ export default function ServicesAndTraining() {
               Tapaustutkimus: Nollasta <span className="text-[#00AEEF]">1 150 000+ orgaaniseen katseluun</span>
             </h3>
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-              Janne Säkkinen rakensi orgaanisen videokanavansa nollasta yli 1.1 miljoonaan katselukertaan täysin ilman maksettua mainontaa. Avain menestykseen oli tutkittuun kliiniseen tietoon perustuvat napakat opetusvideot, Valvira-yhteensopiva viestintä sekä AEO-hakukonenäkyvyys. Samat menetelmät tuodaan nyt Tiedottajanne Oy:n koulutusasiakkaiden käyttöön.
+              Janne Säkkinen rakensi orgaanisen videokanavansa nollasta yli 1.1 miljoonaan katselukertaan täysin ilman maksettua mainontaa. Avain menestykseen oli tutkittuun kliiniseen tietoon perustuvat napakat opetusvideot ja AEO-hakukonenäkyvyys. Samat menetelmät tuodaan nyt Tiedottajanne Oy:n koulutusasiakkaiden käyttöön.
             </p>
           </div>
 
