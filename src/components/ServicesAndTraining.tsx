@@ -36,7 +36,7 @@ export default function ServicesAndTraining() {
   ];
 
   return (
-    <section id="palvelut-ja-koulutukset" className="py-16 bg-[#000a18] border-b border-[#0C66B4]/30 relative">
+    <section id="palvelut" className="py-16 bg-[#000a18] border-b border-[#0C66B4]/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}

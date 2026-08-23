@@ -11,9 +11,9 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Etusivu", href: "/" },
-    { name: "Referenssikanavat", href: "/referenssit" },
-    { name: "Yhteydenotto & Koulutukset", href: "/yhteystiedot" },
+    { name: "Palvelut", href: "/#palvelut" },
+    { name: "Referenssit", href: "/referenssit" },
+    { name: "Yhteystiedot", href: "/yhteystiedot" },
   ];
 
   return (
