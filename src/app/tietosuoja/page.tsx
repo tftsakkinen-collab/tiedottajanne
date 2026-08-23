@@ -3,7 +3,7 @@ import { Shield, ArrowLeft } from "lucide-react";
 
 export const metadata = {
   title: "Tietosuojaseloste | Tiedottajanne Oy",
-  description: "Tiedottajanne Oy:n tietosuojaseloste ja henkilötietojen käsittelyperiaatteet.",
+  description: "Tiedottajanne Oy:n tietosuojaseloste ja henkilï¿½tietojen kï¿½sittelyperiaatteet.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -17,33 +17,33 @@ export default function PrivacyPolicyPage() {
           <Shield className="w-8 h-8 text-[#00AEEF]" />
           <h1 className="text-3xl font-bold text-white">Tietosuojaseloste</h1>
         </div>
-        <p className="text-sm text-gray-400">Päivitetty: 23. elokuuta 2026</p>
+        <p className="text-sm text-gray-400">Pï¿½ivitetty: 23. elokuuta 2026</p>
       </div>
 
       <div className="space-y-6 text-sm leading-relaxed text-gray-300">
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">1. Rekisterinpitäjä</h2>
-          <p>Tiedottajanne Oy (Y-tunnus: 3305813-7)<br />Sähköposti: janne@tiedottajanne.fi</p>
+          <h2 className="text-xl font-semibold text-white">1. Rekisterinpitï¿½jï¿½</h2>
+          <p>Tiedottajanne Oy (Y-tunnus: 3305813-7)<br />Sï¿½hkï¿½posti: janne@tiedottajanne.fi</p>
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">2. Kerättävät henkilötiedot</h2>
-          <p>Käsittelemme vain henkilötietoja, jotka annat vapaaehtoisesti ota yhteyttä -lomakkeella tai uutiskirjeen tilauksen yhteydessä (esim. nimi, sähköpostiosoite, puhelinnumero ja viestin sisältö).</p>
+          <h2 className="text-xl font-semibold text-white">2. Kerï¿½ttï¿½vï¿½t henkilï¿½tiedot</h2>
+          <p>Kï¿½sittelemme vain henkilï¿½tietoja, jotka annat vapaaehtoisesti ota yhteyttï¿½ -lomakkeella tai uutiskirjeen tilauksen yhteydessï¿½ (esim. nimi, sï¿½hkï¿½postiosoite, puhelinnumero ja viestin sisï¿½ltï¿½).</p>
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">3. Henkilötietojen käyttötarkoitus</h2>
-          <p>Tietoja käytetään yhteydenottopyyntöihin vastaamiseen, palvelutarjousten laatimiseen, asiakassuhteen hoitamiseen sekä sovitusti viestinnän ja uutiskirjeiden lähettämiseen.</p>
+          <h2 className="text-xl font-semibold text-white">3. Henkilï¿½tietojen kï¿½yttï¿½tarkoitus</h2>
+          <p>Tietoja kï¿½ytetï¿½ï¿½n yhteydenottopyyntï¿½ihin vastaamiseen, palvelutarjousten laatimiseen, asiakassuhteen hoitamiseen sekï¿½ sovitusti viestinnï¿½n ja uutiskirjeiden lï¿½hettï¿½miseen.</p>
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">4. Tietojen säilytys ja suojaus</h2>
-          <p>Henkilötietojasi käsitellään luottamuksellisesti ja suojatusti. Tietoja ei luovuteta ulkopuolisille kolmansille osapuolille ilman lakisääteistä velvoitetta tai eksplisiittistä suostumusta.</p>
+          <h2 className="text-xl font-semibold text-white">4. Tietojen sï¿½ilytys ja suojaus</h2>
+          <p>Henkilï¿½tietojasi kï¿½sitellï¿½ï¿½n luottamuksellisesti ja suojatusti. Tietoja ei luovuteta ulkopuolisille kolmansille osapuolille ilman lakisï¿½ï¿½teistï¿½ velvoitetta tai eksplisiittistï¿½ suostumusta.</p>
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">5. Rekisteröidyn oikeudet</h2>
-          <p>Sinulla on oikeus tarkastaa itseäsi koskevat henkilötiedot, pyytää tietojen korjaamista tai poistamista sekä kieltää tietojesi käyttö suoramarkkinointiin ottamalla yhteyttä rekisterinpitäjään.</p>
+          <h2 className="text-xl font-semibold text-white">5. Rekisterï¿½idyn oikeudet</h2>
+          <p>Sinulla on oikeus tarkastaa itseï¿½si koskevat henkilï¿½tiedot, pyytï¿½ï¿½ tietojen korjaamista tai poistamista sekï¿½ kieltï¿½ï¿½ tietojesi kï¿½yttï¿½ suoramarkkinointiin ottamalla yhteyttï¿½ rekisterinpitï¿½jï¿½ï¿½n.</p>
         </section>
       </div>
     </div>

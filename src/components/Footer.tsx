@@ -21,10 +21,10 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-              Tiedottajanne Oy (3305813-7) on OMT-fysioterapeutti Janne Säkkisen perustama asiantuntijayritys, joka auttaa terveydenhuollon ja SOTE-alan ammattilaisia tekemään vaikuttavaa, eettistä ja tekoälyindeksoitua videosisältöä.
+              Tiedottajanne Oy (3305813-7) on OMT-fysioterapeutti Janne Sï¿½kkisen perustama asiantuntijayritys, joka auttaa terveydenhuollon ja SOTE-alan ammattilaisia tekemï¿½ï¿½n vaikuttavaa, eettistï¿½ ja tekoï¿½lyindeksoitua videosisï¿½ltï¿½ï¿½.
             </p>
             <div className="text-xs text-gray-500 font-mono">
-              Valvira / Terhikki -rekisteröity OMT-fysioterapeutti • Oulun yliopisto (2017–)
+              Valvira / Terhikki -rekisterï¿½ity OMT-fysioterapeutti ï¿½ Oulun yliopisto (2017ï¿½)
             </div>
           </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
               <li><Link href="/#palvelut" className="hover:text-[#00AEEF] transition-colors">Palvelut</Link></li>
               <li><Link href="/referenssit" className="hover:text-[#00AEEF] transition-colors">Referenssit</Link></li>
               <li><Link href="/yhteystiedot" className="hover:text-[#00AEEF] transition-colors">Yhteystiedot</Link></li>
-              <li><Link href="/kasikirja" className="hover:text-[#00AEEF] transition-colors">SOTE-Käsikirja</Link></li>
+              <li><Link href="/kasikirja" className="hover:text-[#00AEEF] transition-colors">SOTE-Kï¿½sikirja</Link></li>
               <li><Link href="/promptit" className="hover:text-[#00AEEF] transition-colors font-mono">AI-Promptit</Link></li>
             </ul>
           </div>
@@ -108,7 +108,7 @@ export default function Footer() {
               <li>
                 <Link href="/evasteet" className="flex items-center gap-2 hover:text-[#00AEEF] transition-colors">
                   <Cookie className="w-3.5 h-3.5 text-[#00AEEF]" />
-                  <span>Evästekäytännöt</span>
+                  <span>Evï¿½stekï¿½ytï¿½nnï¿½t</span>
                 </Link>
               </li>
               <li className="pt-2">
@@ -131,10 +131,10 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="pt-6 border-t border-[#0C66B4]/20 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            © {new Date().getFullYear()} Tiedottajanne Oy (Y-tunnus: 3305813-7). Kaikki oikeudet pidätetään.
+            ï¿½ {new Date().getFullYear()} Tiedottajanne Oy (Y-tunnus: 3305813-7). Kaikki oikeudet pidï¿½tetï¿½ï¿½n.
           </div>
           <div className="text-gray-400 text-[11px]">
-            Valvira / Terhikki-rekisteröity fysioterapiaviestintä &amp; AI-SEO
+            Valvira / Terhikki-rekisterï¿½ity fysioterapiaviestintï¿½ &amp; AI-SEO
           </div>
         </div>
       </div>

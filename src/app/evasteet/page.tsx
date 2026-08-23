@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Cookie, ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Evästekäytännöt | Tiedottajanne Oy",
-  description: "Tiedottajanne Oy:n sivuston evästekäytännöt ja analytiikka.",
+  title: "Evï¿½stekï¿½ytï¿½nnï¿½t | Tiedottajanne Oy",
+  description: "Tiedottajanne Oy:n sivuston evï¿½stekï¿½ytï¿½nnï¿½t ja analytiikka.",
 };
 
 export default function CookiePolicyPage() {
@@ -15,25 +15,25 @@ export default function CookiePolicyPage() {
       <div className="space-y-3 border-b border-[#0C66B4]/40 pb-6">
         <div className="flex items-center gap-3">
           <Cookie className="w-8 h-8 text-[#00AEEF]" />
-          <h1 className="text-3xl font-bold text-white">Evästekäytännöt & Analytiikka</h1>
+          <h1 className="text-3xl font-bold text-white">Evï¿½stekï¿½ytï¿½nnï¿½t & Analytiikka</h1>
         </div>
-        <p className="text-sm text-gray-400">Päivitetty: 23. elokuuta 2026</p>
+        <p className="text-sm text-gray-400">Pï¿½ivitetty: 23. elokuuta 2026</p>
       </div>
 
       <div className="space-y-6 text-sm leading-relaxed text-gray-300">
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">1. Mitä evästeet ovat?</h2>
-          <p>Evästeet (cookies) ovat pieniä tekstitiedostoja, joita selain tallentaa laitteellesi verkkosivustolla vieraillessasi. Ne auttavat parantamaan käyttökokemusta ja ymmärtämään sivuston käyttöä.</p>
+          <h2 className="text-xl font-semibold text-white">1. Mitï¿½ evï¿½steet ovat?</h2>
+          <p>Evï¿½steet (cookies) ovat pieniï¿½ tekstitiedostoja, joita selain tallentaa laitteellesi verkkosivustolla vieraillessasi. Ne auttavat parantamaan kï¿½yttï¿½kokemusta ja ymmï¿½rtï¿½mï¿½ï¿½n sivuston kï¿½yttï¿½ï¿½.</p>
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">2. Käytettävä analytiikka (Microsoft Clarity)</h2>
-          <p>Sivustollamme käytetään Microsoft Clarity -analytiikkapalvelua sivuston käytön, suorituskyvyn ja käyttökokemuksen parantamiseen. Clarity auttaa näkemään anonyymisti, miten sivustoa käytetään ja mitkä osiot kiinnostavat kävijöitä eniten.</p>
+          <h2 className="text-xl font-semibold text-white">2. Kï¿½ytettï¿½vï¿½ analytiikka (Microsoft Clarity)</h2>
+          <p>Sivustollamme kï¿½ytetï¿½ï¿½n Microsoft Clarity -analytiikkapalvelua sivuston kï¿½ytï¿½n, suorituskyvyn ja kï¿½yttï¿½kokemuksen parantamiseen. Clarity auttaa nï¿½kemï¿½ï¿½n anonyymisti, miten sivustoa kï¿½ytetï¿½ï¿½n ja mitkï¿½ osiot kiinnostavat kï¿½vijï¿½itï¿½ eniten.</p>
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">3. Evästeiden hallinta</h2>
-          <p>Voit hallinnoida ja estää evästeitä selaimen omista asetuksista. Huomioithan, että evästeiden poistaminen käytöstä saattaa vaikuttaa tiettyjen verkkosivuston toimintojen toimivuuteen.</p>
+          <h2 className="text-xl font-semibold text-white">3. Evï¿½steiden hallinta</h2>
+          <p>Voit hallinnoida ja estï¿½ï¿½ evï¿½steitï¿½ selaimen omista asetuksista. Huomioithan, ettï¿½ evï¿½steiden poistaminen kï¿½ytï¿½stï¿½ saattaa vaikuttaa tiettyjen verkkosivuston toimintojen toimivuuteen.</p>
         </section>
       </div>
     </div>
