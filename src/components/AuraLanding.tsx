@@ -69,7 +69,30 @@ export default function AuraLanding() {
 
       <div className="relative z-10 flex flex-col items-center">
         
-
+        {/* Section 1 - Navbar */}
+        <motion.nav 
+          initial={{ opacity: 0, y: -10 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between"
+        >
+          <LogoMark />
+          <div className="hidden md:flex gap-8">
+            {['Palvelut', 'Referenssit', 'Hinnoittelu', 'Tietosuoja', 'Yhteystiedot'].map((item, i) => (
+              <motion.a 
+                key={item} href={`/#${item.toLowerCase()}`} 
+                initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.05 }}
+                className="text-white/70 text-sm font-medium hover:text-white"
+              >
+                {item}
+              </motion.a>
+            ))}
+          </div>
+          <div className="hidden md:block"><AppleButton /></div>
+          <button className="md:hidden w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center">
+            <Menu className="w-4 h-4" />
+          </button>
+        </motion.nav>
 
         {/* Section 2 - Hero */}
         <section className="w-full pt-16 md:pt-28 pb-20 text-center flex flex-col items-center max-w-6xl mx-auto px-6">
