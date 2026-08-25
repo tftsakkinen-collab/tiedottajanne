@@ -5,14 +5,14 @@ import Footer from "@/components/Footer";
 import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
-  title: "Tiedottajanne Oy | SOTE-alan Videotuotanto & Tekoälyviestintä",
-  description: "Opastusta SOTE-alan ammattilaisille ja terveydenhuollon asiantuntijoille tulokselliseen videotuotantoon, Valvira-yhteensopivaan viestintään ja AI-SEO-optimointiin.",
+  title: "Tiedottajanne Oy — Digitaaliset ratkaisut & Teknologia-alustat",
+  description: "Tiedottajanne Oy yhdistää syvän toimialatuntemuksen, modernin tekoälyn ja huippuluokan ohjelmistokehityksen tuotteiksi, jotka ratkaisevat todellisia arjen ongelmia.",
   metadataBase: new URL("https://www.tiedottajanne.fi"),
   alternates: {
     canonical: "https://www.tiedottajanne.fi",
   },
   openGraph: {
-    title: "Tiedottajanne Oy | SOTE-alan Videotuotanto & AI-Viestintä",
+    title: "Tiedottajanne Oy — Digitaaliset ratkaisut & Teknologia-alustat",
     description: "Miten SOTE-alan ammattilaiset ja terveydenhuollon asiantuntijat rakentavat asiantuntija-auktoriteettia YouTubessa, Instagramissa ja TikTokissa.",
     url: "https://www.tiedottajanne.fi",
     siteName: "Tiedottajanne Oy",

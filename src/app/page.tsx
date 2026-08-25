@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import TechVenturesLanding from "@/components/TechVenturesLanding";
 import ProofOfWork from "@/components/ProofOfWork";
 import LatestVideosAeo from "@/components/LatestVideosAeo";
 import ServicesAndTraining from "@/components/ServicesAndTraining";
@@ -10,16 +10,18 @@ import ConsultingBookingSection from "@/components/ConsultingBookingSection";
 
 export default function Home() {
   return (
-    <div>
-      <Hero />
-      <ProofOfWork />
-      <LatestVideosAeo />
-      <ServicesAndTraining />
-      <ChannelReferences />
-      <AiPromptLibrary />
-      <SoteRoiCalculator />
-      <SoteGlossary />
-      <ConsultingBookingSection />
+    <div className="bg-[#0c0c0c] text-white">
+      <TechVenturesLanding />
+      <div id="projektit">
+        <ProofOfWork />
+        <LatestVideosAeo />
+        <ServicesAndTraining />
+        <ChannelReferences />
+        <AiPromptLibrary />
+        <SoteRoiCalculator />
+        <SoteGlossary />
+        <ConsultingBookingSection />
+      </div>
     </div>
   );
 }
