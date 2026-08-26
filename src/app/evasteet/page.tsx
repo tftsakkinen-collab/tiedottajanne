@@ -2,41 +2,47 @@ import Link from "next/link";
 import { Cookie, ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Ev�stek�yt�nn�t | Tiedottajanne Oy",
-  description: "Tiedottajanne Oy:n sivuston ev�stek�yt�nn�t ja analytiikka.",
+  title: "Evästekäytännöt | Tiedottajanne Oy",
+  description: "Tiedottajanne Oy:n sivuston evästekäytännöt ja analytiikka.",
 };
 
 export default function CookiePolicyPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 text-gray-200 space-y-8">
-      <Link href="/" className="inline-flex items-center gap-2 text-sm text-[#00AEEF] hover:underline">
-        <ArrowLeft className="w-4 h-4" /> Takaisin etusivulle
-      </Link>
-      <div className="space-y-3 border-b border-[#0C66B4]/40 pb-6">
-        <div className="flex items-center gap-3">
-          <Cookie className="w-8 h-8 text-[#00AEEF]" />
-          <h1 className="text-3xl font-bold text-white">Ev�stek�yt�nn�t & Analytiikka</h1>
+    <div className="py-20 bg-[#0c0c0c] min-h-screen text-white/80">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <Link href="/" className="inline-flex items-center gap-2 text-xs font-semibold text-[#00d2ff] hover:underline">
+          <ArrowLeft className="w-4 h-4" /> Takaisin etusivulle
+        </Link>
+
+        <div className="liquid-glass rounded-3xl p-8 sm:p-12 space-y-8">
+          <div className="space-y-3 border-b border-white/10 pb-6">
+            <div className="flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00d2ff]/20 to-[#014489]/30 border border-[#00d2ff]/30 text-[#00d2ff] flex items-center justify-center">
+                <Cookie className="w-5 h-5" />
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Evästekäytännöt &amp; Analytiikka</h1>
+            </div>
+            <p className="text-xs text-white/50">Päivitetty: 23. elokuuta 2026</p>
+          </div>
+
+          <div className="space-y-6 text-sm leading-relaxed text-white/70">
+            <section className="space-y-2">
+              <h2 className="text-lg font-semibold text-white">1. Mitä evästeet ovat?</h2>
+              <p>Evästeet (cookies) ovat pieniä tekstitiedostoja, joita selain tallentaa laitteellesi verkkosivustolla vieraillessasi. Ne auttavat parantamaan käyttökokemusta ja ymmärtämään sivuston käyttöä.</p>
+            </section>
+
+            <section className="space-y-2">
+              <h2 className="text-lg font-semibold text-white">2. Käytettävä analytiikka (Microsoft Clarity)</h2>
+              <p>Sivustollamme käytetään Microsoft Clarity -analytiikkapalvelua sivuston käytön, suorituskyvyn ja käyttökokemuksen parantamiseen. Clarity auttaa näkemään anonyymisti, miten sivustoa käytetään ja mitkä osiot kiinnostavat kävijöitä eniten.</p>
+            </section>
+
+            <section className="space-y-2">
+              <h2 className="text-lg font-semibold text-white">3. Evästeiden hallinta</h2>
+              <p>Voit hallinnoida ja estää evästeitä selaimen omista asetuksista. Huomioithan, että evästeiden poistaminen käytöstä saattaa vaikuttaa tiettyjen verkkosivuston toimintojen toimivuuteen.</p>
+            </section>
+          </div>
         </div>
-        <p className="text-sm text-gray-400">P�ivitetty: 23. elokuuta 2026</p>
-      </div>
-
-      <div className="space-y-6 text-sm leading-relaxed text-gray-300">
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">1. Mit� ev�steet ovat?</h2>
-          <p>Ev�steet (cookies) ovat pieni� tekstitiedostoja, joita selain tallentaa laitteellesi verkkosivustolla vieraillessasi. Ne auttavat parantamaan k�ytt�kokemusta ja ymm�rt�m��n sivuston k�ytt��.</p>
-        </section>
-
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">2. K�ytett�v� analytiikka (Microsoft Clarity)</h2>
-          <p>Sivustollamme k�ytet��n Microsoft Clarity -analytiikkapalvelua sivuston k�yt�n, suorituskyvyn ja k�ytt�kokemuksen parantamiseen. Clarity auttaa n�kem��n anonyymisti, miten sivustoa k�ytet��n ja mitk� osiot kiinnostavat k�vij�it� eniten.</p>
-        </section>
-
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-white">3. Ev�steiden hallinta</h2>
-          <p>Voit hallinnoida ja est�� ev�steit� selaimen omista asetuksista. Huomioithan, ett� ev�steiden poistaminen k�yt�st� saattaa vaikuttaa tiettyjen verkkosivuston toimintojen toimivuuteen.</p>
-        </section>
       </div>
     </div>
   );
 }
-

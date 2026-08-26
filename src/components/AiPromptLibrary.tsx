@@ -21,33 +21,38 @@ export default function AiPromptLibrary() {
   };
 
   return (
-    <section className="py-16 bg-[#000a18] border-b border-[#0C66B4]/30 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section className="py-20 md:py-28 bg-[#0c0c0c] border-b border-white/10 relative overflow-hidden">
+      {/* Subtle Ambient Light */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-[20%] right-[-10%] w-[500px] h-[450px] bg-gradient-to-l from-[#00d2ff]/10 to-transparent blur-[140px] rounded-full" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 relative z-10">
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-[#00AEEF]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-[#00d2ff]" />
             <span>VALMIIT PROMPTIRUNGOT CHATGPT &amp; PERPLEXITY -MALLEILLE</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-wide">
-            SOTE-VIDEON <span className="text-[#00AEEF]">AI-PROMPTIKIRJASTO</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+            SOTE-VIDEON <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">AI-PROMPTIKIRJASTO</span>
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-white/60 text-sm sm:text-base leading-relaxed">
             Kopioi valmiit eettiset promptipohjat suoraan ChatGPT:hen tai Perplexityyn. Suunniteltu erityisesti lääkäreille, fysioterapeuteille ja terveysteknologian asiantuntijoille.
           </p>
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+        <div className="flex flex-wrap items-center justify-center gap-2.5">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                 selectedCategory === cat
-                  ? "bg-[#00AEEF] text-black shadow-glow font-bold"
-                  : "bg-[#000d21] border border-[#0C66B4]/50 text-gray-300 hover:border-[#00AEEF] hover:text-white"
+                  ? "bg-white text-black shadow-lg font-bold scale-105"
+                  : "bg-white/[0.03] border border-white/10 text-white/70 hover:border-white/30 hover:text-white"
               }`}
             >
               {cat}
@@ -60,29 +65,29 @@ export default function AiPromptLibrary() {
           {filteredPrompts.map((p) => (
             <div
               key={p.id}
-              className="p-6 sm:p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 shadow-panel flex flex-col justify-between space-y-6 hover:border-[#00AEEF]/60 transition-all"
+              className="liquid-glass rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-6"
             >
               <div className="space-y-4">
                 
-                <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full bg-[#0C66B4]/30 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-mono font-bold">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/15 text-[#00d2ff] text-xs font-mono font-semibold">
                     {p.category}
                   </span>
-                  <span className="text-xs font-mono text-gray-400">
+                  <span className="text-xs font-mono text-white/50">
                     Kohderyhmä: {p.roleTarget}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white tracking-wide">
+                <h3 className="text-xl font-bold text-white tracking-tight">
                   {p.title}
                 </h3>
 
-                <p className="text-xs text-gray-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
                   {p.description}
                 </p>
 
                 {/* Prompt Code Block */}
-                <div className="relative rounded-2xl bg-[#000a18] border border-[#0C66B4]/40 p-4 font-mono text-xs text-gray-300 leading-relaxed max-h-64 overflow-y-auto">
+                <div className="relative rounded-2xl bg-black/60 border border-white/10 p-5 font-mono text-xs text-white/80 leading-relaxed max-h-64 overflow-y-auto">
                   <pre className="whitespace-pre-wrap">{p.promptText}</pre>
                 </div>
 
@@ -92,10 +97,10 @@ export default function AiPromptLibrary() {
               <div>
                 <button
                   onClick={() => handleCopy(p.id, p.promptText)}
-                  className={`w-full py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                  className={`w-full py-3.5 px-5 rounded-2xl font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer ${
                     copiedId === p.id
-                      ? "bg-green-500 text-black shadow-glow"
-                      : "bg-[#00AEEF] text-black hover:bg-[#33C2F5] shadow-glow"
+                      ? "bg-emerald-500 text-black shadow-lg"
+                      : "bg-white text-black hover:bg-white/90 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-[1.01] active:scale-[0.99]"
                   }`}
                 >
                   {copiedId === p.id ? (

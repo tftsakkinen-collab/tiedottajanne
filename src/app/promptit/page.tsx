@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PromptitPage() {
   return (
-    <div className="py-12 bg-[#000a18] min-h-screen">
+    <div className="py-12 bg-[#0c0c0c] min-h-screen">
       <AiPromptLibrary />
     </div>
   );

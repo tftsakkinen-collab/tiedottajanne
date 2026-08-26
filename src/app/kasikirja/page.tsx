@@ -51,19 +51,24 @@ export default function KasikirjaPage() {
   ];
 
   return (
-    <div className="py-16 bg-[#000a18] min-h-screen text-gray-200">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div className="py-20 md:py-28 bg-[#0c0c0c] min-h-screen text-white/90 relative overflow-hidden">
+      {/* Subtle Ambient Light */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-b from-[#00d2ff]/10 to-transparent blur-[140px] rounded-full" />
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
         
         {/* Page Header */}
-        <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+        <div className="text-center space-y-4 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
             <BookOpen className="w-4 h-4" />
             <span>KATTAVA OPAS AMMATTILAISILLE</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-display text-white tracking-wide">
-            SOTE-ALAN SOMEMENESTYKSEN <span className="text-[#00AEEF]">KÄSIKIRJA</span>
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+            SOTE-ALAN SOMEMENESTYKSEN <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">KÄSIKIRJA</span>
           </h1>
-          <p className="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/60 text-base max-w-2xl mx-auto leading-relaxed">
             Näkökulmat ja käytännön ohjeet terveydenhuollon asiantuntijoille, jotka haluavat rakentaa orgaanista näkyvyyttä ja asiantuntija-auktoriteettia.
           </p>
         </div>
@@ -75,21 +80,21 @@ export default function KasikirjaPage() {
             return (
               <div
                 key={idx}
-                className="p-6 sm:p-8 rounded-3xl bg-[#000d21] border border-[#0C66B4]/50 shadow-panel space-y-4"
+                className="liquid-glass rounded-3xl p-8 sm:p-10 space-y-5"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#0C66B4]/30 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#00d2ff]/20 to-[#014489]/30 border border-[#00d2ff]/30 text-[#00d2ff] flex items-center justify-center shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h2 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
+                  <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                     {sec.title}
                   </h2>
                 </div>
 
                 <div className="space-y-3 pt-2">
                   {sec.content.map((point, i) => (
-                    <div key={i} className="flex items-start gap-3 text-sm text-gray-300">
-                      <CheckCircle2 className="w-4 h-4 text-[#00AEEF] shrink-0 mt-0.5" />
+                    <div key={i} className="flex items-start gap-3 text-xs sm:text-sm text-white/70 leading-relaxed">
+                      <CheckCircle2 className="w-4 h-4 text-[#00d2ff] shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </div>
                   ))}
@@ -100,18 +105,20 @@ export default function KasikirjaPage() {
         </div>
 
         {/* Bottom Callout */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#0C66B4]/30 via-[#000d21] to-[#000a18] border border-[#00AEEF]/40 text-center space-y-4">
-          <h3 className="text-2xl font-bold text-white">Tarvitsetko valmiita AI-prompteja skriptaukseen?</h3>
-          <p className="text-sm text-gray-300 max-w-xl mx-auto">
+        <div className="liquid-glass rounded-3xl p-8 sm:p-12 border border-[#00d2ff]/20 text-center space-y-5">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Tarvitsetko valmiita AI-prompteja skriptaukseen?</h3>
+          <p className="text-sm text-white/60 max-w-xl mx-auto leading-relaxed">
             Tutustu ilmaiseen AI-promptikirjastoomme ja kopioi valmiit rungot ChatGPT:hen.
           </p>
-          <Link
-            href="/promptit"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#00AEEF] text-black font-bold text-base hover:bg-[#33C2F5] transition-all shadow-glow"
-          >
-            <span>Avaa Promptikirjasto</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="pt-2">
+            <Link
+              href="/promptit"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold text-sm hover:bg-white/90 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <span>Avaa Promptikirjasto</span>
+              <ArrowRight className="w-4 h-4 text-black" />
+            </Link>
+          </div>
         </div>
 
       </div>

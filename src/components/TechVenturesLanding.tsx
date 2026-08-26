@@ -6,11 +6,12 @@ import { Sparkles, ArrowRight, ShieldCheck, Cpu, Stethoscope, ChevronRight } fro
 
 export default function TechVenturesLanding() {
   return (
-    <div className="relative min-h-screen bg-[#0c0c0c] text-white overflow-hidden selection:bg-[#00d2ff]/20">
+    <div className="relative min-h-[90vh] bg-[#0c0c0c] text-white overflow-hidden selection:bg-[#00d2ff]/20">
       {/* Background Glow Gradients */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-[#00d2ff]/15 via-[#0B2551]/10 to-transparent blur-[120px] rounded-full" />
-        <div className="absolute top-[40%] right-[-10%] w-[500px] h-[400px] bg-gradient-to-l from-[#059669]/10 via-[#0B2551]/10 to-transparent blur-[100px] rounded-full" />
+        <div className="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-b from-[#00d2ff]/15 via-[#014489]/10 to-transparent blur-[140px] rounded-full" />
+        <div className="absolute top-[35%] right-[-10%] w-[600px] h-[450px] bg-gradient-to-l from-[#059669]/10 via-[#0B2551]/10 to-transparent blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[400px] bg-gradient-to-r from-[#014489]/10 to-transparent blur-[120px] rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-24 md:pt-20 md:pb-32 flex flex-col items-center">
@@ -20,7 +21,7 @@ export default function TechVenturesLanding() {
           initial={{ opacity: 0, y: -10 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-white/80 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-white/80 mb-8 shadow-sm hover:border-[#00d2ff]/30 transition-colors"
         >
           <Sparkles className="w-4 h-4 text-[#00d2ff]" />
           <span>Tiedottajanne Oy — Digitaalinen Innovaatiostudio</span>
@@ -83,7 +84,7 @@ export default function TechVenturesLanding() {
           {/* Card 1 */}
           <div className="liquid-glass rounded-3xl p-8 border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#00d2ff]/20 to-[#0B2551]/30 border border-[#00d2ff]/30 flex items-center justify-center mb-6 text-[#00d2ff] group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#00d2ff]/20 to-[#0B2551]/30 border border-[#00d2ff]/30 flex items-center justify-center mb-6 text-[#00d2ff] group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,210,255,0.3)] transition-all">
                 <Cpu className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-semibold text-white tracking-tight mb-3">
@@ -101,7 +102,7 @@ export default function TechVenturesLanding() {
           {/* Card 2 */}
           <div className="liquid-glass rounded-3xl p-8 border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#059669]/20 to-[#0B2551]/30 border border-[#059669]/30 flex items-center justify-center mb-6 text-[#059669] group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#059669]/20 to-[#0B2551]/30 border border-[#059669]/30 flex items-center justify-center mb-6 text-[#059669] group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(5,150,105,0.3)] transition-all">
                 <Stethoscope className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-semibold text-white tracking-tight mb-3">
@@ -119,7 +120,7 @@ export default function TechVenturesLanding() {
           {/* Card 3 */}
           <div className="liquid-glass rounded-3xl p-8 border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col justify-between">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#3b82f6]/20 to-[#0B2551]/30 border border-[#3b82f6]/30 flex items-center justify-center mb-6 text-[#3b82f6] group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#3b82f6]/20 to-[#0B2551]/30 border border-[#3b82f6]/30 flex items-center justify-center mb-6 text-[#3b82f6] group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-semibold text-white tracking-tight mb-3">

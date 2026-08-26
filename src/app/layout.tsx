@@ -74,7 +74,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="min-h-screen bg-[#000a18] text-gray-100 flex flex-col justify-between">
+      <body className="min-h-screen bg-[#0c0c0c] text-white flex flex-col justify-between">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
