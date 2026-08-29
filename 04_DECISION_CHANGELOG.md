@@ -39,3 +39,9 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevis
 ## Päivitys: 29.08.2026 16:02
 - **tiedottajanne (Vaihe 4):** Luotu uusi /tyokalut-reitti, tiivistetty etusivun osiot 8 -> 5 sekä lisätty sticky osionavigaatio progress-palkilla. Sivun pituus laskenut yli 40 %.
 ----------------------------------------
+
+---
+
+## Päivitys: 29.08.2026 16:02
+- **tiedottajanne (Vaihe 5):** Ajettu ui-ux-pro-max search-skripti, generoitu design-system/tiedottajanne/MASTER.md ja suoritettu QA-porttitarkistukset (fontit, SSR, lasipass, a11y, mobiiliresponsiivisuus).
+----------------------------------------
