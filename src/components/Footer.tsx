@@ -23,7 +23,7 @@ export default function Footer() {
             <p className="text-xs text-white/60 leading-relaxed max-w-sm">
               Tiedottajanne Oy (3305813-7) on OMT-fysioterapeutti Janne Säkkisen perustama asiantuntijayritys, joka auttaa terveydenhuollon ja SOTE-alan ammattilaisia tekemään vaikuttavaa, eettistä ja tekoälyindeksoitua videosisältöä.
             </p>
-            <div className="text-xs text-white/40 font-mono">
+            <div className="text-xs text-white/70 font-mono">
               Valvira / Terhikki -rekisteröity OMT-fysioterapeutti • Oulun yliopisto (2017–)
             </div>
           </div>
@@ -129,11 +129,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-8 border-t border-white/10 text-center text-xs text-white/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-white/10 text-center text-xs text-white/70 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             © {new Date().getFullYear()} Tiedottajanne Oy (Y-tunnus: 3305813-7). Kaikki oikeudet pidätetään.
           </div>
-          <div className="text-white/40 text-[11px]">
+          <div className="text-white/70 text-[11px]">
             Valvira / Terhikki-rekisteröity fysioterapiaviestintä &amp; AI-SEO
           </div>
         </div>

@@ -17,9 +17,9 @@ export default function TyokalutPage() {
         <div>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--muted)] hover:text-[var(--primary)] transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--surface)] text-[var(--text)] border border-[var(--border)] text-sm font-semibold hover:border-[var(--primary)] transition-all min-h-[44px]"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4 text-[var(--primary)] shrink-0" />
             <span>Takaisin etusivulle</span>
           </Link>
         </div>
