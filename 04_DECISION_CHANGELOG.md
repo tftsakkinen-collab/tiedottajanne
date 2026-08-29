@@ -45,3 +45,9 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevis
 ## Päivitys: 29.08.2026 16:02
 - **tiedottajanne (Vaihe 5):** Ajettu ui-ux-pro-max search-skripti, generoitu design-system/tiedottajanne/MASTER.md ja suoritettu QA-porttitarkistukset (fontit, SSR, lasipass, a11y, mobiiliresponsiivisuus).
 ----------------------------------------
+
+---
+
+## Päivitys: 29.08.2026 16:55
+- **tiedottajanne (Korjaus 1):** Palautettu .liquid-glass ja muut lasipaneelit tummaksi lasiksi (color-mix 3 % valkoinen, blur 14px, #141414 fallback), korjattu tekstikontrastit (>= 4.5:1).
+----------------------------------------
