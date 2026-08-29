@@ -15,3 +15,9 @@ Tämä on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tä koskevis
 - **API-eheyden palautus:** `ProofOfWork`- ja `LatestVideosAeo`-komponenttien tarvitsema `/api/social-stats`-reitti palautettiin toimivaksi 1 tunnin välimuistituksella (`revalidate = 3600`).
 - **Puhdas paikallinen validointi:** `npm ci`, `npx tsc --noEmit` ja `npm run build` suoritettiin onnistuneesti (kaikki 14 staattista ja dynaamista sivua kääntyivät virheittä).
 - **Tietoturva & Ympäristömuuttujat:** Varmistettu, ettei koodissa ole kovakoodattuja avaimia ja `.env*` pysyy suojattuna `.gitignore`-määrittelyllä.
+
+---
+
+## P�ivitys: 29.08.2026 16:00
+- **tiedottajanne (Vaihe 1):** Sidottu Outfit, Inter ja JetBrains Mono -fontit CSS-muuttujaan --font-heading layout.tsx:ss�. Korjattu Hero SSR -render�inti poistamalla Framer Motion opacity-viiveet Herosta.
+----------------------------------------

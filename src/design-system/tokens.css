@@ -1,0 +1,35 @@
+:root {
+  --bg: oklch(16% .03 245);
+  --surface: oklch(21% .035 245);
+  --text: oklch(96% .01 240);
+  --muted: oklch(72% .02 240);
+  --border: oklch(30% .03 245);
+  --primary: oklch(72% .13 230);        /* nykyinen #00d2ff tokenina */
+  --primary-ink: oklch(18% .03 240);
+  --accent-2: oklch(45% .11 255);
+  --ring: var(--primary);
+  --radius: .875rem;
+  --glass-blur: 14px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: oklch(98.5% .004 240);
+    --surface: oklch(100% 0 0);
+    --text: oklch(22% .02 250);
+    --muted: oklch(48% .02 250);
+    --border: oklch(90% .01 250);
+    --primary: oklch(55% .12 235);
+    --primary-ink: oklch(99% 0 0);
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: oklch(98.5% .004 240);
+  --surface: oklch(100% 0 0);
+  --text: oklch(22% .02 250);
+  --muted: oklch(48% .02 250);
+  --border: oklch(90% .01 250);
+  --primary: oklch(55% .12 235);
+  --primary-ink: oklch(99% 0 0);
+}

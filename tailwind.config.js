@@ -8,6 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        bg: "var(--bg)",
+        surface: "var(--surface)",
+        text: "var(--text)",
+        muted: "var(--muted)",
+        border: "var(--border)",
+        primary: {
+          DEFAULT: "var(--primary)",
+          ink: "var(--primary-ink)",
+        },
+        accent: {
+          2: "var(--accent-2)",
+        },
         brand: {
           50: "#f0f9ff",
           100: "#e0f2fe",
