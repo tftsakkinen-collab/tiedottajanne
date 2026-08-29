@@ -1,8 +1,30 @@
 import type { Metadata } from "next";
+import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SITE_CONFIG } from "@/data/config";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["500"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Tiedottajanne Oy — Digitaaliset ratkaisut & Teknologia-alustat",
@@ -53,7 +75,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="fi" className="dark">
+    <html lang="fi" className={`dark ${outfit.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -74,7 +96,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="min-h-screen bg-[#0c0c0c] text-white flex flex-col justify-between">
+      <body className="min-h-screen bg-[#000a18] text-gray-100 flex flex-col justify-between font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
