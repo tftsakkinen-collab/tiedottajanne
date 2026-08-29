@@ -1,13 +1,19 @@
-.glass {
-  background-color: color-mix(in oklab, var(--surface) 62%, transparent);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+.glass,
+.liquid-glass,
+.glass-panel,
+.glass-pill {
+  background: color-mix(in oklab, #ffffff 3%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in oklab, #ffffff 8%, transparent);
+  border-radius: var(--radius, 0.875rem);
 }
 
-@supports not (backdrop-filter: blur(1px)) {
-  .glass {
-    background-color: var(--surface);
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass,
+  .liquid-glass,
+  .glass-panel,
+  .glass-pill {
+    background: #141414;
   }
 }

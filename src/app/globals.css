@@ -13,7 +13,7 @@ body {
   color: var(--text);
   background-color: var(--bg);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Scroll reveal defaults - visible by default in SSR, smooth transition */
@@ -30,22 +30,22 @@ body {
   }
 }
 
-/* Backward compatibility fallbacks mapping legacy glass classes to single-layer glass */
+/* Backward compatibility fallbacks mapping legacy glass classes to single-layer dark glass */
 .liquid-glass,
 .glass-panel,
 .glass-pill {
-  background-color: color-mix(in oklab, var(--surface) 62%, transparent);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background: color-mix(in oklab, #ffffff 3%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in oklab, #ffffff 8%, transparent);
+  border-radius: var(--radius, 0.875rem);
 }
 
-@supports not (backdrop-filter: blur(1px)) {
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .liquid-glass,
   .glass-panel,
   .glass-pill {
-    background-color: var(--surface);
+    background: #141414;
   }
 }
 
