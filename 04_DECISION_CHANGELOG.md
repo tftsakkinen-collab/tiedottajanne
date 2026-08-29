@@ -57,3 +57,9 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevis
 ## Päivitys: 29.08.2026 16:55
 - **tiedottajanne (Korjaus 2):** Eristetty osionavigaation pilleririvi omaan overflow-x: auto -säiliöön, asetettu min-w-0 ja lisätty overflow-x: clip body-elementille. Pillerit skrollaavat omassa säiliössään mobiilissa ilman vaakascrollia.
 ----------------------------------------
+
+---
+
+## Päivitys: 29.08.2026 16:56
+- **tiedottajanne (Korjaus 3):** Kasvatettu kaikkien interaktiivisten elementtien (uutiskirjelomake, osionavigaation pillerit, footer-linkit, ROI-laskurin välilehdet) kosketusala vähintään 44 px korkeaksi sekä lisätty näkyvä :focus-visible-tila saavutettavuuden varmistamiseksi.
+----------------------------------------
