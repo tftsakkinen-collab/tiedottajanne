@@ -2,40 +2,39 @@
 
 import Link from "next/link";
 import { Sparkles, ArrowRight, ShieldCheck, Cpu, Stethoscope, ChevronRight } from "lucide-react";
+import { GlassPanel } from "@/design-system/primitives/GlassPanel";
 
 export default function TechVenturesLanding() {
   return (
-    <div className="relative min-h-[90vh] bg-[#0c0c0c] text-white overflow-hidden selection:bg-[#00d2ff]/20">
-      {/* Background Glow Gradients */}
+    <div className="relative min-h-[90vh] bg-[var(--bg)] text-[var(--text)] overflow-hidden selection:bg-[var(--primary)]/20">
+      {/* Background Glow Gradient - Max 1 radial gradient */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-b from-[#00d2ff]/15 via-[#014489]/10 to-transparent blur-[140px] rounded-full" />
-        <div className="absolute top-[35%] right-[-10%] w-[600px] h-[450px] bg-gradient-to-l from-[#059669]/10 via-[#0B2551]/10 to-transparent blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[400px] bg-gradient-to-r from-[#014489]/10 to-transparent blur-[120px] rounded-full" />
+        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-[radial-gradient(ellipse_at_center,var(--primary)_0%,transparent_70%)] opacity-10 rounded-full" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-24 md:pt-20 md:pb-32 flex flex-col items-center">
         
         {/* Badge */}
         <div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-white/80 mb-8 shadow-sm hover:border-[#00d2ff]/30 transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--surface)] text-xs sm:text-sm text-[var(--muted)] mb-8 shadow-sm"
         >
-          <Sparkles className="w-4 h-4 text-[#00d2ff]" />
+          <Sparkles className="w-4 h-4 text-[var(--primary)]" />
           <span>Tiedottajanne Oy — Digitaalinen Innovaatiostudio</span>
         </div>
 
         {/* Hero H1 */}
         <h1 
-          className="text-4xl sm:text-6xl md:text-7xl font-display font-bold tracking-tight text-center leading-[1.05] max-w-4xl text-white"
+          className="text-4xl sm:text-6xl md:text-7xl font-display font-bold tracking-tight text-center leading-[1.05] max-w-4xl text-[var(--text)]"
         >
           <span>Rakennamme tulevaisuuden </span>
-          <span className="block mt-1 sm:inline bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">
+          <span className="block mt-1 sm:inline bg-gradient-to-r from-[var(--text)] via-[#A4F4FD] to-[var(--primary)] bg-clip-text text-transparent">
             digitaalisia työkaluja.
           </span>
         </h1>
 
         {/* Hero Lede */}
         <p 
-          className="mt-8 text-base sm:text-lg md:text-xl text-white/60 text-center max-w-2xl leading-relaxed font-sans"
+          className="mt-8 text-base sm:text-lg md:text-xl text-[var(--muted)] text-center max-w-2xl leading-relaxed font-sans"
         >
           Tiedottajanne Oy yhdistää syvän toimialatuntemuksen, modernin tekoälyn ja huippuluokan ohjelmistokehityksen tuotteiksi, jotka ratkaisevat todellisia arjen ongelmia.
         </p>
@@ -46,17 +45,17 @@ export default function TechVenturesLanding() {
         >
           <Link
             href="/#projektit"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white text-black font-semibold text-sm sm:text-base px-8 py-3.5 transition-all hover:bg-white/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-white/10"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] text-[var(--primary-ink)] font-semibold text-sm sm:text-base px-8 py-3.5 transition-all hover:opacity-90 active:scale-[0.98] shadow-lg"
           >
             <span>Tutustu projekteihin</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="/yhteystiedot"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium text-sm sm:text-base px-8 py-3.5 transition-all hover:bg-white/10 hover:border-white/40 active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] font-medium text-sm sm:text-base px-8 py-3.5 transition-all hover:bg-[var(--border)] active:scale-[0.98]"
           >
             <span>Ota yhteyttä</span>
-            <ChevronRight className="w-4 h-4 text-white/50" />
+            <ChevronRight className="w-4 h-4 text-[var(--muted)]" />
           </Link>
         </div>
 
@@ -65,58 +64,58 @@ export default function TechVenturesLanding() {
           className="mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
         >
           {/* Card 1 */}
-          <div className="liquid-glass rounded-3xl p-8 border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col justify-between">
+          <GlassPanel className="rounded-3xl flex flex-col justify-between group">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#00d2ff]/20 to-[#0B2551]/30 border border-[#00d2ff]/30 flex items-center justify-center mb-6 text-[#00d2ff] group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,210,255,0.3)] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--surface)] border border-[var(--border)] flex items-center justify-center mb-6 text-[var(--primary)] group-hover:scale-110 transition-transform">
                 <Cpu className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold text-white tracking-tight mb-3">
+              <h3 className="text-xl font-semibold text-[var(--text)] tracking-tight mb-3 font-display">
                 AI-Native Arkkitehtuuri
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
                 Modernit tekoälyputket ja automaatiot osana jokaista ratkaisua.
               </p>
             </div>
-            <div className="mt-8 pt-4 border-t border-white/5 text-xs text-white/40 flex items-center gap-1">
+            <div className="mt-8 pt-4 border-t border-[var(--border)] text-xs text-[var(--muted)] flex items-center gap-1 font-mono">
               <span>Optimoitu skaalautuvuuteen</span>
             </div>
-          </div>
+          </GlassPanel>
 
           {/* Card 2 */}
-          <div className="liquid-glass rounded-3xl p-8 border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col justify-between">
+          <GlassPanel className="rounded-3xl flex flex-col justify-between group">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#059669]/20 to-[#0B2551]/30 border border-[#059669]/30 flex items-center justify-center mb-6 text-[#059669] group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(5,150,105,0.3)] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--surface)] border border-[var(--border)] flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition-transform">
                 <Stethoscope className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold text-white tracking-tight mb-3">
+              <h3 className="text-xl font-semibold text-[var(--text)] tracking-tight mb-3 font-display">
                 Vahva Kliininen Tausta
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
                 Digitaalisia työkaluja, jotka on testattu todellisessa ammattilaisten arjessa.
               </p>
             </div>
-            <div className="mt-8 pt-4 border-t border-white/5 text-xs text-white/40 flex items-center gap-1">
+            <div className="mt-8 pt-4 border-t border-[var(--border)] text-xs text-[var(--muted)] flex items-center gap-1 font-mono">
               <span>Ammattilaisten suunnittelema</span>
             </div>
-          </div>
+          </GlassPanel>
 
           {/* Card 3 */}
-          <div className="liquid-glass rounded-3xl p-8 border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col justify-between">
+          <GlassPanel className="rounded-3xl flex flex-col justify-between group">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#3b82f6]/20 to-[#0B2551]/30 border border-[#3b82f6]/30 flex items-center justify-center mb-6 text-[#3b82f6] group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--surface)] border border-[var(--border)] flex items-center justify-center mb-6 text-[var(--primary)] group-hover:scale-110 transition-transform">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold text-white tracking-tight mb-3">
+              <h3 className="text-xl font-semibold text-[var(--text)] tracking-tight mb-3 font-display">
                 Tietoturva & Skaalautuvuus
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
                 Nollatoleranssi tietoturvassa, puhtaat lokaalit ympäristöt ja luotettava pilviarkkitehtuuri.
               </p>
             </div>
-            <div className="mt-8 pt-4 border-t border-white/5 text-xs text-white/40 flex items-center gap-1">
+            <div className="mt-8 pt-4 border-t border-[var(--border)] text-xs text-[var(--muted)] flex items-center gap-1 font-mono">
               <span>GDPR & ISO-yhteensopiva</span>
             </div>
-          </div>
+          </GlassPanel>
         </div>
 
       </div>

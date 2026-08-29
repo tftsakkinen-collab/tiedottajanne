@@ -21,3 +21,9 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevis
 ## Päivitys: 29.08.2026 16:00
 - **tiedottajanne (Vaihe 1):** Sidottu Outfit, Inter ja JetBrains Mono -fontit CSS-muuttujaan --font-heading layout.tsx:ssä. Korjattu Hero SSR -renderöinti poistamalla Framer Motion opacity-viiveet Herosta.
 ----------------------------------------
+
+---
+
+## Päivitys: 29.08.2026 16:01
+- **tiedottajanne (Vaihe 2):** Luotu src/design-system/ (OKLCH-tokenit, 3-vaiheteemoitus, glass.css, observer.ts, UI-primitiivit). Korvattu kovakoodatut värit semanttisilla tokeneilla.
+----------------------------------------
