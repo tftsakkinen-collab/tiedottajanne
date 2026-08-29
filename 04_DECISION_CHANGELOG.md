@@ -33,3 +33,9 @@ T√§m√§ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:t√§ koskevis
 ## P‰ivitys: 29.08.2026 16:01
 - **tiedottajanne (Vaihe 3):** Tiivistetty lasikerrokset yhteen <GlassPanel>-rakenteeseen (--glass-blur: 14px), siivottu turhat taustagradientit ja varmistettu @supports-fallback sek‰ suora tekstikontrasti >= 4.5:1.
 ----------------------------------------
+
+---
+
+## P‰ivitys: 29.08.2026 16:02
+- **tiedottajanne (Vaihe 4):** Luotu uusi /tyokalut-reitti, tiivistetty etusivun osiot 8 -> 5 sek‰ lis‰tty sticky osionavigaatio progress-palkilla. Sivun pituus laskenut yli 40 %.
+----------------------------------------
