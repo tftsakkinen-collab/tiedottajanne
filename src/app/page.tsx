@@ -3,25 +3,42 @@ import ProofOfWork from "@/components/ProofOfWork";
 import LatestVideosAeo from "@/components/LatestVideosAeo";
 import ServicesAndTraining from "@/components/ServicesAndTraining";
 import ChannelReferences from "@/components/ChannelReferences";
-import AiPromptLibrary from "@/components/AiPromptLibrary";
 import SoteRoiCalculator from "@/components/SoteRoiCalculator";
-import SoteGlossary from "@/components/SoteGlossary";
 import ConsultingBookingSection from "@/components/ConsultingBookingSection";
+import SectionNav from "@/components/SectionNav";
 
 export default function Home() {
   return (
-    <div className="bg-[#0c0c0c] text-white">
-      <TechVenturesLanding />
-      <div id="projektit">
+    <div className="bg-[var(--bg)] text-[var(--text)]">
+      {/* Section 1: Studio & AI Hero */}
+      <section id="studiot">
+        <TechVenturesLanding />
+      </section>
+
+      {/* Sticky Section Navigation */}
+      <SectionNav />
+
+      {/* Section 2: Proof of Work */}
+      <section id="projektit">
         <ProofOfWork />
+      </section>
+
+      {/* Section 3: Videot & AEO + Referenssit */}
+      <section id="videot">
         <LatestVideosAeo />
-        <ServicesAndTraining />
         <ChannelReferences />
-        <AiPromptLibrary />
+      </section>
+
+      {/* Section 4: Palvelut & ROI Laskuri */}
+      <section id="palvelut">
+        <ServicesAndTraining />
         <SoteRoiCalculator />
-        <SoteGlossary />
+      </section>
+
+      {/* Section 5: Varaa Koulutus / Consultation */}
+      <section id="varaa">
         <ConsultingBookingSection />
-      </div>
+      </section>
     </div>
   );
 }

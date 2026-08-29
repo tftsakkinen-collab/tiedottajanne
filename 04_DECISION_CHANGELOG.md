@@ -27,3 +27,9 @@ T√§m√§ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:t√§ koskevis
 ## P‰ivitys: 29.08.2026 16:01
 - **tiedottajanne (Vaihe 2):** Luotu src/design-system/ (OKLCH-tokenit, 3-vaiheteemoitus, glass.css, observer.ts, UI-primitiivit). Korvattu kovakoodatut v‰rit semanttisilla tokeneilla.
 ----------------------------------------
+
+---
+
+## P‰ivitys: 29.08.2026 16:01
+- **tiedottajanne (Vaihe 3):** Tiivistetty lasikerrokset yhteen <GlassPanel>-rakenteeseen (--glass-blur: 14px), siivottu turhat taustagradientit ja varmistettu @supports-fallback sek‰ suora tekstikontrasti >= 4.5:1.
+----------------------------------------
