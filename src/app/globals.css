@@ -1,57 +1,14 @@
-@import "../design-system/tokens.css";
-@import "../design-system/glass.css";
+@import "../design-system/brand.sakkinen.css";
+@import "../design-system/base.css";
+@import "../design-system/mobile.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: var(--text);
-  background-color: var(--bg);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
-  overflow-x: clip;
-}
-
-/* Scroll reveal defaults - visible by default in SSR, smooth transition */
-[data-reveal] {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1), transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
-    transition: none !important;
-    transform: none !important;
-  }
-}
-
-/* Backward compatibility fallbacks mapping legacy glass classes to single-layer dark glass */
-.liquid-glass,
-.glass-panel,
-.glass-pill {
-  background: color-mix(in oklab, #ffffff 3%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid color-mix(in oklab, #ffffff 8%, transparent);
-  border-radius: var(--radius, 0.875rem);
-}
-
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .liquid-glass,
-  .glass-panel,
-  .glass-pill {
-    background: #141414;
-  }
-}
-
 /* Gradient Text Utilities */
 .text-gradient-cyan {
-  background: linear-gradient(135deg, var(--text) 20%, #a5f3fc 70%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--text) 20%, #a5f3fc 70%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -75,5 +32,5 @@ body {
   border: 2px solid var(--bg);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  background: var(--accent);
 }

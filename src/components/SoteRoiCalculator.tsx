@@ -71,22 +71,22 @@ export default function SoteRoiCalculator() {
   };
 
   return (
-    <section id="sote-roi-ja-postituslista" className="py-20 md:py-28 bg-[#0c0c0c] border-b border-white/10 relative overflow-hidden">
+    <section id="sote-roi-ja-postituslista" className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
       {/* Glow background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#00d2ff]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[var(--accent)]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-14">
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold tracking-wider uppercase">
-            <Sparkles className="w-4 h-4 text-[#00d2ff]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-semibold tracking-wider uppercase">
+            <Sparkles className="w-4 h-4 text-[var(--accent)]" />
             <span>SOTE-Viestinnän Laskuri, Testi &amp; Yhteistyö</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-            Laske orgaanisen videon <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">säästöt &amp; liity verkostoon</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] leading-tight font-display">
+            Laske orgaanisen videon <span className="text-gradient-cyan">säästöt &amp; liity verkostoon</span>
           </h2>
-          <p className="text-white/60 text-sm sm:text-base leading-relaxed">
+          <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
             Katso kuinka paljon orgaaninen videoviestintä säästää sote-yrityksesi mainosbudjetista, testaa nykytilasi ja tilaa SOTE-viestinnän ilmaiset teho-ohjeet sähköpostiisi!
           </p>
         </div>
@@ -285,13 +285,12 @@ export default function SoteRoiCalculator() {
             </div>
           </div>
         )}
-
         {/* Tab 3: Dedicated Email Newsletter & Collaboration Signup */}
         {activeTab === "newsletter" && (
           <div className="liquid-glass rounded-3xl p-8 sm:p-12 space-y-8 max-w-3xl mx-auto border border-[#00d2ff]/20">
             <div className="space-y-2 text-center">
-              <span className="px-3.5 py-1 rounded-full bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider border border-[#00d2ff]/30">
-                Yhteistyö &amp; Sometyöpajat
+              <span className="px-3.5 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-semibold uppercase tracking-wider border border-[var(--accent)]/30">
+                LASKURIN TULOKSET
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Liity SOTE-Viestintä &amp; Sometyöpajan Postituslistalle</h3>
               <p className="text-xs sm:text-sm text-white/60 max-w-lg mx-auto leading-relaxed">
@@ -340,7 +339,7 @@ export default function SoteRoiCalculator() {
                   <select
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
-                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-[#0c0c0c] border border-white/15 text-sm text-white focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
+                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-sm text-[var(--text)] focus:outline-none focus:border-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--accent)] transition-colors"
                   >
                     <option value="SOTE-yritys / Klinikka">SOTE-yritys / Klinikka</option>
                     <option value="Fysioterapeutti / Osteopaatti">Fysioterapeutti / Osteopaatti</option>

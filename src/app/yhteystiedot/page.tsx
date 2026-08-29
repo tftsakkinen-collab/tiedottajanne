@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function YhteystiedotPage() {
   return (
-    <div className="py-12 bg-[#0c0c0c] min-h-screen">
+    <div className="py-12 md:py-16 bg-[var(--bg)] min-h-screen text-[var(--text)]">
       <ConsultingBookingSection />
     </div>
   );

@@ -50,19 +50,19 @@ export default function SoteStrategyGuide() {
   ];
 
   return (
-    <section className="py-16 bg-[#000d21] border-b border-[#0C66B4]/30 relative">
+    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00AEEF]/20 border border-[#00AEEF]/40 text-[#00AEEF] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[var(--accent)]/20 border border-[var(--accent)]/40 text-[var(--accent)] text-xs font-bold uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4" />
             <span>SOTE-SOMEN 4 PILARIA</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display text-white tracking-wide">
-            RESEPTI <span className="text-[#00AEEF]">MENESTYKSEKKÄÄSEEN</span> SOTE-VIDEOTUOTANTOON
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[var(--text)] tracking-wide">
+            RESEPTI <span className="text-gradient-cyan">MENESTYKSEKKÄÄSEEN</span> SOTE-VIDEOTUOTANTOON
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
             Terveydenhuollon videotuotanto eroaa tavallisesta viihdesomesta. Se vaatii kliinistä tarkkuutta, eettisyyttä ja tekoälyajan hakukoneoptimointia.
           </p>
         </div>
@@ -74,30 +74,30 @@ export default function SoteStrategyGuide() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-[#000a18] border border-[#0C66B4]/40 flex flex-col justify-between space-y-6 hover:border-[#00AEEF]/60 transition-all shadow-panel"
+                className="p-6 rounded-3xl glass flex flex-col justify-between space-y-6 hover:border-[var(--accent)]/60 transition-all shadow-sm"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-xl bg-[#0C66B4]/30 border border-[#00AEEF]/40 text-[#00AEEF] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-[var(--surface-elevated)] border border-[var(--accent)]/40 text-[var(--accent)] flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-2xl font-mono font-bold text-[#00AEEF]/40">
+                    <span className="text-2xl font-mono font-bold text-[var(--accent)]/40">
                       {p.step}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white tracking-wide leading-snug">
+                  <h3 className="text-xl font-bold text-[var(--text)] font-display tracking-wide leading-snug">
                     {p.title}
                   </h3>
 
-                  <p className="text-xs text-gray-300 leading-relaxed">
+                  <p className="text-xs text-[var(--muted)] leading-relaxed">
                     {p.description}
                   </p>
 
-                  <div className="pt-2 space-y-2 border-t border-[#0C66B4]/30">
+                  <div className="pt-2 space-y-2 border-t border-[var(--border)]">
                     {p.bullets.map((b, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-gray-400">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#00AEEF] shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-2 text-xs text-[var(--muted)]">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
                         <span>{b}</span>
                       </div>
                     ))}
@@ -109,21 +109,21 @@ export default function SoteStrategyGuide() {
         </div>
 
         {/* Bottom CTA Banner */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#0C66B4]/30 via-[#000d21] to-[#000a18] border border-[#00AEEF]/40 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="p-8 rounded-3xl glass border border-[var(--accent)]/40 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-left">
-            <h3 className="text-xl sm:text-2xl font-bold text-white">
+            <h3 className="text-xl sm:text-2xl font-bold text-[var(--text)] font-display">
               Haluatko lukea täydellisen SOTE-some käsikirjan?
             </h3>
-            <p className="text-xs sm:text-sm text-gray-300">
+            <p className="text-xs sm:text-sm text-[var(--muted)]">
               Opas sisältää laitteisto-ohjeet (kamerat, valot, mikit), eettiset suuntaviivat ja SEO-käsikirjoitusmalleja.
             </p>
           </div>
           <Link
             href="/kasikirja"
-            className="px-6 py-3.5 rounded-xl bg-[#00AEEF] text-black font-bold text-sm hover:bg-[#33C2F5] transition-all shadow-glow flex items-center gap-2 whitespace-nowrap shrink-0"
+            className="px-6 py-3.5 rounded-xl bg-[var(--text)] text-[var(--bg)] font-bold text-sm hover:opacity-90 transition-all shadow-md flex items-center gap-2 whitespace-nowrap shrink-0 min-h-[44px]"
           >
             <span>Avaa Käsikirja</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-[var(--bg)]" />
           </Link>
         </div>
 

@@ -1,0 +1,15 @@
+/* Mobile responsive touch targets & scroll utilities */
+@media (max-width: 640px) {
+  a, button, input, select, textarea {
+    min-height: 44px;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

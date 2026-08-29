@@ -10,29 +10,18 @@ module.exports = {
       colors: {
         bg: "var(--bg)",
         surface: "var(--surface)",
+        "surface-elevated": "var(--surface-elevated)",
         text: "var(--text)",
         muted: "var(--muted)",
         border: "var(--border)",
-        primary: {
-          DEFAULT: "var(--primary)",
-          ink: "var(--primary-ink)",
-        },
         accent: {
+          DEFAULT: "var(--accent)",
+          ink: "var(--accent-ink)",
           2: "var(--accent-2)",
         },
-        brand: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          400: "#38bdf8",
-          500: "#00AEEF",
-          600: "#0C66B4",
-          700: "#0369a1",
-          800: "#075985",
-          900: "#0c0c0c",
-          950: "#060911",
-          cyan: "#00d2ff",
-          navy: "#0B2551",
-          sapphire: "#014489",
+        primary: {
+          DEFAULT: "var(--accent)",
+          ink: "var(--accent-ink)",
         },
       },
       fontFamily: {

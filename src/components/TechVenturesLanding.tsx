@@ -6,19 +6,19 @@ import { GlassPanel } from "@/design-system/primitives/GlassPanel";
 
 export default function TechVenturesLanding() {
   return (
-    <div className="relative min-h-[90vh] bg-[var(--bg)] text-[var(--text)] overflow-hidden selection:bg-[var(--primary)]/20">
+    <div className="relative py-8 md:py-12 bg-[var(--bg)] text-[var(--text)] overflow-hidden selection:bg-[var(--accent)]/20">
       {/* Background Glow Gradient - Max 1 radial gradient */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-[radial-gradient(ellipse_at_center,var(--primary)_0%,transparent_70%)] opacity-10 rounded-full" />
+        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-[radial-gradient(ellipse_at_center,var(--accent)_0%,transparent_70%)] opacity-10 rounded-full" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-24 md:pt-20 md:pb-32 flex flex-col items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-4 md:py-8 flex flex-col items-center">
         
         {/* Badge */}
         <div 
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--surface)] text-xs sm:text-sm text-[var(--muted)] mb-8 shadow-sm"
         >
-          <Sparkles className="w-4 h-4 text-[var(--primary)]" />
+          <Sparkles className="w-4 h-4 text-[var(--accent)]" />
           <span>Tiedottajanne Oy — Digitaalinen Innovaatiostudio</span>
         </div>
 
@@ -27,7 +27,7 @@ export default function TechVenturesLanding() {
           className="text-4xl sm:text-6xl md:text-7xl font-display font-bold tracking-tight text-center leading-[1.05] max-w-4xl text-[var(--text)]"
         >
           <span>Rakennamme tulevaisuuden </span>
-          <span className="block mt-1 sm:inline bg-gradient-to-r from-[var(--text)] via-[#A4F4FD] to-[var(--primary)] bg-clip-text text-transparent">
+          <span className="block mt-1 sm:inline bg-gradient-to-r from-[var(--text)] via-[#A4F4FD] to-[var(--accent)] bg-clip-text text-transparent">
             digitaalisia työkaluja.
           </span>
         </h1>
@@ -45,7 +45,7 @@ export default function TechVenturesLanding() {
         >
           <Link
             href="/#projektit"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] text-[var(--primary-ink)] font-semibold text-sm sm:text-base px-8 py-3.5 transition-all hover:opacity-90 active:scale-[0.98] shadow-lg"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] text-[var(--accent-ink)] font-semibold text-sm sm:text-base px-8 py-3.5 transition-all hover:opacity-90 active:scale-[0.98] shadow-lg"
           >
             <span>Tutustu projekteihin</span>
             <ArrowRight className="w-4 h-4" />
@@ -61,7 +61,7 @@ export default function TechVenturesLanding() {
 
         {/* 3 Stat Elements / Core Value Pillars */}
         <div 
-          className="mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
+          className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 w-full"
         >
           {/* Card 1 */}
           <GlassPanel className="rounded-3xl flex flex-col justify-between group">

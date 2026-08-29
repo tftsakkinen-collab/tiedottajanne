@@ -59,7 +59,7 @@ export default function SectionNav() {
     <div className="sticky top-20 z-40 w-full max-w-full bg-[var(--surface)]/95 backdrop-blur-md border-b border-[var(--border)] transition-all overflow-hidden">
       {/* Scroll Progress Bar */}
       <div
-        className="h-1 bg-[var(--primary)] transition-all duration-75"
+        className="h-1 bg-[var(--accent)] transition-all duration-75"
         style={{ width: `${scrollProgress}%` }}
       />
 
@@ -76,8 +76,8 @@ export default function SectionNav() {
                   aria-current={isActive ? "true" : undefined}
                   className={`min-h-[44px] px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all flex items-center justify-center cursor-pointer ${
                     isActive
-                      ? "bg-[var(--primary)] text-[var(--primary-ink)] shadow-md"
-                      : "text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--border)]/50 bg-[var(--surface)] border border-[var(--border)]"
+                      ? "bg-[var(--accent)] text-[var(--accent-ink)] shadow-md"
+                      : "text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--surface-elevated)] bg-[var(--surface)] border border-[var(--border)]"
                   }`}
                 >
                   {section.label}

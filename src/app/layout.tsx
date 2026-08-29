@@ -75,7 +75,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="fi" className={`dark ${outfit.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="fi" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -96,7 +96,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="min-h-screen bg-[#000a18] text-gray-100 flex flex-col justify-between font-sans">
+      <body className="min-h-screen bg-[var(--bg)] text-[var(--text)] flex flex-col justify-between font-sans">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
