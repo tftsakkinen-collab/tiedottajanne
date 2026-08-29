@@ -31,24 +31,24 @@ export default function Footer() {
           {/* Col 2: Pikalinkit */}
           <div className="md:col-span-2 space-y-3">
             <h4 className="text-xs font-semibold text-white uppercase tracking-wider">Pikalinkit</h4>
-            <ul className="space-y-2.5 text-xs">
-              <li><Link href="/#palvelut" className="hover:text-[#00d2ff] transition-colors">Palvelut</Link></li>
-              <li><Link href="/referenssit" className="hover:text-[#00d2ff] transition-colors">Referenssit</Link></li>
-              <li><Link href="/yhteystiedot" className="hover:text-[#00d2ff] transition-colors">Yhteystiedot</Link></li>
-              <li><Link href="/kasikirja" className="hover:text-[#00d2ff] transition-colors">SOTE-Käsikirja</Link></li>
-              <li><Link href="/promptit" className="hover:text-[#00d2ff] transition-colors font-mono">AI-Promptit</Link></li>
+            <ul className="space-y-1 text-xs">
+              <li><Link href="/#palvelut" className="min-h-[44px] py-2 flex items-center hover:text-[#00d2ff] transition-colors">Palvelut</Link></li>
+              <li><Link href="/referenssit" className="min-h-[44px] py-2 flex items-center hover:text-[#00d2ff] transition-colors">Referenssit</Link></li>
+              <li><Link href="/yhteystiedot" className="min-h-[44px] py-2 flex items-center hover:text-[#00d2ff] transition-colors">Yhteystiedot</Link></li>
+              <li><Link href="/kasikirja" className="min-h-[44px] py-2 flex items-center hover:text-[#00d2ff] transition-colors">SOTE-Käsikirja</Link></li>
+              <li><Link href="/promptit" className="min-h-[44px] py-2 flex items-center hover:text-[#00d2ff] transition-colors font-mono">AI-Promptit</Link></li>
             </ul>
           </div>
 
           {/* Col 3: Info & Verkostot */}
           <div className="md:col-span-3 space-y-3">
             <h4 className="text-xs font-semibold text-white uppercase tracking-wider">Info &amp; Kanavat</h4>
-            <div className="space-y-2.5 text-xs">
+            <div className="space-y-1 text-xs">
               <a
                 href={SITE_CONFIG.youtubeTiedottajanne}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
+                className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
               >
                 <Video className="w-4 h-4 text-red-500 shrink-0" />
                 <span>YouTube: @tiedottajanne</span>
@@ -58,7 +58,7 @@ export default function Footer() {
                 href={SITE_CONFIG.youtubeFtSakkinen}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
+                className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
               >
                 <Video className="w-4 h-4 text-red-500 shrink-0" />
                 <span>YouTube: @ft_sakkinen (1,1M+)</span>
@@ -68,7 +68,7 @@ export default function Footer() {
                 href={SITE_CONFIG.youtubePtSakkinen}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
+                className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
               >
                 <Video className="w-4 h-4 text-red-500 shrink-0" />
                 <span>YouTube: @pt_sakkinen (Global)</span>
@@ -78,7 +78,7 @@ export default function Footer() {
                 href="https://www.ftsakkinen.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors pt-1"
+                className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
               >
                 <ShieldCheck className="w-4 h-4 text-[#00d2ff] shrink-0" />
                 <span>ftsakkinen.com (FI)</span>
@@ -87,7 +87,7 @@ export default function Footer() {
                 href="https://www.ptsakkinen.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
+                className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors"
               >
                 <ShieldCheck className="w-4 h-4 text-[#00d2ff] shrink-0" />
                 <span>ptsakkinen.com (EN)</span>
@@ -98,27 +98,27 @@ export default function Footer() {
           {/* Col 4: Juridiset & Hallinnolliset */}
           <div className="md:col-span-3 space-y-3">
             <h4 className="text-xs font-semibold text-white uppercase tracking-wider">Juridiset &amp; Hallinto</h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-1 text-xs">
               <li>
-                <Link href="/tietosuoja" className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors">
+                <Link href="/tietosuoja" className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors">
                   <Lock className="w-3.5 h-3.5 text-[#00d2ff]" />
                   <span>Tietosuojaseloste</span>
                 </Link>
               </li>
               <li>
-                <Link href="/evasteet" className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors">
+                <Link href="/evasteet" className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors">
                   <Cookie className="w-3.5 h-3.5 text-[#00d2ff]" />
                   <span>Evästekäytännöt</span>
                 </Link>
               </li>
-              <li className="pt-2">
-                <Link href="/llms.txt" className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors font-mono text-[11px]">
+              <li>
+                <Link href="/llms.txt" className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors font-mono text-[11px]">
                   <FileText className="w-3.5 h-3.5 text-white/40" />
                   <span>llms.txt (AI Index)</span>
                 </Link>
               </li>
               <li>
-                <Link href="/llms-full.txt" className="flex items-center gap-2 hover:text-[#00d2ff] transition-colors font-mono text-[11px]">
+                <Link href="/llms-full.txt" className="min-h-[44px] py-2 flex items-center gap-2 hover:text-[#00d2ff] transition-colors font-mono text-[11px]">
                   <FileText className="w-3.5 h-3.5 text-white/40" />
                   <span>llms-full.txt (Full AI Context)</span>
                 </Link>

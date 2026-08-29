@@ -51,3 +51,9 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevis
 ## Päivitys: 29.08.2026 16:55
 - **tiedottajanne (Korjaus 1):** Palautettu .liquid-glass ja muut lasipaneelit tummaksi lasiksi (color-mix 3 % valkoinen, blur 14px, #141414 fallback), korjattu tekstikontrastit (>= 4.5:1).
 ----------------------------------------
+
+---
+
+## Päivitys: 29.08.2026 16:55
+- **tiedottajanne (Korjaus 2):** Eristetty osionavigaation pilleririvi omaan overflow-x: auto -säiliöön, asetettu min-w-0 ja lisätty overflow-x: clip body-elementille. Pillerit skrollaavat omassa säiliössään mobiilissa ilman vaakascrollia.
+----------------------------------------

@@ -95,7 +95,7 @@ export default function SoteRoiCalculator() {
         <div className="flex flex-wrap items-center justify-center gap-3">
           <button
             onClick={() => setActiveTab("roi")}
-            className={`px-5 py-3 rounded-full font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 border cursor-pointer ${
+            className={`min-h-[44px] px-5 py-3 rounded-full font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border cursor-pointer focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:outline-none ${
               activeTab === "roi"
                 ? "bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]"
                 : "bg-white/[0.03] text-white/70 border-white/10 hover:border-white/30 hover:text-white"
@@ -107,7 +107,7 @@ export default function SoteRoiCalculator() {
 
           <button
             onClick={() => setActiveTab("quiz")}
-            className={`px-5 py-3 rounded-full font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 border cursor-pointer ${
+            className={`min-h-[44px] px-5 py-3 rounded-full font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border cursor-pointer focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:outline-none ${
               activeTab === "quiz"
                 ? "bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]"
                 : "bg-white/[0.03] text-white/70 border-white/10 hover:border-white/30 hover:text-white"
@@ -119,7 +119,7 @@ export default function SoteRoiCalculator() {
 
           <button
             onClick={() => setActiveTab("newsletter")}
-            className={`px-5 py-3 rounded-full font-semibold text-xs sm:text-sm transition-all flex items-center gap-2 border cursor-pointer ${
+            className={`min-h-[44px] px-5 py-3 rounded-full font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border cursor-pointer focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:outline-none ${
               activeTab === "newsletter"
                 ? "bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]"
                 : "bg-white/[0.03] text-white/70 border-white/10 hover:border-white/30 hover:text-white"
@@ -318,7 +318,7 @@ export default function SoteRoiCalculator() {
                       placeholder="esim. Janne Säkkinen / Klinikka Oy"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.03] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#00d2ff] transition-colors"
+                      className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-white/[0.03] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                     />
                   </div>
 
@@ -330,7 +330,7 @@ export default function SoteRoiCalculator() {
                       placeholder="esim. etunimi@klinikka.fi"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.03] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#00d2ff] transition-colors"
+                      className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-white/[0.03] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                     />
                   </div>
                 </div>
@@ -340,7 +340,7 @@ export default function SoteRoiCalculator() {
                   <select
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
-                    className="w-full px-4 py-3.5 rounded-2xl bg-[#0c0c0c] border border-white/15 text-sm text-white focus:outline-none focus:border-[#00d2ff] transition-colors"
+                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-[#0c0c0c] border border-white/15 text-sm text-white focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                   >
                     <option value="SOTE-yritys / Klinikka">SOTE-yritys / Klinikka</option>
                     <option value="Fysioterapeutti / Osteopaatti">Fysioterapeutti / Osteopaatti</option>
@@ -357,16 +357,16 @@ export default function SoteRoiCalculator() {
                     placeholder="Esim. Haluamme koulutuksen henkilöstöllemme / Olen kiinnostunut yhteistyöstä..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.03] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#00d2ff] transition-colors"
+                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-white/[0.03] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full py-4 px-6 rounded-full bg-white text-black font-semibold text-sm hover:bg-white/90 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 hover:scale-[1.01] active:scale-[0.99]"
+                  className="w-full min-h-[44px] py-3.5 px-6 rounded-full bg-white text-black font-semibold text-sm hover:bg-white/90 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 hover:scale-[1.01] active:scale-[0.99] focus-visible:ring-2 focus-visible:ring-[#00d2ff] focus-visible:outline-none"
                 >
-                  <Send className="w-4 h-4 text-black" />
+                  <Send className="w-4 h-4 text-black shrink-0" />
                   <span>{isLoading ? "Lähetetään..." : "Liity postituslistalle / Lähetä yhteistyöpyyntö"}</span>
                 </button>
 
