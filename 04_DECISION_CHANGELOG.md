@@ -63,3 +63,9 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevis
 ## Päivitys: 29.08.2026 16:56
 - **tiedottajanne (Korjaus 3):** Kasvatettu kaikkien interaktiivisten elementtien (uutiskirjelomake, osionavigaation pillerit, footer-linkit, ROI-laskurin välilehdet) kosketusala vähintään 44 px korkeaksi sekä lisätty näkyvä :focus-visible-tila saavutettavuuden varmistamiseksi.
 ----------------------------------------
+
+---
+
+## Päivitys: 29.08.2026 18:13
+- **tiedottajanne (Kontrastiauditointi):** Ajettu käyttäjän selaimen kontrastiskripti headless Playwright-selaimella kaikissa näkymissä (mobiili 375px + desktop 1280px, vaalea + tumma teema). Korjattu kaikki havaitut poikkeamat -> 0 kontrastivirhettä (KOKONAISKONTRASTIVIRHEET: 0).
+----------------------------------------
