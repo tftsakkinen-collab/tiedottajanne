@@ -1,6 +1,4 @@
-@import "../design-system/brand.sakkinen.css";
-@import "../design-system/base.css";
-@import "../design-system/mobile.css";
+@import "../design-system/index.css";
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +6,7 @@
 
 /* Gradient Text Utilities */
 .text-gradient-cyan {
-  background: linear-gradient(135deg, var(--text) 20%, #a5f3fc 70%, var(--accent) 100%);
+  background: linear-gradient(135deg, var(--text) 20%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -28,7 +26,7 @@
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   border: 2px solid var(--bg);
 }
 ::-webkit-scrollbar-thumb:hover {

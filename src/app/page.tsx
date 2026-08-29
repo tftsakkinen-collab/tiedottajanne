@@ -6,6 +6,7 @@ import ChannelReferences from "@/components/ChannelReferences";
 import SoteRoiCalculator from "@/components/SoteRoiCalculator";
 import ConsultingBookingSection from "@/components/ConsultingBookingSection";
 import SectionNav from "@/components/SectionNav";
+import SocialStatsErrorBoundary from "@/components/SocialStatsErrorBoundary";
 
 export default function Home() {
   return (
@@ -20,12 +21,16 @@ export default function Home() {
 
       {/* Section 2: Proof of Work */}
       <section id="projektit">
-        <ProofOfWork />
+        <SocialStatsErrorBoundary>
+          <ProofOfWork />
+        </SocialStatsErrorBoundary>
       </section>
 
       {/* Section 3: Videot & AEO + Referenssit */}
       <section id="videot">
-        <LatestVideosAeo />
+        <SocialStatsErrorBoundary>
+          <LatestVideosAeo />
+        </SocialStatsErrorBoundary>
         <ChannelReferences />
       </section>
 

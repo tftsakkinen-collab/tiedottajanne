@@ -29,12 +29,12 @@ export default function LatestVideosAeo() {
     fetch("/api/social-stats")
       .then((res) => res.json())
       .then((data) => {
-        if (data?.youtube?.channels) {
-          const tCh = data.youtube.channels.find((c: ChannelData) => c.handle === "@tiedottajanne");
-          const ftCh = data.youtube.channels.find((c: ChannelData) => c.handle === "@ft_sakkinen");
+        if (Array.isArray(data?.youtube?.channels)) {
+          const tCh = data.youtube.channels.find((c: ChannelData) => c?.handle === "@tiedottajanne");
+          const ftCh = data.youtube.channels.find((c: ChannelData) => c?.handle === "@ft_sakkinen");
 
-          if (tCh?.latestVideos) setTiedottajanneVideos(tCh.latestVideos);
-          if (ftCh?.latestVideos) setFtSakkinenVideos(ftCh.latestVideos);
+          if (Array.isArray(tCh?.latestVideos)) setTiedottajanneVideos(tCh.latestVideos);
+          if (Array.isArray(ftCh?.latestVideos)) setFtSakkinenVideos(ftCh.latestVideos);
         }
       })
       .catch(() => {})
@@ -42,12 +42,12 @@ export default function LatestVideosAeo() {
   }, []);
 
   // Combine top latest videos from both channels
-  const allLatestVideos = [...tiedottajanneVideos, ...ftSakkinenVideos].slice(0, 6);
+  const allLatestVideos = [...(Array.isArray(tiedottajanneVideos) ? tiedottajanneVideos : []), ...(Array.isArray(ftSakkinenVideos) ? ftSakkinenVideos : [])].slice(0, 6);
 
   // Generate dynamic Schema.org VideoObject JSON-LD for AI & Search indexing
   const jsonLdData = {
     "@context": "https://schema.org",
-    "@graph": allLatestVideos.map((vid) => ({
+    "@graph": (Array.isArray(allLatestVideos) ? allLatestVideos : []).map((vid) => ({
       "@type": "VideoObject",
       "name": vid.title,
       "description": `Janne Säkkinen (Tiedottajanne Oy) SOTE-alan videotuotanto & asiantuntijaviestintä: ${vid.title}`,
@@ -98,8 +98,8 @@ export default function LatestVideosAeo() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[var(--border)] pb-8">
           <div className="space-y-3.5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider">
-              <Youtube className="w-4 h-4" />
+            <div className="pill tracking-wider uppercase">
+              <Youtube className="w-4 h-4 text-[var(--danger)]" />
               <span>Automaattisesti Indeksoituva Videofeed</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text)] font-display">
@@ -114,11 +114,11 @@ export default function LatestVideosAeo() {
             href="https://www.youtube.com/@tiedottajanne"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-xs sm:text-sm transition-all shadow-md shrink-0 hover:scale-[1.02] active:scale-[0.98] min-h-[44px]"
+            className="btn btn--primary px-5 py-3 text-xs sm:text-sm shrink-0 shadow-md"
           >
-            <Youtube className="w-4 h-4" />
+            <Youtube className="w-4 h-4 text-[var(--accent-ink)]" />
             <span>Tilaa @tiedottajanne YouTubessa</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-[var(--accent-ink)]" />
           </a>
         </div>
 
@@ -168,7 +168,7 @@ export default function LatestVideosAeo() {
                   </div>
 
                   <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-[var(--muted)]">
-                    <span className="flex items-center gap-1.5 text-emerald-400 font-mono text-xs">
+                    <span className="flex items-center gap-1.5 text-[var(--success)] font-mono text-xs font-semibold">
                       <CheckCircle2 className="w-4 h-4" />
                       Indeksoitu tekoälylle
                     </span>

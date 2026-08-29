@@ -58,7 +58,7 @@ export default function ServicesAndTraining() {
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-semibold tracking-wider uppercase">
+          <div className="pill tracking-wider uppercase">
             <GraduationCap className="w-4 h-4 text-[var(--accent)]" />
             <span>Koulutus- &amp; Valmennuspaketit</span>
           </div>
@@ -84,7 +84,7 @@ export default function ServicesAndTraining() {
                     <div className="w-12 h-12 rounded-2xl bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--accent)] flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-mono font-semibold">
+                    <span className="pill text-xs font-mono font-semibold">
                       {pkg.badge}
                     </span>
                   </div>
@@ -119,10 +119,10 @@ export default function ServicesAndTraining() {
 
                   <Link
                     href="/yhteystiedot"
-                    className="w-full py-3.5 px-4 rounded-2xl bg-[var(--text)] text-[var(--bg)] font-semibold text-xs sm:text-sm hover:opacity-90 transition-all flex items-center justify-center gap-2 group-hover:shadow-md min-h-[44px]"
+                    className="btn btn--primary w-full py-3.5 px-4 text-xs sm:text-sm"
                   >
                     <span>Pyydä Tarjous &amp; Lisätiedot</span>
-                    <ArrowRight className="w-4 h-4 text-[var(--bg)]" />
+                    <ArrowRight className="w-4 h-4 text-[var(--accent-ink)]" />
                   </Link>
                 </div>
               </div>

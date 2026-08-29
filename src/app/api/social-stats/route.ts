@@ -2,6 +2,70 @@ import { NextResponse } from "next/server";
 
 export const revalidate = 3600; // Revalidate every 1 hour
 
+const FALLBACK_STATS = {
+  timestamp: new Date().toISOString(),
+  youtubeFtSakkinen: {
+    subscribers: "5 380+",
+    views: "1 100 000+",
+    videos: "350+",
+  },
+  youtubePtSakkinen: {
+    subscribers: "Global",
+    views: "150 000+",
+  },
+  combinedTotalViews: "1 250 000+",
+  youtube: {
+    totalViews: "1 150 000+",
+    viewsGrowth: "+145 %",
+    subscribers: "5 380+",
+    subscribersGrowth: "+85 %",
+    searchSeoShare: "92 %",
+    engagementRate: "8.4 %",
+    channels: [
+      {
+        name: "Tiedottajanne Oy",
+        handle: "@tiedottajanne",
+        channelId: "UC1Duj0lp5i-LVWhH2LwfAcg",
+        platform: "YouTube",
+        role: "SOTE Videotuotanto & AI",
+        latestVideos: [],
+      },
+      {
+        name: "FT Säkkinen (FI)",
+        handle: "@ft_sakkinen",
+        channelId: "UCz0XuTDgzskIDlzSrZFxsBg",
+        platform: "YouTube",
+        role: "Suomenkielinen pääkanava",
+        latestVideos: [],
+      },
+      {
+        name: "PT Sakkinen (EN)",
+        handle: "@pt_sakkinen",
+        channelId: "UCbIWSnSD_k3YoTQSqrzi5Bw",
+        platform: "YouTube",
+        role: "Kansainvälinen fysioterapian kanava",
+        latestVideos: [],
+      },
+    ],
+  },
+  instagram: {
+    handle: "@sakkinenjanne",
+    handleEn: "@ptsakkinen",
+    estimatedMonthlyReach: "150 000+",
+    reachGrowth: "+120 %",
+    profileVisitsGrowth: "+65 %",
+    contentType: "Reels & Kliiniset mikro-oppaat",
+  },
+  tiktok: {
+    handle: "@sakkinenjanne",
+    handleEn: "@ptsakkinen",
+    estimatedMonthlyViews: "200 000+",
+    viewsGrowth: "+210 %",
+    savesGrowth: "+180 %",
+    contentType: "Shorts & Ergonomiavinkit",
+  },
+};
+
 export async function GET() {
   try {
     const channels = [
@@ -68,36 +132,16 @@ export async function GET() {
     );
 
     const statsData = {
+      ...FALLBACK_STATS,
       timestamp: new Date().toISOString(),
       youtube: {
-        totalViews: "1 150 000+",
-        viewsGrowth: "+145 %",
-        subscribers: "5 380+",
-        subscribersGrowth: "+85 %",
-        searchSeoShare: "92 %",
-        engagementRate: "8.4 %",
+        ...FALLBACK_STATS.youtube,
         channels: results,
-      },
-      instagram: {
-        handle: "@sakkinenjanne",
-        handleEn: "@ptsakkinen",
-        estimatedMonthlyReach: "150 000+",
-        reachGrowth: "+120 %",
-        profileVisitsGrowth: "+65 %",
-        contentType: "Reels & Kliiniset mikro-oppaat",
-      },
-      tiktok: {
-        handle: "@sakkinenjanne",
-        handleEn: "@ptsakkinen",
-        estimatedMonthlyViews: "200 000+",
-        viewsGrowth: "+210 %",
-        savesGrowth: "+180 %",
-        contentType: "Shorts & Ergonomiavinkit",
       },
     };
 
     return NextResponse.json(statsData);
   } catch {
-    return NextResponse.json({ error: "Failed to fetch stats" }, { status: 500 });
+    return NextResponse.json(FALLBACK_STATS);
   }
 }

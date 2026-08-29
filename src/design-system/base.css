@@ -1,59 +1,47 @@
-html {
-  scroll-behavior: smooth;
-}
-
+/* design-system/base.css — perusrytmi */
 body {
-  background-color: var(--bg);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  background: var(--bg);
   color: var(--text);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+h1 { font-size: var(--step-4); }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
+h4 { font-size: var(--step-1); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.section {
+  padding-block: clamp(2.5rem, 8vw, 5rem);
+  position: relative;
   overflow-x: clip;
-  margin: 0;
-  padding: 0;
 }
 
-.glass {
-  background: color-mix(in oklab, #ffffff 3%, transparent);
-  backdrop-filter: blur(var(--glass-blur, 14px));
-  -webkit-backdrop-filter: blur(var(--glass-blur, 14px));
-  border: 1px solid color-mix(in oklab, #ffffff 8%, transparent);
-  border-radius: var(--radius, 0.875rem);
+.container {
+  width: min(100% - 2 * clamp(1rem, 5vw, 2.5rem), 72rem);
+  margin-inline: auto;
 }
 
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .glass {
-    background: var(--surface-elevated, #141414);
-  }
+a, button, [role="button"], input, select, textarea, summary {
+  min-height: 44px;
 }
 
-/* Backward compatibility mapping legacy glass classes */
-.liquid-glass,
-.glass-panel,
-.glass-pill {
-  background: color-mix(in oklab, #ffffff 3%, transparent);
-  backdrop-filter: blur(var(--glass-blur, 14px));
-  -webkit-backdrop-filter: blur(var(--glass-blur, 14px));
-  border: 1px solid color-mix(in oklab, #ffffff 8%, transparent);
-  border-radius: var(--radius, 0.875rem);
+button, [role="button"], .icon-btn {
+  min-width: 44px;
 }
 
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .liquid-glass,
-  .glass-panel,
-  .glass-pill {
-    background: var(--surface-elevated, #141414);
-  }
+html, body {
+  overflow-x: clip;
 }
 
-/* Scroll reveal defaults - visible by default in SSR */
-[data-reveal] {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1), transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
-    transition: none !important;
-    transform: none !important;
-  }
+.text-gradient-cyan {
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

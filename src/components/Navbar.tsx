@@ -72,9 +72,9 @@ export default function Navbar() {
             </a>
             <Link
               href="/yhteystiedot"
-              className="px-5 py-2.5 rounded-xl bg-[var(--text)] text-[var(--bg)] font-semibold text-xs sm:text-sm hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md flex items-center gap-2 whitespace-nowrap min-h-[44px]"
+              className="btn btn--primary px-5 py-2.5 text-xs sm:text-sm flex items-center gap-2 whitespace-nowrap"
             >
-              <Send className="w-4 h-4 text-[var(--bg)]" />
+              <Send className="w-4 h-4 text-[var(--accent-ink)]" />
               <span>Pyydä Koulutustarjous</span>
             </Link>
           </div>

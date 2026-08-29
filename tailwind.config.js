@@ -10,13 +10,16 @@ module.exports = {
       colors: {
         bg: "var(--bg)",
         surface: "var(--surface)",
+        "surface-2": "var(--surface-2)",
         "surface-elevated": "var(--surface-elevated)",
         text: "var(--text)",
+        "text-muted": "var(--text-muted)",
         muted: "var(--muted)",
         border: "var(--border)",
         accent: {
           DEFAULT: "var(--accent)",
           ink: "var(--accent-ink)",
+          quiet: "var(--accent-quiet)",
           2: "var(--accent-2)",
         },
         primary: {
@@ -24,9 +27,20 @@ module.exports = {
           ink: "var(--accent-ink)",
         },
       },
+      borderRadius: {
+        sm: "var(--radius-sm)",
+        DEFAULT: "var(--radius)",
+        md: "var(--radius)",
+        lg: "var(--radius)",
+        xl: "var(--radius)",
+        "2xl": "var(--radius)",
+        "3xl": "var(--radius)",
+        pill: "var(--radius-pill)",
+        full: "var(--radius-pill)",
+      },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-heading)", "system-ui", "sans-serif"],
+        sans: ["var(--font-body)", "var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-heading)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       boxShadow: {

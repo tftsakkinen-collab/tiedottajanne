@@ -5,8 +5,6 @@ import Image from "next/image";
 import { 
   Youtube, 
   TrendingUp, 
-  Eye, 
-  Users, 
   Award, 
   CheckCircle2, 
   ArrowUpRight,
@@ -16,21 +14,25 @@ import {
 } from "lucide-react";
 
 interface SocialStats {
-  youtubeFtSakkinen: {
-    subscribers: string;
-    views: string;
-    videos: string;
+  youtubeFtSakkinen?: {
+    subscribers?: string;
+    views?: string;
+    videos?: string;
   };
-  youtubePtSakkinen: {
-    subscribers: string;
-    views: string;
+  youtubePtSakkinen?: {
+    subscribers?: string;
+    views?: string;
   };
-  tiktok: {
-    estimatedMonthlyViews: string;
-    viewsGrowth: string;
-    savesGrowth: string;
+  youtube?: {
+    totalViews?: string;
+    subscribers?: string;
   };
-  combinedTotalViews: string;
+  tiktok?: {
+    estimatedMonthlyViews?: string;
+    viewsGrowth?: string;
+    savesGrowth?: string;
+  };
+  combinedTotalViews?: string;
 }
 
 const GALLERY_PHOTOS = [
@@ -52,32 +54,37 @@ const GALLERY_PHOTOS = [
   },
 ];
 
+const DEFAULT_STATS: SocialStats = {
+  youtubeFtSakkinen: {
+    subscribers: "1 150+",
+    views: "1 100 000+",
+    videos: "350+",
+  },
+  youtubePtSakkinen: {
+    subscribers: "Global",
+    views: "150 000+",
+  },
+  tiktok: {
+    estimatedMonthlyViews: "200 000+",
+    viewsGrowth: "+210 %",
+    savesGrowth: "+180 %",
+  },
+  combinedTotalViews: "1,5M+",
+};
+
 export default function ProofOfWork() {
-  const [stats, setStats] = useState<SocialStats | null>(null);
+  const [stats, setStats] = useState<SocialStats>(DEFAULT_STATS);
 
   useEffect(() => {
     fetch("/api/social-stats")
       .then((res) => res.json())
-      .then((data) => setStats(data))
+      .then((data) => {
+        if (data && typeof data === "object") {
+          setStats((prev) => ({ ...prev, ...data }));
+        }
+      })
       .catch(() => {
-        // Fallback default stats
-        setStats({
-          youtubeFtSakkinen: {
-            subscribers: "1 150+",
-            views: "1 100 000+",
-            videos: "350+",
-          },
-          youtubePtSakkinen: {
-            subscribers: "Global",
-            views: "150 000+",
-          },
-          tiktok: {
-            estimatedMonthlyViews: "200 000+",
-            viewsGrowth: "+210 %",
-            savesGrowth: "+180 %",
-          },
-          combinedTotalViews: "1,5M+",
-        });
+        setStats(DEFAULT_STATS);
       });
   }, []);
 
@@ -125,7 +132,7 @@ export default function ProofOfWork() {
 
               <div>
                 <div className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text)] font-display">
-                  {stats?.youtubeFtSakkinen.views || "1 100 000+"}
+                  {stats?.youtubeFtSakkinen?.views ?? stats?.youtube?.totalViews ?? "1 100 000+"}
                 </div>
                 <div className="text-xs text-[var(--muted)] mt-1 font-medium">Katselukertaa yhteensä</div>
               </div>
@@ -134,11 +141,11 @@ export default function ProofOfWork() {
             <div className="pt-4 border-t border-[var(--border)] space-y-2.5 text-xs text-[var(--muted)]">
               <div className="flex items-center justify-between">
                 <span>Tilaajia:</span>
-                <span className="font-semibold text-[var(--text)]">{stats?.youtubeFtSakkinen.subscribers || "1 150+"}</span>
+                <span className="font-semibold text-[var(--text)]">{stats?.youtubeFtSakkinen?.subscribers ?? stats?.youtube?.subscribers ?? "1 150+"}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Julkaistuja videoita:</span>
-                <span className="font-semibold text-[var(--text)]">{stats?.youtubeFtSakkinen.videos || "350+"}</span>
+                <span className="font-semibold text-[var(--text)]">{stats?.youtubeFtSakkinen?.videos ?? "350+"}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Kohderyhmä:</span>
@@ -164,7 +171,7 @@ export default function ProofOfWork() {
 
               <div>
                 <div className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text)] font-display">
-                  {stats?.youtubePtSakkinen.views || "150 000+"}
+                  {stats?.youtubePtSakkinen?.views ?? "150 000+"}
                 </div>
                 <div className="text-xs text-[var(--muted)] mt-1 font-medium">Katselukertaa kansainvälisesti</div>
               </div>
@@ -196,15 +203,15 @@ export default function ProofOfWork() {
                   </div>
                   <span className="text-xs font-semibold text-[var(--text)] tracking-wide">TikTok &amp; Shorts</span>
                 </div>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--success)]/10 border border-[var(--success)]/30 text-[var(--success)] text-xs font-mono font-semibold">
                   <ArrowUpRight className="w-3.5 h-3.5" />
-                  {stats?.tiktok.viewsGrowth || "+210 %"}
+                  {stats?.tiktok?.viewsGrowth ?? "+210 %"}
                 </span>
               </div>
 
               <div>
                 <div className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--text)] font-display">
-                  {stats?.tiktok.estimatedMonthlyViews || "200 000+"}
+                  {stats?.tiktok?.estimatedMonthlyViews ?? "200 000+"}
                 </div>
                 <div className="text-xs text-[var(--muted)] mt-1 font-medium">Katselukertaa kuukaudessa</div>
               </div>
@@ -213,7 +220,7 @@ export default function ProofOfWork() {
             <div className="pt-4 border-t border-[var(--border)] space-y-2.5 text-xs text-[var(--muted)]">
               <div className="flex items-center justify-between">
                 <span>Tallennukset &amp; jakelut:</span>
-                <span className="font-semibold text-emerald-400">{stats?.tiktok.savesGrowth || "+180 %"}</span>
+                <span className="font-semibold text-[var(--success)]">{stats?.tiktok?.savesGrowth ?? "+180 %"}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Kanavat:</span>
@@ -240,7 +247,7 @@ export default function ProofOfWork() {
                 <h3 className="text-xl sm:text-2xl font-bold text-[var(--text)] tracking-tight font-display">Somen orgaaninen kasvu &amp; mitattavat tulokset</h3>
               </div>
             </div>
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-400 text-xs font-medium">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[var(--success)]/10 border border-[var(--success)]/30 text-[var(--success)] text-xs font-medium">
               <Sparkles className="w-3.5 h-3.5" />
               Säännöllisesti todennettu data
             </span>
@@ -248,11 +255,11 @@ export default function ProofOfWork() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5">
-              <span className="text-2xl sm:text-3xl font-bold font-display text-emerald-400">+145 %</span>
+              <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--success)]">+145 %</span>
               <span className="text-xs text-[var(--muted)] block font-medium">Orgaaninen katselukasvu</span>
             </div>
             <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5">
-              <span className="text-2xl sm:text-3xl font-bold font-display text-emerald-400">+85 %</span>
+              <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--success)]">+85 %</span>
               <span className="text-xs text-[var(--muted)] block font-medium">Kuukausittainen tilaajanousu</span>
             </div>
             <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5">
@@ -260,7 +267,7 @@ export default function ProofOfWork() {
               <span className="text-xs text-[var(--muted)] block font-medium">Hakukonenäkyvyys (SEO)</span>
             </div>
             <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5">
-              <span className="text-2xl sm:text-3xl font-bold font-display text-amber-400">8.4 %</span>
+              <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--warning)]">8.4 %</span>
               <span className="text-xs text-[var(--muted)] block font-medium">Sitoutumisaste (Engagement)</span>
             </div>
           </div>
