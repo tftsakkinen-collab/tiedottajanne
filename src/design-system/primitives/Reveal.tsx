@@ -1,31 +1,53 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { initScrollReveal } from "../motion/observer";
+import React, { useEffect, useRef, useState } from "react";
 
-interface RevealProps extends React.HTMLAttributes<HTMLDivElement> {
+interface RevealProps {
   children: React.ReactNode;
   className?: string;
-  delayMs?: number;
+  delay?: number;
 }
 
-export function Reveal({ children, className = "", delayMs = 0, ...props }: RevealProps) {
+export const Reveal: React.FC<RevealProps> = ({ children, className = "", delay }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const cleanup = initScrollReveal();
-    return () => cleanup();
+    if (typeof window === "undefined") return;
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div
       ref={ref}
-      data-reveal
-      className={`transition-all duration-300 ${className}`}
-      style={{ transitionDelay: delayMs ? `${delayMs}ms` : undefined }}
-      {...props}
+      className={`transition-all duration-300 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-90 translate-y-2"
+      } ${className}`}
     >
       {children}
     </div>
   );
-}
+};
+
+export default Reveal;

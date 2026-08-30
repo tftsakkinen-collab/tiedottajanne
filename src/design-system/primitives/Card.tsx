@@ -1,17 +1,28 @@
 import React from "react";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CardProps {
   children: React.ReactNode;
   className?: string;
+  hoverable?: boolean;
+  variant?: "default" | "glass" | "surface";
 }
 
-export function Card({ children, className = "", ...props }: CardProps) {
+export const Card: React.FC<CardProps> = ({
+  children,
+  className = "",
+  hoverable = true,
+  variant = "default",
+}) => {
+  const bgClass = variant === "glass" ? "glass" : "bg-[var(--surface)]";
   return (
     <div
-      className={`bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius)] p-6 transition-all duration-200 ${className}`}
-      {...props}
+      className={`${bgClass} text-[var(--text)] border border-[var(--border)] rounded-[var(--radius)] p-6 transition-all duration-200 ${
+        hoverable ? "hover:border-[var(--primary)] hover:shadow-lg hover:-translate-y-0.5" : ""
+      } ${className}`}
     >
       {children}
     </div>
   );
-}
+};
+
+export default Card;

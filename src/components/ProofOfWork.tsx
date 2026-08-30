@@ -80,7 +80,23 @@ export default function ProofOfWork() {
       .then((res) => res.json())
       .then((data) => {
         if (data && typeof data === "object") {
-          setStats((prev) => ({ ...prev, ...data }));
+          setStats({
+            youtubeFtSakkinen: {
+              subscribers: data?.youtubeFtSakkinen?.subscribers ?? DEFAULT_STATS.youtubeFtSakkinen?.subscribers ?? "1 150+",
+              views: data?.youtubeFtSakkinen?.views ?? data?.youtube?.totalViews ?? DEFAULT_STATS.youtubeFtSakkinen?.views ?? "1 100 000+",
+              videos: data?.youtubeFtSakkinen?.videos ?? DEFAULT_STATS.youtubeFtSakkinen?.videos ?? "350+",
+            },
+            youtubePtSakkinen: {
+              subscribers: data?.youtubePtSakkinen?.subscribers ?? DEFAULT_STATS.youtubePtSakkinen?.subscribers ?? "Global",
+              views: data?.youtubePtSakkinen?.views ?? DEFAULT_STATS.youtubePtSakkinen?.views ?? "150 000+",
+            },
+            tiktok: {
+              estimatedMonthlyViews: data?.tiktok?.estimatedMonthlyViews ?? DEFAULT_STATS.tiktok?.estimatedMonthlyViews ?? "200 000+",
+              viewsGrowth: data?.tiktok?.viewsGrowth ?? DEFAULT_STATS.tiktok?.viewsGrowth ?? "+210 %",
+              savesGrowth: data?.tiktok?.savesGrowth ?? DEFAULT_STATS.tiktok?.savesGrowth ?? "+180 %",
+            },
+            combinedTotalViews: data?.combinedTotalViews ?? DEFAULT_STATS.combinedTotalViews ?? "1,5M+",
+          });
         }
       })
       .catch(() => {

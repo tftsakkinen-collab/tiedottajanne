@@ -1,30 +1,22 @@
 import React from "react";
 
-interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ContainerProps {
   children: React.ReactNode;
   className?: string;
-  size?: "narrow" | "default" | "wide" | "full";
+  size?: "sm" | "md" | "lg" | "full";
 }
 
-export function Container({
+export const Container: React.FC<ContainerProps> = ({
   children,
   className = "",
-  size = "default",
-  ...props
-}: ContainerProps) {
-  const sizeMap = {
-    narrow: "max-w-4xl",
-    default: "max-w-6xl",
-    wide: "max-w-7xl",
-    full: "max-w-[1440px]",
-  };
-
+  size,
+}) => {
+  const sizeClass = size === "full" ? "w-full max-w-none px-4" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full";
   return (
-    <div
-      className={`w-full mx-auto px-4 sm:px-6 lg:px-8 ${sizeMap[size]} ${className}`}
-      {...props}
-    >
+    <div className={`${sizeClass} ${className}`}>
       {children}
     </div>
   );
-}
+};
+
+export default Container;

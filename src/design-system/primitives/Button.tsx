@@ -1,55 +1,49 @@
 import React from "react";
-import Link from "next/link";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "destructive";
   size?: "sm" | "md" | "lg";
-  href?: string;
   children: React.ReactNode;
   className?: string;
 }
 
-export function Button({
+export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   size = "md",
-  href,
   children,
   className = "",
   ...props
-}: ButtonProps) {
-  const baseStyles =
-    "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 active:scale-[0.98]";
+}) => {
+  const baseStyle =
+    "inline-flex items-center justify-center font-bold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--ring)] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
 
-  const variantStyles = {
+  const variants = {
     primary:
-      "bg-[var(--primary)] text-[var(--primary-ink)] hover:opacity-90 shadow-md hover:shadow-lg",
+      "bg-[var(--primary)] text-[var(--primary-ink)] hover:brightness-110 shadow-[0_0_20px_oklch(72%_0.13_230_/_0.3)]",
     secondary:
-      "bg-[var(--surface)] text-[var(--text)] border border-[var(--border)] hover:bg-[var(--border)]",
+      "bg-[var(--surface)] text-[var(--text)] border border-[var(--border)] hover:border-[var(--primary)] hover:bg-[var(--surface)]/80",
     outline:
-      "border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-[var(--primary-ink)]",
+      "bg-transparent text-[var(--primary)] border border-[var(--primary)] hover:bg-[var(--primary)]/10",
     ghost:
-      "text-[var(--text)] hover:bg-[var(--surface)]",
+      "bg-transparent text-[var(--text)] hover:bg-[var(--surface)]/50",
+    destructive:
+      "bg-red-600 text-white hover:bg-red-700 shadow-md",
   };
 
-  const sizeStyles = {
-    sm: "px-4 py-2 text-xs gap-1.5",
-    md: "px-6 py-3 text-sm sm:text-base gap-2",
-    lg: "px-8 py-4 text-base font-bold gap-2.5",
+  const sizes = {
+    sm: "min-h-[44px] px-4 py-2 text-xs rounded-lg gap-1.5",
+    md: "min-h-[48px] px-6 py-3 text-sm rounded-xl gap-2",
+    lg: "min-h-[52px] px-8 py-4 text-base rounded-2xl gap-2.5",
   };
-
-  const combinedClass = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
-
-  if (href) {
-    return (
-      <Link href={href} className={combinedClass}>
-        {children}
-      </Link>
-    );
-  }
 
   return (
-    <button className={combinedClass} {...props}>
+    <button
+      className={`${baseStyle} ${variants[variant]} ${sizes[size]} ${className}`}
+      {...props}
+    >
       {children}
     </button>
   );
-}
+};
+
+export default Button;

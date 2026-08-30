@@ -11,7 +11,7 @@ interface State {
   hasError: boolean;
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
   };
@@ -21,18 +21,16 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("ErrorBoundary caught an error:", error, errorInfo);
+    console.warn("Caught component error in ErrorBoundary:", error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="p-4 rounded-xl bg-[var(--surface-elevated)] border border-[var(--border)] text-xs text-[var(--muted)]">
-          Osion lataus epäonnistui tilapäisesti.
-        </div>
-      );
+      return this.props.fallback || null;
     }
 
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;

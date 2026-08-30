@@ -1,39 +1,36 @@
-/**
- * IntersectionObserver utility for data-reveal elements.
- * T0: CSS 150-240ms
- * T1: [data-reveal] default visible + IO utility (reduced-motion -> instant)
- */
-export function initScrollReveal(): () => void {
-  if (typeof window === "undefined") return () => {};
+"use client";
 
-  // Check prefers-reduced-motion
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  
-  const revealElements = document.querySelectorAll<HTMLElement>("[data-reveal]");
+import { useEffect } from "react";
 
-  if (prefersReducedMotion) {
-    revealElements.forEach((el) => el.classList.add("in"));
-    return () => {};
-  }
+export function useRevealObserver() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          observer.unobserve(entry.target);
-        }
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const elements = document.querySelectorAll("[data-reveal]");
+    
+    if (prefersReducedMotion) {
+      elements.forEach((el) => {
+        el.setAttribute("data-visible", "true");
       });
-    },
-    {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+      return;
     }
-  );
 
-  revealElements.forEach((el) => observer.observe(el));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.setAttribute("data-visible", "true");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  return () => {
-    observer.disconnect();
-  };
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 }
