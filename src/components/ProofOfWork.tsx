@@ -37,19 +37,19 @@ interface SocialStats {
 
 const GALLERY_PHOTOS = [
   {
-    src: "/images/valmennus_1.jpg",
+    src: "/assets/Janne_0705_2022-2196.jpg",
     alt: "Janne Säkkinen kouluttamassa SOTE-ammattilaisia",
   },
   {
-    src: "/images/valmennus_2.jpg",
+    src: "/assets/Janne_0705_2022-2201.jpg",
     alt: "OMT-fysioterapeutti Janne Säkkinen videokuvauksissa",
   },
   {
-    src: "/images/valmennus_3.jpg",
+    src: "/assets/Janne_0705_2022-2226.jpg",
     alt: "Tekoälyvideotuotannon työpaja terveydenhuollon asiantuntijoille",
   },
   {
-    src: "/images/valmennus_4.jpg",
+    src: "/assets/DSC09790.jpg",
     alt: "Fysioterapiaviestinnän ja digitaalisen sisällöntuotannon koulutus",
   },
 ];

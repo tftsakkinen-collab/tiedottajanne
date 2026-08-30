@@ -1,4 +1,8 @@
-﻿## Päivitys: 29.08.2026 23:35
+﻿## Päivitys: 30.08.2026 08:56
+- Korjattu valokuvien ja YouTube-pikkukuvien lataus (tiedottajanne): Päivitetty ProofOfWork.tsx:n GALLERY_PHOTOS viittaamaan olemassa oleviin public/assets/ -kuviin /images/ sijaan, ja määritelty YouTube-kuvadomainit (img.youtube.com & i.ytimg.com) next.config.mjs:n remotePatterns-konfiguraatioon.
+- Auditointi: AA-kontrastitestaus 0 virhettä kaikissa näkymissä.
+--------------------------------------------------
+## Päivitys: 29.08.2026 23:35
 - P0-Triage virheenkorjaus (tiedottajanne): Toteutettu React SocialStatsErrorBoundary ja valinnaisketjutustarkistukset /api/social-stats -reitille ja metriikkakomponenteille (ProofOfWork & LatestVideosAeo).
 - Yhtenäistetty ilmekerros (design-system/): Luotu tokens.css, brand.sakkinen.css, primitives.css (.btn, .card, .pill, .glass) ja base.css. Outfit (display) + Inter (body) fonttiarkkitehtuuri ja WCAG AA -kontrastiauditointi (Kontrastivirheitä: 0).
 --------------------------------------------------
@@ -77,4 +81,5 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ ko
 ## PÃ¤ivitys: 29.08.2026 21:16
 Poistettu feature-korttien jÃ¤lkeinen tyhjÃ¤ alue, kytketty SÃ¤kkinen design system OKLCH-tokenit taustoihin, yhtenÃ¤istetty vÃ¤rit, korjattu mobiili kosketusalueet (>=44px) ja auditoitu kontrastit (0 virhettÃ¤).
 --------------------------------------------------
+
 

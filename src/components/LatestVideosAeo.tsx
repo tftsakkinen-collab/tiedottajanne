@@ -141,9 +141,10 @@ export default function LatestVideosAeo() {
               >
                 <div className="relative aspect-video w-full bg-black overflow-hidden">
                   <Image
-                    src={vid.thumbnail}
-                    alt={vid.title}
+                    src={vid.thumbnail || "/assets/Janne_0705_2022-2196.jpg"}
+                    alt={vid.title || "Tiedottajanne Oy video"}
                     fill
+                    unoptimized
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
