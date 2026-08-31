@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Video, Send } from "lucide-react";
+import { Menu, X, Video, Send, Sparkles } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
 
 export default function Navbar() {
@@ -11,27 +11,28 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Palvelut", href: "/#palvelut" },
-    { name: "Työkalut", href: "/tyokalut" },
+    { name: "Etusivu", href: "/" },
+    { name: "Palvelut", href: "/palvelut" },
     { name: "Referenssit", href: "/referenssit" },
+    { name: "Työkalut", href: "/tyokalut" },
     { name: "Yhteystiedot", href: "/yhteystiedot" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[var(--surface)]/80 backdrop-blur-xl border-b border-[var(--border)] transition-all">
+    <header className="sticky top-0 z-50 bg-[#0c0c0c]/80 backdrop-blur-xl border-b border-white/10 transition-all">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3.5 shrink-0 group">
-            <div className="relative w-11 h-11 rounded-2xl border border-[var(--accent)]/40 bg-[var(--surface-elevated)] flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:border-[var(--accent)] transition-all p-1">
-              <Video className="w-5 h-5 text-[var(--accent)] transition-colors" />
+            <div className="relative w-11 h-11 rounded-2xl border border-[#00d2ff]/40 bg-gradient-to-br from-[#00d2ff]/20 via-[#0B2551]/30 to-black flex items-center justify-center shadow-[0_0_20px_rgba(0,210,255,0.25)] group-hover:scale-105 group-hover:border-[#00d2ff] transition-all p-1">
+              <Video className="w-5 h-5 text-[#00d2ff] group-hover:text-white transition-colors" />
             </div>
             <div className="flex flex-col">
-              <span className="font-display text-lg sm:text-xl font-bold tracking-wide text-[var(--text)] group-hover:text-[var(--accent)] transition-colors flex items-center gap-1">
-                TIEDOTTAJANNE<span className="text-[var(--accent)]">.OY</span>
+              <span className="font-display text-lg sm:text-xl font-bold tracking-wide text-white group-hover:text-[#00d2ff] transition-colors flex items-center gap-1">
+                TIEDOTTAJANNE<span className="text-[#00d2ff]">.OY</span>
               </span>
-              <span className="text-[10px] text-[var(--muted)] uppercase tracking-widest font-sans font-medium">
+              <span className="text-[10px] text-white/50 uppercase tracking-widest font-sans font-medium">
                 SOTE-Alan Videotuotanto &amp; AI
               </span>
             </div>
@@ -39,17 +40,17 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex items-center justify-center flex-1 gap-1">
-            <div className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface)] backdrop-blur-md">
+            <div className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-md">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-xs font-semibold px-4 py-1.5 rounded-full transition-all relative ${
+                    className={`text-xs font-semibold px-3.5 py-1.5 rounded-full transition-all relative ${
                       isActive
-                        ? "bg-[var(--accent)]/20 text-[var(--accent)] shadow-sm border border-[var(--accent)]/30"
-                        : "text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--surface-elevated)]"
+                        ? "bg-white/10 text-white shadow-sm border border-white/15"
+                        : "text-white/70 hover:text-white hover:bg-white/[0.05]"
                     }`}
                   >
                     {link.name}
@@ -61,21 +62,12 @@ export default function Navbar() {
 
           {/* Desktop Right Action */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <a
-              href={SITE_CONFIG.youtubeTiedottajanne}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-xs font-medium text-[var(--text)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/10 transition-all min-h-[44px]"
-            >
-              <Video className="w-4 h-4 text-[#ef4444]" />
-              <span>@tiedottajanne</span>
-            </a>
             <Link
               href="/yhteystiedot"
-              className="btn btn--primary px-5 py-2.5 text-xs sm:text-sm flex items-center gap-2 whitespace-nowrap"
+              className="px-5 py-2.5 rounded-xl bg-white text-black font-semibold text-xs sm:text-sm hover:bg-[#00d2ff] hover:text-black hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center gap-2 whitespace-nowrap"
             >
-              <Send className="w-4 h-4 text-[var(--accent-ink)]" />
-              <span>Pyydä Koulutustarjous</span>
+              <Send className="w-4 h-4 text-black" />
+              <span>Tilaa Tuntiohjaus (200 €/h)</span>
             </Link>
           </div>
 
@@ -83,7 +75,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation"
-            className="lg:hidden p-2.5 rounded-xl bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] hover:text-[var(--accent)] transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="lg:hidden p-3 min-h-[48px] min-w-[48px] rounded-xl bg-white/[0.04] border border-white/10 text-white hover:text-[#00d2ff] transition-colors flex items-center justify-center"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -92,7 +84,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[var(--surface)]/95 backdrop-blur-2xl border-b border-[var(--border)] px-6 pt-4 pb-8 space-y-5 animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden bg-[#0c0c0c]/95 backdrop-blur-2xl border-b border-white/10 px-6 pt-4 pb-8 space-y-5 animate-in slide-in-from-top-2 duration-200">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -101,10 +93,10 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all min-h-[44px] flex items-center ${
+                  className={`px-4 py-3.5 rounded-xl text-sm font-medium transition-all min-h-[48px] flex items-center ${
                     isActive
-                      ? "bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30"
-                      : "text-[var(--muted)] hover:bg-[var(--surface-elevated)] hover:text-[var(--text)]"
+                      ? "bg-white/10 text-[#00d2ff] border border-white/15"
+                      : "text-white/70 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   {link.name}
@@ -113,22 +105,13 @@ export default function Navbar() {
             })}
           </nav>
           <div className="pt-2 flex flex-col gap-3">
-            <a
-              href={SITE_CONFIG.youtubeTiedottajanne}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] text-center text-xs font-semibold hover:border-[var(--accent)]/40 hover:text-[var(--accent)] transition-all flex items-center justify-center gap-2 min-h-[44px]"
-            >
-              <Video className="w-4 h-4 text-[#ef4444]" />
-              <span>YouTube: @tiedottajanne</span>
-            </a>
             <Link
               href="/yhteystiedot"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3.5 rounded-xl bg-[var(--text)] text-[var(--bg)] font-semibold text-center text-sm hover:opacity-90 transition-all shadow-lg flex items-center justify-center gap-2 min-h-[44px]"
+              className="w-full py-4 rounded-xl bg-white text-black font-semibold text-center text-sm hover:bg-[#00d2ff] hover:text-black transition-all shadow-lg flex items-center justify-center gap-2 min-h-[48px]"
             >
-              <Send className="w-4 h-4 text-[var(--bg)]" />
-              <span>Pyydä Koulutustarjous</span>
+              <Send className="w-4 h-4 text-black" />
+              <span>Tilaa Tuntiohjaus (200 € / h)</span>
             </Link>
           </div>
         </div>

@@ -27,15 +27,18 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tiedottajanne Oy — Digitaaliset ratkaisut & Teknologia-alustat",
-  description: "Tiedottajanne Oy yhdistää syvän toimialatuntemuksen, modernin tekoälyn ja huippuluokan ohjelmistokehityksen tuotteiksi, jotka ratkaisevat todellisia arjen ongelmia.",
+  title: {
+    default: "Tiedottajanne Oy — SOTE-Alan Videotuotanto & Tekoälyviestintä",
+    template: "%s | Tiedottajanne Oy",
+  },
+  description: "SOTE-alan videotuotantoa, tuotteistetut videokoulutukset ja Google Meet -tuntiohjaus Janne Säkkiseltä. Yli 1,1M orgaanista katselukertaa ja Valvira-etiikka.",
   metadataBase: new URL("https://www.tiedottajanne.fi"),
   alternates: {
     canonical: "https://www.tiedottajanne.fi",
   },
   openGraph: {
-    title: "Tiedottajanne Oy — Digitaaliset ratkaisut & Teknologia-alustat",
-    description: "Miten SOTE-alan ammattilaiset ja terveydenhuollon asiantuntijat rakentavat asiantuntija-auktoriteettia YouTubessa, Instagramissa ja TikTokissa.",
+    title: "Tiedottajanne Oy — SOTE-Alan Videotuotanto & Tekoälyviestintä",
+    description: "Miten SOTE-alan ammattilaiset ja yritykset rakentavat asiantuntija-auktoriteettia YouTubessa, Instagramissa ja tekoälyhakukoneissa.",
     url: "https://www.tiedottajanne.fi",
     siteName: "Tiedottajanne Oy",
     locale: "fi_FI",
