@@ -137,7 +137,7 @@ export default function SoteRoiCalculator() {
                 <label className="text-xs sm:text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
                   Arvioitu kuukausittainen orgaaninen katselumäärä:
                 </label>
-                <span className="text-2xl sm:text-3xl font-bold font-mono text-[var(--accent)]">
+                <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--accent)]">
                   {monthlyViews.toLocaleString("fi-FI")} katselua / kk
                 </span>
               </div>
@@ -151,7 +151,7 @@ export default function SoteRoiCalculator() {
                 onChange={(e) => setMonthlyViews(Number(e.target.value))}
                 className="w-full h-3 bg-[var(--surface)] rounded-lg appearance-none cursor-pointer accent-[var(--accent)] border border-[var(--border)] min-h-[44px]"
               />
-              <div className="flex justify-between text-xs text-[var(--muted)] font-mono">
+              <div className="flex justify-between text-xs text-[var(--muted)] font-medium">
                 <span>5 000 katselua</span>
                 <span>50 000 katselua</span>
                 <span>200 000 katselua (Pääkanavat)</span>
@@ -272,7 +272,7 @@ export default function SoteRoiCalculator() {
 
             {/* Quiz Result Box */}
             <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-center space-y-3">
-              <div className="text-xs uppercase font-mono text-[var(--muted)]">Testituloksesi:</div>
+              <div className="text-xs uppercase font-semibold text-[var(--muted)]">Testituloksesi:</div>
               <div className="text-4xl font-bold font-display text-[var(--accent)]">{calculateScore()} / 100 pistettä</div>
               <p className="text-xs text-[var(--muted)] max-w-md mx-auto leading-relaxed">
                 {calculateScore() >= 80

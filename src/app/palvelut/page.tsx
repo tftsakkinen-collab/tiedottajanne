@@ -122,7 +122,7 @@ export default function PalvelutPage() {
             {faqs.map((faq, i) => (
               <div key={i} className="liquid-glass rounded-2xl p-6 sm:p-8 space-y-2 border border-white/10">
                 <h3 className="text-base sm:text-lg font-bold text-white flex items-start gap-2">
-                  <span className="text-[#00d2ff] font-mono">0{i + 1}.</span>
+                  <span className="text-[#00d2ff] font-display font-bold">0{i + 1}.</span>
                   <span>{faq.q}</span>
                 </h3>
                 <p className="text-sm text-white/70 leading-relaxed pl-6">{faq.a}</p>

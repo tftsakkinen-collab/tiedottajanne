@@ -136,7 +136,7 @@ export default function ProofOfWork() {
                   </div>
                   <span className="text-xs font-semibold text-[var(--text)] tracking-wide">YouTube: @ft_sakkinen</span>
                 </div>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-mono font-semibold">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-semibold">
                   <Award className="w-3.5 h-3.5" />
                   Pääkanava (FI)
                 </span>
@@ -176,7 +176,7 @@ export default function ProofOfWork() {
                   </div>
                   <span className="text-xs font-semibold text-[var(--text)] tracking-wide">YouTube: @pt_sakkinen</span>
                 </div>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] text-xs font-mono font-semibold">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] text-xs font-semibold">
                   Global (EN)
                 </span>
               </div>
@@ -215,7 +215,7 @@ export default function ProofOfWork() {
                   </div>
                   <span className="text-xs font-semibold text-[var(--text)] tracking-wide">TikTok &amp; Shorts</span>
                 </div>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--success)]/10 border border-[var(--success)]/30 text-[var(--success)] text-xs font-mono font-semibold">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--success)]/10 border border-[var(--success)]/30 text-[var(--success)] text-xs font-semibold">
                   <ArrowUpRight className="w-3.5 h-3.5" />
                   {stats?.tiktok?.viewsGrowth ?? "+210 %"}
                 </span>
@@ -293,7 +293,7 @@ export default function ProofOfWork() {
                 Valmennukset &amp; asiantuntijatyö
               </h3>
             </div>
-            <div className="text-xs text-[var(--accent)] font-mono flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-[var(--surface)] border border-[var(--border)]">
+            <div className="text-xs text-[var(--accent)] font-semibold flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-[var(--surface)] border border-[var(--border)]">
               <CheckCircle2 className="w-4 h-4" />
               <span>Valvira-laillistettu OMT-fysioterapeutti</span>
             </div>

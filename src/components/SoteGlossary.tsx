@@ -55,7 +55,7 @@ export default function SoteGlossary() {
   });
 
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       {/* Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[20%] left-[-10%] w-[500px] h-[450px] bg-[var(--accent)]/10 blur-[140px] rounded-full" />
@@ -126,7 +126,7 @@ export default function SoteGlossary() {
               className="glass rounded-3xl p-7 space-y-4 flex flex-col justify-between"
             >
               <div className="space-y-3">
-                <span className="px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--accent)] text-[10px] font-mono font-semibold uppercase">
+                <span className="px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--accent)] text-[10px] font-semibold uppercase">
                   {item.category}
                 </span>
                 <h3 className="text-lg font-bold text-[var(--text)] tracking-tight font-display">{item.term}</h3>

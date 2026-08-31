@@ -153,7 +153,7 @@ export default function LatestVideosAeo() {
                       <Play className="w-5 h-5 fill-white ml-0.5" />
                     </div>
                   </div>
-                  <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-white text-[10px] font-mono font-semibold border border-white/20">
+                  <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-white text-[10px] font-semibold border border-white/20">
                     AEO VERIFIED
                   </span>
                 </div>
@@ -166,7 +166,7 @@ export default function LatestVideosAeo() {
                   </div>
 
                   <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-[var(--muted)]">
-                    <span className="flex items-center gap-1.5 text-[var(--success)] font-mono text-xs font-semibold">
+                    <span className="flex items-center gap-1.5 text-[var(--success)] text-xs font-semibold">
                       <CheckCircle2 className="w-4 h-4" />
                       Indeksoitu tekoälylle
                     </span>

@@ -75,7 +75,7 @@ export default function ChannelReferences() {
 
               <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-[var(--muted)]">
                 <span>Saavutettu näkyvyys:</span>
-                <span className="font-bold text-[var(--accent)] font-mono">{c.viewsOrReach}</span>
+                <span className="font-bold text-sm text-[var(--accent)] font-display">{c.viewsOrReach}</span>
               </div>
             </div>
           ))}

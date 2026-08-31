@@ -43,10 +43,10 @@ export default function ServicesAndTraining() {
               </div>
 
               <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug font-display">
                   Somenkonsultointi &amp; Google Meet -tuntiohjaus
                 </h3>
-                <div className="mt-3 text-2xl sm:text-3xl font-bold text-[#00d2ff] font-mono bg-white/[0.03] py-2.5 px-4 rounded-2xl border border-white/10 inline-block">
+                <div className="mt-3 text-2xl sm:text-3xl font-bold font-display text-[#00d2ff] bg-white/[0.03] py-2.5 px-4 rounded-2xl border border-white/10 inline-block">
                   200 € <span className="text-sm font-sans font-normal text-white/70">(+ alv) / tunti</span>
                 </div>
               </div>

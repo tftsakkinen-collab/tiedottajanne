@@ -14,7 +14,7 @@ export default function AiPromptLibrary() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       {/* Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[20%] right-[-10%] w-[500px] h-[450px] bg-[var(--accent)]/10 blur-[140px] rounded-full" />
@@ -26,10 +26,10 @@ export default function AiPromptLibrary() {
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[var(--accent)]" />
-            <span>VALMIIT PROMPTIRUNGOT CHATGPT &amp; PERPLEXITY -MALLEILLE</span>
+            <span>Valmiit promptirungot ChatGPT &amp; Perplexity -malleille</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] leading-tight font-display">
-            SOTE-VIDEON <span className="text-gradient-cyan">AI-PROMPTIKIRJASTO</span>
+            SOTE-videon <span className="text-gradient-cyan">AI-promptikirjasto</span>
           </h2>
           <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
             Kopioi testatut tekoäly-promptit suoraan ChatGPT:hen tai Claudeen. Valvira-yhteensopivat rungot lääkäreille, fysioterapeuteille ja terveysteknologian asiantuntijoille.
@@ -45,7 +45,7 @@ export default function AiPromptLibrary() {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between gap-2 border-b border-[var(--border)] pb-4">
-                  <span className="text-xs font-mono font-semibold text-[var(--accent)] uppercase tracking-wider">
+                  <span className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wider">
                     {p.category}
                   </span>
                   <span className="text-[10px] px-2.5 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--muted)] font-semibold">

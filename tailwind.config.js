@@ -39,9 +39,10 @@ module.exports = {
         full: "var(--radius-pill)",
       },
       fontFamily: {
-        sans: ["var(--font-body)", "var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-heading)", "system-ui", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-body)", "system-ui", "sans-serif"],
+        heading: ["var(--font-display)", "var(--font-body)", "system-ui", "sans-serif"],
       },
       boxShadow: {
         glow: "0 0 30px rgba(0, 210, 255, 0.25)",
