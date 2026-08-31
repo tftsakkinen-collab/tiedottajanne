@@ -37,7 +37,7 @@ export default function YhteystiedotPage() {
       "name": "Janne Säkkinen",
       "jobTitle": "OMT-Fysioterapeutti, Toimitusjohtaja",
     },
-    "priceRange": "200€ - 1990€",
+    "priceRange": "200 €",
   };
 
   const breadcrumbSchema = {
@@ -76,13 +76,13 @@ export default function YhteystiedotPage() {
         <div className="text-center space-y-4 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
             <Mail className="w-4 h-4" />
-            <span>Yhteystiedot &amp; Tilaus</span>
+            <span>Yhteystiedot &amp; tilaus</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-            Ota Yhteyttä &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">Pyydä Koulutustarjous</span>
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight font-display">
+            Ota yhteyttä &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">pyydä koulutustarjous</span>
           </h1>
           {/* AEO Lead Paragraph */}
-          <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="text-slate-200 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
             Tiedottajanne Oy palvelee SOTE-alan ammattilaisia ja yrityksiä valtakunnallisesti. Voit tilata henkilökohtaisen Google Meet -tuntisparrauksen (200 € / h) tai jättää tarjouspyynnön alla olevalla lomakkeella tai suoraan sähköpostitse osoitteeseen {SITE_CONFIG.contactEmail}.
           </p>
         </div>
