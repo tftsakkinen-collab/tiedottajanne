@@ -208,7 +208,7 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ1(false)}
-                    className={`btn btn--sm ${q1 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q1 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>
@@ -226,7 +226,7 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ2(false)}
-                    className={`btn btn--sm ${q2 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q2 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>
@@ -244,7 +244,7 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ3(false)}
-                    className={`btn btn--sm ${q3 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q3 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>
@@ -262,7 +262,7 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ4(false)}
-                    className={`btn btn--sm ${q4 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q4 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>

@@ -1,39 +1,23 @@
 :root {
-  --accent: oklch(0.86 0.09 220);
-  --accent-ink: oklch(16% 0.03 240);
-  --accent-quiet: oklch(0.86 0.09 220 / 0.15);
-  --on-accent-quiet: oklch(0.86 0.09 220);
-  --primary: var(--accent);
-  --primary-ink: var(--accent-ink);
+  --accent: #00d2ff;
+  --accent-hover: #38bdf8;
+  --accent-ink: #05080f;
+  --accent-quiet: rgba(0, 210, 255, 0.12);
+  --on-accent-quiet: #00d2ff;
+  --primary: #00d2ff;
+  --primary-ink: #05080f;
+  --growth: #10b981;
 }
 
-:root[data-theme="light"],
-html.light,
-:root.light {
-  --accent: oklch(40% 0.15 240);
-  --accent-ink: oklch(99% 0 0);
-  --accent-quiet: oklch(40% 0.15 240 / 0.12);
-  --on-accent-quiet: oklch(35% 0.15 240);
-  --primary: var(--accent);
-  --primary-ink: var(--accent-ink);
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --accent: oklch(40% 0.15 240);
-    --accent-ink: oklch(99% 0 0);
-    --accent-quiet: oklch(40% 0.15 240 / 0.12);
-    --on-accent-quiet: oklch(35% 0.15 240);
-    --primary: var(--accent);
-    --primary-ink: var(--accent-ink);
-  }
-}
-
-:root[data-theme="dark"] {
-  --accent: oklch(0.86 0.09 220);
-  --accent-ink: oklch(16% 0.03 240);
-  --accent-quiet: oklch(0.86 0.09 220 / 0.15);
-  --on-accent-quiet: oklch(0.86 0.09 220);
-  --primary: var(--accent);
-  --primary-ink: var(--accent-ink);
+:root[data-theme="dark"],
+html.dark,
+body.dark {
+  --accent: #00d2ff;
+  --accent-hover: #38bdf8;
+  --accent-ink: #05080f;
+  --accent-quiet: rgba(0, 210, 255, 0.12);
+  --on-accent-quiet: #00d2ff;
+  --primary: #00d2ff;
+  --primary-ink: #05080f;
+  --growth: #10b981;
 }

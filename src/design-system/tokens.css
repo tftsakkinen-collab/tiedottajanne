@@ -1,13 +1,19 @@
 :root {
-  --bg: oklch(14% .02 250);
-  --surface: oklch(18% .022 250);
-  --surface-2: oklch(22% .024 250);
-  --surface-elevated: oklch(22% .024 250);
-  --text: oklch(96% .01 240);
-  --text-muted: oklch(72% .02 245);
-  --muted: oklch(72% .02 245);
-  --border: oklch(28% .02 250);
-  --ring: var(--accent);
+  --bg: #06090e;
+  --surface: #0c121c;
+  --surface-2: #101826;
+  --surface-elevated: #141f30;
+  --text: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.10);
+  --accent: #00d2ff;
+  --accent-hover: #38bdf8;
+  --accent-ink: #05080f;
+  --accent-quiet: rgba(0, 210, 255, 0.12);
+  --growth: #10b981;
+  --ring: #00d2ff;
 
   /* VAIN NÄMÄ KOLME SÄDETTÄ */
   --radius-sm: .5rem;

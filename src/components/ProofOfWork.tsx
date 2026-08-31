@@ -279,7 +279,7 @@ export default function ProofOfWork() {
               <span className="text-xs text-[var(--muted)] block font-medium">Hakukonenäkyvyys (SEO)</span>
             </div>
             <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5">
-              <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--warning)]">8.4 %</span>
+              <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--accent)]">8.4 %</span>
               <span className="text-xs text-[var(--muted)] block font-medium">Sitoutumisaste (Engagement)</span>
             </div>
           </div>
