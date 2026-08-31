@@ -78,7 +78,7 @@ export default function PalvelutPage() {
   };
 
   return (
-    <div className="py-12 md:py-20 bg-[#0c0c0c] min-h-screen text-white">
+    <div className="py-12 md:py-20 min-h-screen text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

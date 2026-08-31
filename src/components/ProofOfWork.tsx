@@ -38,19 +38,15 @@ interface SocialStats {
 const GALLERY_PHOTOS = [
   {
     src: "/assets/Janne_0705_2022-2196.jpg",
-    alt: "Janne Säkkinen kouluttamassa SOTE-ammattilaisia",
-  },
-  {
-    src: "/assets/Janne_0705_2022-2201.jpg",
-    alt: "OMT-fysioterapeutti Janne Säkkinen videokuvauksissa",
+    alt: "Janne Säkkinen — OMT-Fysioterapeutti ja Tiedottajanne Oy:n perustaja",
   },
   {
     src: "/assets/Janne_0705_2022-2226.jpg",
-    alt: "Tekoälyvideotuotannon työpaja terveydenhuollon asiantuntijoille",
+    alt: "Videotuotannon, käsikirjoituksen ja digitaalisen viestinnän suunnittelu",
   },
   {
     src: "/assets/DSC09790.jpg",
-    alt: "Fysioterapiaviestinnän ja digitaalisen sisällöntuotannon koulutus",
+    alt: "Käytännön kliininen opetus ja SOTE-viestinnän koulutus",
   },
 ];
 
@@ -105,7 +101,7 @@ export default function ProofOfWork() {
   }, []);
 
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       {/* Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[10%] left-[-15%] w-[600px] h-[500px] bg-[var(--accent)]/10 blur-[140px] rounded-full" />
@@ -303,7 +299,7 @@ export default function ProofOfWork() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {GALLERY_PHOTOS.map((photo, idx) => (
               <div
                 key={idx}
@@ -313,7 +309,7 @@ export default function ProofOfWork() {
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
               </div>

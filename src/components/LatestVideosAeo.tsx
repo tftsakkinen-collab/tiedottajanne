@@ -86,7 +86,7 @@ export default function LatestVideosAeo() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       {/* Dynamic Schema.org JSON-LD Injection for Google & AI (ChatGPT/Perplexity/Gemini) */}
       <script
         type="application/ld+json"

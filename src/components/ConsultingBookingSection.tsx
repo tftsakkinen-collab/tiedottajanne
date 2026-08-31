@@ -33,7 +33,7 @@ export default function ConsultingBookingSection() {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-[#0c0c0c] border-b border-white/10 relative overflow-hidden" id="tarjous">
+    <section className="py-20 md:py-28 border-b border-white/10 relative overflow-hidden" id="tarjous">
       {/* Subtle Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[20%] right-[-10%] w-[600px] h-[500px] bg-gradient-to-l from-[#014489]/10 to-transparent blur-[140px] rounded-full" />

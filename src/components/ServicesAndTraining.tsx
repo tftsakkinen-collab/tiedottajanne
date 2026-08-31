@@ -5,7 +5,7 @@ import { Sparkles, Video, CheckCircle2, ArrowRight, Send, Building2 } from "luci
 
 export default function ServicesAndTraining() {
   return (
-    <section id="palvelut" className="py-16 md:py-24 bg-[#0c0c0c] border-b border-white/10 relative overflow-hidden">
+    <section id="palvelut" className="py-16 md:py-24 border-b border-white/10 relative overflow-hidden">
       {/* Subtle Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[20%] right-[-10%] w-[500px] h-[450px] bg-gradient-to-l from-[#00d2ff]/10 to-transparent blur-[140px] rounded-full" />

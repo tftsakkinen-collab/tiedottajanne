@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="bg-[#0c0c0c] text-white">
+    <div className="text-white">
       
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[75vh] flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-12 pb-20 selection:bg-[#00d2ff]/20">

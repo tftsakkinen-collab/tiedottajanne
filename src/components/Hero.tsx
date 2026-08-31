@@ -10,7 +10,8 @@ import {
   TrendingUp, 
   ShieldCheck, 
   Award,
-  GraduationCap
+  GraduationCap,
+  Users
 } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
 
