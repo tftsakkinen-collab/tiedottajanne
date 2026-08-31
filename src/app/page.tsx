@@ -17,46 +17,120 @@ export default function Home() {
     <div className="text-white">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[75vh] flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-12 pb-20 selection:bg-[#00d2ff]/20">
+      <section className="relative min-h-[80vh] flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-10 pb-20 selection:bg-[#00d2ff]/20">
         {/* Subtle Ambient Light */}
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-[#00d2ff]/15 via-[#014489]/10 to-transparent blur-[140px] rounded-full" />
+          <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-b from-[#00d2ff]/15 via-[#014489]/10 to-transparent blur-[150px] rounded-full" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center space-y-8">
+        <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-slate-200 shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#00d2ff]" />
-            <span>Tiedottajanne Oy — SOTE-alan videotuotanto &amp; konsultointi</span>
+          {/* Left: Headline, Value Proposition & CTAs */}
+          <div className="lg:col-span-7 space-y-7 text-left">
+            
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-slate-200 shadow-sm">
+              <Sparkles className="w-4 h-4 text-[#00d2ff]" />
+              <span>Tiedottajanne Oy — SOTE-alan videotuotanto &amp; konsultointi</span>
+            </div>
+
+            {/* Hero H1 */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.12] font-display text-white">
+              Somenkonsultointi &amp; SOTE-videotuotanto <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">asiantuntijoille.</span>
+            </h1>
+
+            {/* Hero Lede */}
+            <p className="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
+              Saa henkilökohtaista kädestä pitäen -opastusta ja sparrausta omaan someesi Google Meetissä (200 € / h) tai pyydä räätälöity koulutustarjous yrityksellesi.
+            </p>
+
+            {/* Primary CTA + Secondary Link */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <Link
+                href="/yhteystiedot"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black font-semibold text-sm sm:text-base px-8 py-4 transition-all hover:bg-[#00d2ff] hover:text-black hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-white/10 min-h-[48px]"
+              >
+                <Send className="w-4 h-4 text-black" />
+                <span>Varaa Google Meet -tuntiohjaus (200 € / h)</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/yhteystiedot"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium text-sm sm:text-base px-8 py-4 transition-all hover:bg-white/10 hover:border-white/40 active:scale-[0.98] min-h-[48px]"
+              >
+                <span>Pyydä yritystarjous</span>
+              </Link>
+            </div>
+
+            {/* Trust Metrics Pills */}
+            <div className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs text-slate-200">
+              <div className="flex items-center gap-1.5 font-semibold">
+                <CheckCircle2 className="w-4 h-4 text-[#00d2ff]" />
+                <span>1,1M+ orgaanista näyttöä</span>
+              </div>
+              <div className="flex items-center gap-1.5 font-semibold">
+                <CheckCircle2 className="w-4 h-4 text-[#00d2ff]" />
+                <span>Valvira-laillistettu etiikka</span>
+              </div>
+              <div className="flex items-center gap-1.5 font-semibold">
+                <CheckCircle2 className="w-4 h-4 text-[#00d2ff]" />
+                <span>Google Meet 200 € / h</span>
+              </div>
+            </div>
+
           </div>
 
-          {/* Hero H1 */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center leading-[1.1] max-w-4xl font-display">
-            Somenkonsultointi &amp; SOTE-videotuotanto <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">asiantuntijoille.</span>
-          </h1>
+          {/* Right: Visual SOTE Video Mockup Showcase */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              
+              {/* Glow Behind Mockup */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#00d2ff]/30 to-[#014489]/40 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition duration-1000" />
 
-          {/* Hero Lede */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
-            Saa henkilökohtaista kädestä pitäen -opastusta ja sparrausta omaan someesi Google Meetissä (200 € / h) tai pyydä räätälöity koulutustarjous yrityksellesi.
-          </p>
+              {/* Main Video Frame */}
+              <div className="relative liquid-glass rounded-3xl p-3 sm:p-4 border border-white/20 shadow-2xl space-y-3">
+                <div className="relative aspect-[16/10] sm:aspect-video rounded-2xl overflow-hidden bg-black/60 border border-white/10 group">
+                  <Image
+                    src="/assets/DSC09790.jpg"
+                    alt="SOTE-videotuotannon ja asiantuntijaopetuksen esikatselu — Janne Säkkinen"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  
+                  {/* Top Verified Badge */}
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[#00d2ff] text-[11px] font-semibold flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>AEO-indeksoitu videotuotanto</span>
+                  </div>
 
-          {/* Primary CTA + Secondary Link */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto pt-2">
-            <Link
-              href="/yhteystiedot"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white text-black font-semibold text-sm sm:text-base px-8 py-4 transition-all hover:bg-white/90 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-white/10 min-h-[48px]"
-            >
-              <Send className="w-4 h-4 text-black" />
-              <span>Varaa Google Meet -tuntiohjaus (200 € / h)</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/yhteystiedot"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium text-sm sm:text-base px-8 py-4 transition-all hover:bg-white/10 hover:border-white/40 active:scale-[0.98] min-h-[48px]"
-            >
-              <span>Pyydä yritystarjous</span>
-            </Link>
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-full bg-[#00d2ff] text-black flex items-center justify-center shadow-[0_0_30px_rgba(0,210,255,0.6)] group-hover:scale-110 transition-transform">
+                      <Video className="w-6 h-6 text-black" />
+                    </div>
+                  </div>
+
+                  {/* Bottom Video Meta */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
+                    <span className="font-semibold truncate max-w-[200px]">Purenta &amp; SOTE-asiantuntijaviestintä</span>
+                    <span className="px-2 py-0.5 rounded bg-black/70 border border-white/15 font-semibold text-[11px]">1,1M+ katselua</span>
+                  </div>
+                </div>
+
+                {/* Floating Growth Stat Bar */}
+                <div className="flex items-center justify-between p-3 rounded-xl bg-white/[0.04] border border-white/10 text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="font-medium text-slate-200">Orgaaninen tavoittavuus:</span>
+                  </div>
+                  <span className="font-bold text-emerald-400 font-display text-sm">+210 % kasvu</span>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>
