@@ -3,7 +3,7 @@ import { Youtube, ExternalLink, CheckCircle2, Video } from "lucide-react";
 
 export default function ChannelReferences() {
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       {/* Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[30%] left-[-10%] w-[500px] h-[450px] bg-[var(--accent)]/10 blur-[140px] rounded-full" />
@@ -20,7 +20,7 @@ export default function ChannelReferences() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] leading-tight font-display">
             Opeta SOTEa <span className="text-gradient-cyan">aidoilla referenssikanavilla</span>
           </h2>
-          <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
             Teoria ei yksin riitä terveydenhuollossa. Tiedottajanne Oy:n opit ja videostrategiat perustuvat aitoihin, satojatuhansia ihmisiä tavoittaneisiin suomen- ja englanninkielisiin videokanaviin.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function ChannelReferences() {
           {CASE_STUDIES.map((c) => (
             <div
               key={c.id}
-              className="glass rounded-3xl p-8 space-y-6 flex flex-col justify-between group"
+              className="liquid-glass rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between border border-white/10 hover:border-[#00d2ff]/40 shadow-lg transition-all group"
             >
               <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4 border-b border-[var(--border)] pb-4">
@@ -47,22 +47,22 @@ export default function ChannelReferences() {
                     href={c.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] hover:text-[var(--accent)] text-xs font-semibold transition-all min-h-[44px]"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] hover:text-[var(--accent)] text-xs font-semibold transition-all min-h-[44px]"
                   >
                     <span>Avaa kanava</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
 
-                <p className="text-sm text-[var(--muted)] leading-relaxed">
+                <p className="text-sm text-slate-200 leading-relaxed font-normal">
                   {c.description}
                 </p>
 
                 <div className="p-4 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-2">
                   <span className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wider block">
-                    MITÄ TÄSTÄ OPPII SOTE-AMMATTILAISELLE:
+                    Mitä tästä oppii SOTE-ammattilaiselle:
                   </span>
-                  <ul className="space-y-1.5 text-xs text-[var(--text)]">
+                  <ul className="space-y-1.5 text-xs text-slate-200">
                     {c.keyLearnings.map((t, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
@@ -73,7 +73,7 @@ export default function ChannelReferences() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-[var(--muted)]">
+              <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-slate-300">
                 <span>Saavutettu näkyvyys:</span>
                 <span className="font-bold text-sm text-[var(--accent)] font-display">{c.viewsOrReach}</span>
               </div>

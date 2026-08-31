@@ -123,17 +123,17 @@ export default function SoteGlossary() {
           {filteredTerms.map((item, idx) => (
             <div
               key={idx}
-              className="glass rounded-3xl p-7 space-y-4 flex flex-col justify-between"
+              className="liquid-glass rounded-3xl p-6 sm:p-7 space-y-4 flex flex-col justify-between border border-white/10 hover:border-[#00d2ff]/40 shadow-lg transition-all"
             >
               <div className="space-y-3">
-                <span className="px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--accent)] text-[10px] font-semibold uppercase">
+                <span className="px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-[#00d2ff] text-[10px] font-semibold uppercase">
                   {item.category}
                 </span>
-                <h3 className="text-lg font-bold text-[var(--text)] tracking-tight font-display">{item.term}</h3>
-                <p className="text-xs sm:text-sm text-[var(--muted)] leading-relaxed">{item.definition}</p>
+                <h3 className="text-lg font-bold text-white tracking-tight font-display">{item.term}</h3>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">{item.definition}</p>
               </div>
 
-              <div className="pt-3 border-t border-[var(--border)] flex items-center gap-2 text-xs text-[var(--muted)]">
+              <div className="pt-3 border-t border-white/10 flex items-center gap-2 text-xs text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                 <span>Kliinisesti auditoitu käsite</span>
               </div>
