@@ -47,16 +47,16 @@ export default function ServicesAndTraining() {
                   Somenkonsultointi &amp; Google Meet -tuntiohjaus
                 </h3>
                 <div className="mt-3 text-2xl sm:text-3xl font-bold font-display text-[#00d2ff] bg-white/[0.03] py-2.5 px-4 rounded-2xl border border-white/10 inline-block">
-                  200 € <span className="text-sm font-sans font-normal text-white/70">(+ alv) / tunti</span>
+                  200 € <span className="text-sm font-sans font-normal text-slate-300">(+ alv) / tunti</span>
                 </div>
               </div>
 
-              <p className="text-sm text-white/70 leading-relaxed">
+              <p className="text-sm text-slate-200 leading-relaxed">
                 Henkilökohtaista, kädestä pitäen -opastusta ja sparrausta suoraan niihin asioihin ja pulmiin, jotka askarruttavat omassa somessasi.
               </p>
 
               <div className="pt-4 space-y-3 border-t border-white/10">
-                <span className="text-xs font-semibold text-white/90 uppercase tracking-wider block">Mitä saat tunnissa:</span>
+                <span className="text-xs font-semibold text-slate-100 uppercase tracking-wider block">Mitä saat tunnissa:</span>
                 <ul className="space-y-2.5">
                   {[
                     "1-on-1 tai pienen tiimin tuntisparraus Google Meetissä",
@@ -66,7 +66,7 @@ export default function ServicesAndTraining() {
                     "Orgaaninen AEO-kasvu & kanavasi auditointi",
                     "Aikataulut sovitaan suoraan sähköpostitse tilauksen jälkeen",
                   ].map((feat, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-white/80">
+                    <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200">
                       <CheckCircle2 className="w-4 h-4 text-[#00d2ff] shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </li>
@@ -88,26 +88,26 @@ export default function ServicesAndTraining() {
           {/* Card 2: Tailored Enterprise / Clinic Offerings via Form */}
           <div className="lg:col-span-5 liquid-glass rounded-3xl p-8 sm:p-10 space-y-8 flex flex-col justify-between border border-white/10">
             <div className="space-y-6">
-              <span className="inline-block px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-white/70 text-xs font-semibold tracking-wider">
-                Yrityksille &amp; Organisaatioille
+              <span className="inline-block px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-slate-300 text-xs font-semibold tracking-wider">
+                Yrityksille &amp; organisaatioille
               </span>
 
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
-                  Räätälöidyt Koulutukset &amp; Luennot
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug font-display">
+                  Räätälöidyt koulutukset &amp; luennot
                 </h3>
-                <div className="mt-3 text-sm font-medium text-white/50">
+                <div className="mt-3 text-sm font-semibold text-[#00d2ff]">
                   Tarjouspyynnön kautta
                 </div>
               </div>
 
-              <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                 Kaipaako työyhteisösi, lääkäriasemasi tai yrityksesi räätälöityä koulutuspäivää, henkilöstön puhelinkuvauskoulutusta tai laajempaa videostrategiaa?
               </p>
 
               <div className="pt-4 space-y-3 border-t border-white/10">
-                <span className="text-xs font-semibold text-white/80 uppercase tracking-wider block">Räätälöitävissä mm:</span>
-                <ul className="space-y-2.5 text-xs text-white/70">
+                <span className="text-xs font-semibold text-slate-100 uppercase tracking-wider block">Räätälöitävissä mm:</span>
+                <ul className="space-y-2.5 text-xs text-slate-200">
                   {[
                     "Koko työyhteisön videokoulutukset & työpajat",
                     "Asiantuntijoiden esiintymisvalmennus & rutiini",

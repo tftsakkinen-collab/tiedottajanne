@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0c0c0c]/80 backdrop-blur-xl border-b border-white/10 transition-all">
+    <header className="sticky top-0 z-50 bg-[#06090e]/85 backdrop-blur-xl border-b border-white/10 transition-all">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           
@@ -32,14 +32,14 @@ export default function Navbar() {
               <span className="font-display text-lg sm:text-xl font-bold tracking-wide text-white group-hover:text-[#00d2ff] transition-colors flex items-center gap-1">
                 TIEDOTTAJANNE<span className="text-[#00d2ff]">.OY</span>
               </span>
-              <span className="text-[10px] text-white/50 uppercase tracking-widest font-sans font-medium">
-                SOTE-Alan Videotuotanto &amp; AI
+              <span className="text-[10px] text-slate-300 uppercase tracking-widest font-sans font-medium">
+                SOTE-alan videotuotanto &amp; AI
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center justify-center flex-1 gap-1">
+          <nav className="hidden md:flex items-center justify-center flex-1 gap-1">
             <div className="flex items-center gap-1 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-md">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
@@ -50,7 +50,7 @@ export default function Navbar() {
                     className={`text-xs font-semibold px-3.5 py-1.5 rounded-full transition-all relative ${
                       isActive
                         ? "bg-white/10 text-white shadow-sm border border-white/15"
-                        : "text-white/70 hover:text-white hover:bg-white/[0.05]"
+                        : "text-slate-300 hover:text-white hover:bg-white/[0.05]"
                     }`}
                   >
                     {link.name}
@@ -61,21 +61,21 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Right Action */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
+          <div className="hidden md:flex items-center gap-3 shrink-0">
             <Link
               href="/yhteystiedot"
-              className="px-5 py-2.5 rounded-xl bg-white text-black font-semibold text-xs sm:text-sm hover:bg-[#00d2ff] hover:text-black hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center gap-2 whitespace-nowrap"
+              className="px-5 py-2.5 rounded-xl bg-white text-black font-semibold text-xs sm:text-sm hover:bg-[#00d2ff] hover:text-black hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center gap-2 whitespace-nowrap min-h-[44px]"
             >
               <Send className="w-4 h-4 text-black" />
-              <span>Tilaa Tuntiohjaus (200 €/h)</span>
+              <span>Ota yhteyttä</span>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle navigation"
-            className="lg:hidden p-3 min-h-[48px] min-w-[48px] rounded-xl bg-white/[0.04] border border-white/10 text-white hover:text-[#00d2ff] transition-colors flex items-center justify-center"
+            aria-label="Avaa päävalikko"
+            className="md:hidden p-3 min-h-[48px] min-w-[48px] rounded-xl bg-white/[0.04] border border-white/10 text-white hover:text-[#00d2ff] transition-colors flex items-center justify-center cursor-pointer"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -84,7 +84,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0c0c0c]/95 backdrop-blur-2xl border-b border-white/10 px-6 pt-4 pb-8 space-y-5 animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden bg-[#06090e]/95 backdrop-blur-2xl border-b border-white/10 px-6 pt-4 pb-8 space-y-5 animate-in slide-in-from-top-2 duration-200">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -95,8 +95,8 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-3.5 rounded-xl text-sm font-medium transition-all min-h-[48px] flex items-center ${
                     isActive
-                      ? "bg-white/10 text-[#00d2ff] border border-white/15"
-                      : "text-white/70 hover:bg-white/5 hover:text-white"
+                      ? "bg-white/10 text-[#00d2ff] border border-white/15 font-semibold"
+                      : "text-slate-200 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   {link.name}
@@ -111,7 +111,7 @@ export default function Navbar() {
               className="w-full py-4 rounded-xl bg-white text-black font-semibold text-center text-sm hover:bg-[#00d2ff] hover:text-black transition-all shadow-lg flex items-center justify-center gap-2 min-h-[48px]"
             >
               <Send className="w-4 h-4 text-black" />
-              <span>Tilaa Tuntiohjaus (200 € / h)</span>
+              <span>Ota yhteyttä</span>
             </Link>
           </div>
         </div>

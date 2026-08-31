@@ -26,18 +26,18 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center space-y-8">
           
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-white/80 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-slate-200 shadow-sm">
             <Sparkles className="w-4 h-4 text-[#00d2ff]" />
-            <span>Tiedottajanne Oy — SOTE-Alan Videotuotanto &amp; Konsultointi</span>
+            <span>Tiedottajanne Oy — SOTE-alan videotuotanto &amp; konsultointi</span>
           </div>
 
           {/* Hero H1 */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center leading-[1.1] max-w-4xl">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-center leading-[1.1] max-w-4xl font-display">
             Somenkonsultointi &amp; SOTE-videotuotanto <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">asiantuntijoille.</span>
           </h1>
 
           {/* Hero Lede */}
-          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
             Saa henkilökohtaista kädestä pitäen -opastusta ja sparrausta omaan someesi Google Meetissä (200 € / h) tai pyydä räätälöity koulutustarjous yrityksellesi.
           </p>
 
@@ -67,22 +67,22 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white">
+            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white font-display">
               Palvelumme
             </h2>
-            <p className="text-sm text-white/60">
+            <p className="text-sm text-slate-300">
               Yksinkertainen ja läpinäkyvä hinnoittelu ilman sitoumuksia.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
             {/* Card 1: Core 200€/h Product */}
             <div className="lg:col-span-7 liquid-glass rounded-3xl p-8 sm:p-10 space-y-8 flex flex-col justify-between border-[#00d2ff]/50 shadow-[0_0_35px_rgba(0,210,255,0.12)]">
               <div className="space-y-6">
                 <div className="flex items-center justify-between gap-2">
                   <span className="inline-block px-3.5 py-1 rounded-full bg-[#00d2ff]/15 border border-[#00d2ff]/30 text-[#00d2ff] text-xs font-semibold tracking-wider">
-                    Yksinyrittäjille &amp; Ammatinharjoittajille
+                    Yksinyrittäjille &amp; ammatinharjoittajille
                   </span>
                   <span className="inline-block px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[#00d2ff]/20 to-[#014489]/40 border border-[#00d2ff]/40 text-[#A4F4FD] text-[10px] font-bold uppercase tracking-wider">
                     Päätuote
@@ -94,17 +94,17 @@ export default function Home() {
                     Somenkonsultointi &amp; Google Meet -tuntiohjaus
                   </h3>
                   <div className="mt-3 text-2xl sm:text-3xl font-bold font-display text-[#00d2ff] bg-white/[0.03] py-2.5 px-4 rounded-2xl border border-white/10 inline-block">
-                    200 € <span className="text-sm font-sans font-normal text-white/70">(+ alv) / tunti</span>
+                    200 € <span className="text-sm font-sans font-normal text-slate-300">(+ alv) / tunti</span>
                   </div>
                 </div>
 
-                <p className="text-sm text-white/70 leading-relaxed">
+                <p className="text-sm text-slate-200 leading-relaxed">
                   Kädestä pitäen -opastusta ja täsmäsparrausta suoraan niihin asioihin, jotka askarruttavat sinua oman sosiaalisen median tekemisessä.
                 </p>
 
                 <div className="pt-4 space-y-3 border-t border-white/10">
-                  <span className="text-xs font-semibold text-white/90 uppercase tracking-wider block">Mitä käymme läpi tunnissa:</span>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-white/80">
+                  <span className="text-xs font-semibold text-slate-100 uppercase tracking-wider block">Mitä käymme läpi tunnissa:</span>
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-slate-200">
                     {[
                       "Aihevalinta, koukut & käsikirjoitukset (Holy Trifecta)",
                       "Puhelinkuvaus, mikrofonit ja valaistus omilla välineilläsi",
@@ -134,26 +134,26 @@ export default function Home() {
             {/* Card 2: Custom Enterprise Inquiries via Form */}
             <div className="lg:col-span-5 liquid-glass rounded-3xl p-8 sm:p-10 space-y-8 flex flex-col justify-between border border-white/10">
               <div className="space-y-6">
-                <span className="inline-block px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-white/70 text-xs font-semibold tracking-wider">
-                  Yrityksille &amp; Klinikoille
+                <span className="inline-block px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-slate-300 text-xs font-semibold tracking-wider">
+                  Yrityksille &amp; klinikoille
                 </span>
 
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
-                    Räätälöidyt Koulutukset &amp; Luennot
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug font-display">
+                    Räätälöidyt koulutukset &amp; luennot
                   </h3>
-                  <div className="mt-3 text-sm font-medium text-white/50">
+                  <div className="mt-3 text-sm font-semibold text-[#00d2ff]">
                     Tarjouspyynnön kautta
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                   Kaikki työyhteisöjen, lääkäriasemien ja organisaatioiden luennot, työpajat ja laajemmat videostrategiat räätälöidään tarpeidenne mukaan.
                 </p>
 
                 <div className="pt-4 space-y-3 border-t border-white/10">
-                  <span className="text-xs font-semibold text-white/80 uppercase tracking-wider block">Räätälöitävissä mm:</span>
-                  <ul className="space-y-2.5 text-xs text-white/70">
+                  <span className="text-xs font-semibold text-slate-100 uppercase tracking-wider block">Räätälöitävissä mm:</span>
+                  <ul className="space-y-2.5 text-xs text-slate-200">
                     {[
                       "Koko henkilöstön videokoulutus & työpajat",
                       "Esiintymisvalmennus & rutiini ammattilaisille",

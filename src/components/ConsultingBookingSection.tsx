@@ -45,12 +45,12 @@ export default function ConsultingBookingSection() {
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
             <Building2 className="w-4 h-4" />
-            <span>KONSULTOINTI- JA KOULUTUSPYYNTÖ</span>
+            <span>Konsultointi- ja koulutuspyyntö</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-            TILAA KONSULTOINTI TAI <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">PYYDÄ TARJOUS</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight font-display">
+            Tilaa konsultointi tai <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">pyydä tarjous</span>
           </h2>
-          <p className="text-white/60 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
             Varaa henkilökohtainen Google Meet -tuntisparraus (200 € / h) tai pyydä räätälöity tarjous organisaatiosi videovalmennuksesta ja luennoista.
           </p>
         </div>
@@ -60,19 +60,19 @@ export default function ConsultingBookingSection() {
           {/* Info Card */}
           <div className="lg:col-span-5 space-y-6">
             <div className="liquid-glass rounded-3xl p-8 sm:p-10 space-y-8">
-              <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+              <h3 className="text-2xl font-bold text-white flex items-center gap-3 font-display">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00d2ff]/20 to-[#014489]/30 border border-[#00d2ff]/30 text-[#00d2ff] flex items-center justify-center">
                   <Building2 className="w-5 h-5" />
                 </div>
                 <span>Tiedottajanne Oy</span>
               </h3>
 
-              <div className="space-y-4 text-sm text-white/70">
+              <div className="space-y-4 text-sm text-slate-200">
                 <div className="flex items-start gap-3.5">
                   <MapPin className="w-5 h-5 text-[#00d2ff] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-semibold text-white block">Sijainti &amp; Toimialue:</span>
-                    <span className="text-xs text-white/50">Oulu (Päätoimipaikka) &amp; Google Meet / Koko Suomi</span>
+                    <span className="text-xs text-slate-300">Oulu (Päätoimipaikka) &amp; Google Meet / Koko Suomi</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3.5">
@@ -90,8 +90,8 @@ export default function ConsultingBookingSection() {
               </div>
 
               <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 space-y-2.5">
-                <div className="text-xs font-semibold text-white uppercase tracking-wider">Asiantuntija Janne Säkkinen</div>
-                <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
+                <div className="text-xs font-semibold text-slate-100 uppercase tracking-wider">Asiantuntija Janne Säkkinen</div>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                   OMT-Fysioterapeutti (SOMTY), Oulun yliopiston lääketieteellisen tiedekunnan luennoitsija (2017–). Kokemusta 3 suuren YouTube-kanavan ja monikanavaisen SOTE-somen rakentamisesta.
                 </p>
               </div>
