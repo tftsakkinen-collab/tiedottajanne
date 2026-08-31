@@ -160,9 +160,6 @@ export default function LatestVideosAeo() {
 
                 <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wider block">
-                      {vid.aeoCategory}
-                    </span>
                     <h3 className="text-sm sm:text-base font-bold text-[var(--text)] group-hover:text-[var(--accent)] transition-colors line-clamp-2 leading-snug font-display">
                       {vid.title}
                     </h3>
