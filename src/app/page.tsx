@@ -1,26 +1,34 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Sparkles, ArrowRight, ShieldCheck, Video, Send, CheckCircle2, Building2 } from "lucide-react";
+import { Sparkles, ArrowRight, ShieldCheck, Video, Send, CheckCircle2, Building2, CreditCard, Flame, Lock } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
-  title: "Tiedottajanne Oy — Somenkonsultointi & SOTE-Videotuotanto",
-  description: "Henkilökohtainen somenkonsultointi ja Google Meet -tuntiohjaus (200 € / h) Janne Säkkiseltä sekä räätälöidyt SOTE-videokoulutukset yrityksille.",
+  title: "Tiedottajanne Oy — AI-Kotisivut SOTE-Ammatinharjoittajille",
+  description: "Älä jätä asiakasvirtaasi isojen lääkäritalojen varausjärjestelmien varaan. Hanki AI-optimoitu (GEO) oma profiili 499 € perustajahintaan (vain 10 ensimmäiselle).",
   alternates: {
     canonical: "https://www.tiedottajanne.fi",
+  },
+  openGraph: {
+    title: "AI-Kotisivut SOTE-Ammatinharjoittajille — Tiedottajanne Oy",
+    description: "Oma maa vs. Vuokramaa: Täysin oma tekoälylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille.",
+    url: "https://www.tiedottajanne.fi",
+    siteName: "Tiedottajanne Oy",
+    locale: "fi_FI",
+    type: "website",
   },
 };
 
 export default function Home() {
   return (
-    <div className="text-white">
+    <div className="bg-[var(--bg)] text-[var(--text)]">
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[80vh] flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-10 pb-20 selection:bg-[#00d2ff]/20">
+      <section className="relative py-16 md:py-24 overflow-hidden px-4 sm:px-6 lg:px-8 border-b border-[var(--border)]">
         {/* Subtle Ambient Light */}
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-b from-[#00d2ff]/15 via-[#014489]/10 to-transparent blur-[150px] rounded-full" />
+          <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-[radial-gradient(ellipse_at_center,var(--accent)_0%,transparent_70%)] opacity-15 rounded-full" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -29,52 +37,54 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-7 text-left">
             
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md text-xs sm:text-sm text-slate-200 shadow-sm">
-              <Sparkles className="w-4 h-4 text-[#00d2ff]" />
-              <span>Tiedottajanne Oy — SOTE-alan videotuotanto &amp; konsultointi</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--warning)]/40 bg-[var(--warning)]/10 text-[var(--warning)] text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
+              <Flame className="w-4 h-4 text-[var(--warning)] animate-pulse" />
+              <span>TESTIRYHMÄTARJOUS: Vain 10 ensimmäiselle sote-ammatinharjoittajalle (499 € + alv 0%)</span>
             </div>
 
             {/* Hero H1 */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.12] font-display text-white">
-              Somenkonsultointi &amp; SOTE-videotuotanto <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">asiantuntijoille.</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] font-display text-[var(--text)]">
+              Näytkö tekoälylle vai oletko vain <span className="text-gradient-cyan">nimi ison talon varauslistassa?</span>
             </h1>
 
             {/* Hero Lede */}
-            <p className="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
-              Saa henkilökohtaista kädestä pitäen -opastusta ja sparrausta omaan someesi Google Meetissä (200 € / h) tai pyydä räätälöity koulutustarjous yrityksellesi.
+            <p className="text-base sm:text-lg text-[var(--muted)] max-w-2xl leading-relaxed">
+              <strong>Oma maa vs. Vuokramaa:</strong> Älä vuokraa näkyvyyttäsi isojen lääkärikeskusten varausjärjestelmissä. Tiedottajanne Oy rakentaa sinulle täysin oman, tekoälylle (ChatGPT, Gemini, Google AI) optimoidun digitaalisen profiilin, joka ohjaa potilaat suoraan sinulle.
             </p>
 
             {/* Primary CTA + Secondary Link */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-              <Link
-                href="/yhteystiedot"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-black font-semibold text-sm sm:text-base px-8 py-4 transition-all hover:bg-[#00d2ff] hover:text-black hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-white/10 min-h-[48px]"
+              <a
+                href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--primary btn--lg text-sm sm:text-base font-bold shadow-xl flex items-center justify-center gap-2.5 cursor-pointer group"
               >
-                <Send className="w-4 h-4 text-black" />
-                <span>Varaa Google Meet -tuntiohjaus (200 € / h)</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <CreditCard className="w-5 h-5 text-[var(--accent-ink)]" />
+                <span>Tilaa AI-optimoidut sivut (499 €)</span>
+                <ArrowRight className="w-4 h-4 text-[var(--accent-ink)] group-hover:translate-x-1 transition-transform" />
+              </a>
               <Link
-                href="/yhteystiedot"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white font-medium text-sm sm:text-base px-8 py-4 transition-all hover:bg-white/10 hover:border-white/40 active:scale-[0.98] min-h-[48px]"
+                href="/palvelut"
+                className="btn btn--outline btn--lg text-sm sm:text-base font-semibold flex items-center justify-center gap-2"
               >
-                <span>Pyydä yritystarjous</span>
+                <span>Lue lisää (Oma maa vs. Vuokramaa)</span>
               </Link>
             </div>
 
             {/* Trust Metrics Pills */}
-            <div className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-4 text-xs text-slate-200">
+            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap items-center gap-4 text-xs text-[var(--muted)] font-mono">
               <div className="flex items-center gap-1.5 font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-[#00d2ff]" />
-                <span>1,1M+ orgaanista näyttöä</span>
+                <ShieldCheck className="w-4 h-4 text-[var(--success)]" />
+                <span>"Näe ennen kuin maksat" -lupaus</span>
               </div>
               <div className="flex items-center gap-1.5 font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-[#00d2ff]" />
-                <span>Valvira-laillistettu etiikka</span>
+                <CheckCircle2 className="w-4 h-4 text-[var(--accent)]" />
+                <span>30 päivän tyytyväisyystakuu</span>
               </div>
               <div className="flex items-center gap-1.5 font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-[#00d2ff]" />
-                <span>Google Meet 200 € / h</span>
+                <Lock className="w-4 h-4 text-[var(--success)]" />
+                <span>100 % Omat asiakassuhteet</span>
               </div>
             </div>
 
@@ -85,11 +95,11 @@ export default function Home() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Glow Behind Mockup */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#00d2ff]/30 to-[#014489]/40 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition duration-1000" />
+              <div className="absolute -inset-1.5 bg-[var(--accent)]/20 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition duration-1000" />
 
-              {/* Main Video Frame */}
-              <div className="relative liquid-glass rounded-3xl p-3 sm:p-4 border border-white/20 shadow-2xl space-y-3">
-                <div className="relative aspect-[16/10] sm:aspect-video rounded-2xl overflow-hidden bg-black/60 border border-white/10 group">
+              {/* Main Frame */}
+              <div className="relative glass rounded-3xl p-3 sm:p-4 border border-[var(--border)] shadow-2xl space-y-3">
+                <div className="relative aspect-[16/10] sm:aspect-video rounded-2xl overflow-hidden bg-black/60 border border-[var(--border)] group">
                   <Image
                     src="/assets/DSC09790.jpg"
                     alt="SOTE-videotuotannon ja asiantuntijaopetuksen esikatselu — Janne Säkkinen"
@@ -101,32 +111,32 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
                   {/* Top Verified Badge */}
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[#00d2ff] text-[11px] font-semibold flex items-center gap-1.5">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[var(--accent)] text-[11px] font-semibold flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5" />
-                    <span>AEO-indeksoitu videotuotanto</span>
+                    <span>GEO-optimoitu sote-verkkokoti</span>
                   </div>
 
                   {/* Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-full bg-[#00d2ff] text-black flex items-center justify-center shadow-[0_0_30px_rgba(0,210,255,0.6)] group-hover:scale-110 transition-transform">
-                      <Video className="w-6 h-6 text-black" />
+                    <div className="w-14 h-14 rounded-full bg-[var(--accent)] text-[var(--accent-ink)] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <Video className="w-6 h-6 text-[var(--accent-ink)]" />
                     </div>
                   </div>
 
                   {/* Bottom Video Meta */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
-                    <span className="font-semibold truncate max-w-[200px]">Purenta &amp; SOTE-asiantuntijaviestintä</span>
-                    <span className="px-2 py-0.5 rounded bg-black/70 border border-white/15 font-semibold text-[11px]">1,1M+ katselua</span>
+                    <span className="font-semibold truncate max-w-[200px]">Janne Säkkinen (OMT)</span>
+                    <span className="px-2 py-0.5 rounded bg-black/70 border border-white/15 font-semibold text-[11px]">1,1M+ näytöt</span>
                   </div>
                 </div>
 
                 {/* Floating Growth Stat Bar */}
-                <div className="flex items-center justify-between p-3 rounded-xl bg-white/[0.04] border border-white/10 text-xs">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-[var(--surface-elevated)] border border-[var(--border)] text-xs">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="font-medium text-slate-200">Orgaaninen tavoittavuus:</span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[var(--success)] animate-pulse" />
+                    <span className="font-medium text-[var(--text)]">Orgaaninen tekoälynäkyvyys:</span>
                   </div>
-                  <span className="font-bold text-emerald-400 font-display text-sm">+210 % kasvu</span>
+                  <span className="font-bold text-[var(--success)] font-display text-sm">100 % Oma maa</span>
                 </div>
               </div>
 
@@ -136,58 +146,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. THE CORE 200€/H PRODUCT & TAILORED CORPORATE OFFERS */}
-      <section className="py-16 md:py-24 border-t border-b border-white/10 bg-white/[0.01]">
+      {/* 2. CORE PRODUCTS ("THE GODFATHER OFFER") */}
+      <section className="py-16 md:py-24 border-b border-[var(--border)] bg-[var(--bg)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white font-display">
-              Palvelumme
+            <div className="pill uppercase tracking-wider">
+              <Sparkles className="w-4 h-4 text-[var(--accent)]" />
+              <span>Palvelumme &amp; Hinnoittelu (B2B alv 0%)</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--text)] font-display">
+              Testiryhmäpaketit SOTE-Ammatinharjoittajille
             </h2>
-            <p className="text-sm text-slate-300">
-              Yksinkertainen ja läpinäkyvä hinnoittelu ilman sitoumuksia.
+            <p className="text-sm text-[var(--muted)]">
+              Selkeä, suoraviivainen hinnoittelu ilman piilokuluja tai pitkiä määräaikaisuuksia.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
-            {/* Card 1: Core 200€/h Product */}
-            <div className="lg:col-span-7 liquid-glass rounded-3xl p-8 sm:p-10 space-y-8 flex flex-col justify-between border-[#00d2ff]/50 shadow-[0_0_35px_rgba(0,210,255,0.12)]">
+            {/* Card 1: Core AI Website Package */}
+            <div className="lg:col-span-7 glass rounded-3xl p-8 sm:p-10 space-y-8 flex flex-col justify-between border-2 border-[var(--accent)]/40 shadow-xl">
               <div className="space-y-6">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="inline-block px-3.5 py-1 rounded-full bg-[#00d2ff]/15 border border-[#00d2ff]/30 text-[#00d2ff] text-xs font-semibold tracking-wider">
-                    Yksinyrittäjille &amp; ammatinharjoittajille
+                  <span className="px-3 py-1 rounded-full bg-[var(--accent)]/15 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-mono font-bold uppercase">
+                    TUOTE 1 (PÄÄTUOTE)
                   </span>
-                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[#00d2ff]/20 to-[#014489]/40 border border-[#00d2ff]/40 text-[#A4F4FD] text-[10px] font-bold uppercase tracking-wider">
-                    Päätuote
+                  <span className="px-2.5 py-0.5 rounded-full bg-[var(--warning)]/15 border border-[var(--warning)]/30 text-[var(--warning)] text-[10px] font-bold uppercase font-mono">
+                    VAIN 10 PAIKKAA
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug font-display">
-                    Somenkonsultointi &amp; Google Meet -tuntiohjaus
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)] tracking-tight leading-snug font-display">
+                    AI-Ystävälliset Sivut
                   </h3>
-                  <div className="mt-3 text-2xl sm:text-3xl font-bold font-display text-[#00d2ff] bg-white/[0.03] py-2.5 px-4 rounded-2xl border border-white/10 inline-block">
-                    200 € <span className="text-sm font-sans font-normal text-slate-300">(+ alv) / tunti</span>
+                  <div className="mt-3 flex items-baseline gap-2">
+                    <span className="text-3xl sm:text-4xl font-extrabold text-[var(--text)] font-display">499 €</span>
+                    <span className="text-xs text-[var(--muted)] font-mono">+ alv 0% (Kertamaksu)</span>
                   </div>
                 </div>
 
-                <p className="text-sm text-slate-200 leading-relaxed">
-                  Kädestä pitäen -opastusta ja täsmäsparrausta suoraan niihin asioihin, jotka askarruttavat sinua oman sosiaalisen median tekemisessä.
+                <p className="text-sm text-[var(--muted)] leading-relaxed">
+                  Avaimet käteen -sivustorakenne, asiantuntijaprofiilin luonti ja SEO/GEO-optimoidut tekstit tekoälyhakukoneille (ChatGPT, Gemini, Google AI).
                 </p>
 
-                <div className="pt-4 space-y-3 border-t border-white/10">
-                  <span className="text-xs font-semibold text-slate-100 uppercase tracking-wider block">Mitä käymme läpi tunnissa:</span>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-slate-200">
+                <div className="pt-4 space-y-3 border-t border-[var(--border)]">
+                  <span className="text-xs font-semibold text-[var(--text)] uppercase tracking-wider block">Mitä pakettiin sisältyy:</span>
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-[var(--text)]">
                     {[
-                      "Aihevalinta, koukut & käsikirjoitukset (Holy Trifecta)",
-                      "Puhelinkuvaus, mikrofonit ja valaistus omilla välineilläsi",
-                      "SOTE- ja asiantuntijaetiikka & Valvira-potilassuoja",
-                      "Orgaaninen AEO-kasvu & kanavasi nykytilan auditointi",
-                      "Aikataulut sovitaan joustavasti suoraan kalenteriisi",
+                      "Responsiivinen, salamannopea toteutus (CLS < 0.05)",
+                      "Asiantuntijaprofiilin tuotteistus & GEO-optimoidut tekstit",
+                      "Valvira- & Kela-yhteensopivat eettiset vastuuvapauslausekkeet",
+                      "Ajanvarauslinkkien integrointi nykyiseen kalenteriisi",
                     ].map((feat, i) => (
                       <li key={i} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#00d2ff] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -195,61 +209,66 @@ export default function Home() {
                 </div>
               </div>
 
-              <Link
-                href="/yhteystiedot"
-                className="w-full py-4 px-6 rounded-2xl bg-white text-black font-semibold text-sm hover:bg-[#00d2ff] hover:text-black transition-all flex items-center justify-center gap-2 group/btn text-center mt-6 shadow-[0_0_25px_rgba(255,255,255,0.2)] min-h-[48px]"
+              <a
+                href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--primary btn--lg w-full text-base font-bold shadow-xl flex items-center justify-center gap-2 group cursor-pointer"
               >
-                <Send className="w-4 h-4 text-black" />
-                <span>Tilaa Google Meet -ohjaus (200 € / h)</span>
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </Link>
+                <CreditCard className="w-5 h-5 text-[var(--accent-ink)]" />
+                <span>Osta AI-sivut (499 €) — Stripe</span>
+                <ArrowRight className="w-4 h-4 text-[var(--accent-ink)] group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
 
-            {/* Card 2: Custom Enterprise Inquiries via Form */}
-            <div className="lg:col-span-5 liquid-glass rounded-3xl p-8 sm:p-10 space-y-8 flex flex-col justify-between border border-white/10">
+            {/* Card 2: Add-on & Upsell */}
+            <div className="lg:col-span-5 glass rounded-3xl p-8 sm:p-10 space-y-8 flex flex-col justify-between border border-[var(--border)]">
               <div className="space-y-6">
-                <span className="inline-block px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-slate-300 text-xs font-semibold tracking-wider">
-                  Yrityksille &amp; klinikoille
+                <span className="px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--muted)] text-xs font-mono font-bold uppercase">
+                  YLLÄPITO &amp; SOMEKOUTSAUS
                 </span>
 
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug font-display">
-                    Räätälöidyt koulutukset &amp; luennot
-                  </h3>
-                  <div className="mt-3 text-sm font-semibold text-[#00d2ff]">
-                    Tarjouspyynnön kautta
+                <div className="space-y-4 border-b border-[var(--border)] pb-4">
+                  <div>
+                    <h4 className="text-lg font-bold text-[var(--text)] font-display">Huoleton Ylläpito</h4>
+                    <div className="text-xl font-extrabold text-[var(--text)] font-display mt-1">
+                      39 € <span className="text-xs font-sans font-normal text-[var(--muted)]">/ kk + alv 0%</span>
+                    </div>
                   </div>
+                  <p className="text-xs text-[var(--muted)]">
+                    Hosting, SSL, automaattiset päivitykset ja tekninen huolenpito. Aktivoituu vasta kun sivut on hyväksytty.
+                  </p>
+                  <a
+                    href="https://buy.stripe.com/00wcN5gsYcM629s4jH0Ny06"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--outline btn--sm w-full text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <span>Tilaa Ylläpito (39 €/kk)</span>
+                  </a>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  Kaikki työyhteisöjen, lääkäriasemien ja organisaatioiden luennot, työpajat ja laajemmat videostrategiat räätälöidään tarpeidenne mukaan.
-                </p>
-
-                <div className="pt-4 space-y-3 border-t border-white/10">
-                  <span className="text-xs font-semibold text-slate-100 uppercase tracking-wider block">Räätälöitävissä mm:</span>
-                  <ul className="space-y-2.5 text-xs text-slate-200">
-                    {[
-                      "Koko henkilöstön videokoulutus & työpajat",
-                      "Esiintymisvalmennus & rutiini ammattilaisille",
-                      "Organisaation monikanavainen videostrategia",
-                      "Lääkinnällinen etiikka & potilasohjeistus",
-                    ].map((feat, i) => (
-                      <li key={i} className="flex items-start gap-2.5">
-                        <Building2 className="w-4 h-4 text-[#00d2ff] shrink-0 mt-0.5" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-lg font-bold text-[var(--text)] font-display">Somekoutsaus</h4>
+                    <div className="text-xl font-extrabold text-[var(--text)] font-display mt-1">
+                      200 € <span className="text-xs font-sans font-normal text-[var(--muted)]">/ h + alv 0%</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-[var(--muted)]">
+                    Henkilökohtainen 1-on-1 etävalmennus kamerakammon selättämiseen ja ammattibrändin rakentamiseen somessa.
+                  </p>
+                  <a
+                    href="https://buy.stripe.com/00wcN5gsYcM629s4jH0Ny06"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--outline btn--sm w-full text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <span>Tilaa Somekoutsaus (200 €/h)</span>
+                  </a>
                 </div>
+
               </div>
-
-              <Link
-                href="/yhteystiedot"
-                className="w-full py-3.5 px-6 rounded-2xl bg-white/[0.03] border border-white/15 text-white font-semibold text-xs sm:text-sm hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2 group/btn text-center mt-6 min-h-[48px]"
-              >
-                <span>Pyydä räätälöity tarjous yrityksellesi</span>
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </Link>
             </div>
 
           </div>
@@ -258,12 +277,12 @@ export default function Home() {
       </section>
 
       {/* 3. SHORT EXPERT PROFILE (JANNE SÄKKINEN) */}
-      <section className="py-16 md:py-24 border-b border-white/10">
+      <section className="py-16 md:py-24 border-b border-[var(--border)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="liquid-glass rounded-3xl p-8 sm:p-12 border border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="glass rounded-3xl p-8 sm:p-12 border border-[var(--border)] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Photo */}
-            <div className="lg:col-span-4 relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/15 bg-white/[0.02]">
+            <div className="lg:col-span-4 relative aspect-[4/5] rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--surface-elevated)]">
               <Image
                 src="/assets/DSC09967.jpg"
                 alt="Janne Säkkinen — OMT-fysioterapeutti ja Tiedottajanne Oy:n perustaja"
@@ -273,36 +292,36 @@ export default function Home() {
               />
             </div>
 
-            {/* Content (2-3 concise sentences) */}
+            {/* Content */}
             <div className="lg:col-span-8 space-y-6">
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--accent)] text-xs font-semibold uppercase tracking-wider">
                   <ShieldCheck className="w-3.5 h-3.5" />
                   <span>Kouluttaja &amp; Asiantuntija</span>
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+                <h2 className="text-2xl sm:text-4xl font-bold text-[var(--text)] tracking-tight font-display">
                   Janne Säkkinen
                 </h2>
-                <div className="text-xs text-white/70 font-medium">
+                <div className="text-xs text-[var(--muted)] font-medium font-mono">
                   OMT-Fysioterapeutti (SOMTY) • Terveystieteiden B.Sc. • Oulun yliopiston luennoitsija (2017–)
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-                Janne Säkkinen on Valvira-rekisteröity OMT-fysioterapeutti ja Oulun yliopiston lääketieteellisen tiedekunnan pitkäaikainen luennoitsija. Hän on rakentanut nollasta yli 1,1 miljoonan orgaanisen katselukerran kanavakokonaisuuden täysin ilman maksettua mainontaa. Tiedottajanne Oy tuo nämä käytännön opit sote-alan ammattilaisten ja yritysten käyttöön.
+              <p className="text-sm sm:text-base text-[var(--muted)] leading-relaxed">
+                Janne Säkkinen on Valvira-rekisteröity OMT-fysioterapeutti ja Oulun yliopiston lääketieteellisen tiedekunnan luennoitsija. Hän on rakentanut nollasta yli 1,1 miljoonan orgaanisen katselukerran kanavakokonaisuuden. Tiedottajanne Oy tuo nämä opit sote-alan ammatinharjoittajien ja yritysten käyttöön.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href="/referenssit"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white text-black font-semibold text-xs sm:text-sm hover:bg-white/90 transition-all min-h-[48px]"
+                  className="btn btn--outline px-6 py-3 text-xs sm:text-sm font-semibold inline-flex items-center gap-2"
                 >
                   <span>Katso referenssit &amp; 1,1M+ näytöt</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/yhteystiedot"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl border border-white/15 bg-white/[0.03] text-white font-semibold text-xs sm:text-sm hover:bg-white/10 transition-all min-h-[48px]"
+                  className="btn btn--ghost px-6 py-3 text-xs sm:text-sm font-semibold inline-flex items-center gap-2"
                 >
                   <span>Ota yhteyttä</span>
                 </Link>
@@ -314,31 +333,33 @@ export default function Home() {
       </section>
 
       {/* 4. UNIFIED FINAL CALL TO ACTION */}
-      <section className="py-20 md:py-28 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10">
+      <section className="py-20 md:py-28 relative overflow-hidden text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           
           <div className="space-y-4">
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
-              Varaa Google Meet -tuntiohjaus <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">(200 € / h)</span>
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--text)] font-display">
+              Siirry vuokramaalta <span className="text-gradient-cyan">omalle maalle tänään.</span>
             </h2>
-            <p className="text-sm sm:text-base text-white/70 max-w-xl mx-auto leading-relaxed">
-              Jätä viesti lomakkeella, niin otamme yhteyttä ja laitamme aikataulut suoraan kalenteriisi.
+            <p className="text-sm sm:text-base text-[var(--muted)] max-w-xl mx-auto leading-relaxed">
+              Lukitse 499 € testiryhmähinta (10 ensimmäiselle sote-ammatinharjoittajalle). "Näe ennen kuin maksat" -lupaus ja 30 päivän tyytyväisyystakuu.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/yhteystiedot"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white text-black font-semibold text-sm sm:text-base px-8 py-4 transition-all hover:bg-white/90 shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-[0.98] min-h-[48px]"
+            <a
+              href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--primary btn--lg text-sm sm:text-base font-bold shadow-xl inline-flex items-center gap-2 cursor-pointer"
             >
-              <Send className="w-4 h-4 text-black" />
-              <span>Siirry tilauslomakkeeseen</span>
-            </Link>
+              <CreditCard className="w-5 h-5 text-[var(--accent-ink)]" />
+              <span>Tilaa AI-optimoidut sivut (499 €) — Stripe</span>
+            </a>
             <Link
-              href="/tyokalut"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 text-white font-medium text-sm sm:text-base px-8 py-4 transition-all hover:bg-white/10 min-h-[48px]"
+              href="/palvelut"
+              className="btn btn--outline btn--lg text-sm sm:text-base font-semibold inline-flex items-center gap-2"
             >
-              <span>Ilmaiset työkalut &amp; ROI-laskuri</span>
+              <span>Lue kaikki palvelutiedot</span>
             </Link>
           </div>
 
