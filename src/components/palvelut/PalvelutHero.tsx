@@ -25,7 +25,7 @@ export default function PalvelutHero() {
 
         {/* Hero Lede / Value Proposition */}
         <p className="mt-6 text-base sm:text-lg md:text-xl text-[var(--muted)] max-w-3xl leading-relaxed font-sans">
-          <strong>Rakenna oma digitaalinen kotisi:</strong> asiakassuhteet ja näkyvyys, jotka pysyvät sinulla. Tiedottajanne Oy rakentaa sinulle tekoälylle (ChatGPT, Gemini, Google AI) optimoidun digitaalisen kiinteistön, joka tuo potilaat ja asiakkaat suoraan luoksesi.
+          <strong>Rakenna oma digitaalinen kotisi:</strong> asiantuntijabrändi ja näkyvyys, jotka pysyvät sinulla. Tiedottajanne Oy rakentaa sinulle tekoälylle (ChatGPT, Gemini, Google AI) optimoidun oman verkkokodin, josta ohjaat asiakkaat ja potilaat suoraan niihin paikkoihin, joissa työskentelet.
         </p>
 
         {/* Dual Call to Action Buttons */}

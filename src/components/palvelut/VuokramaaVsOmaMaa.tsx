@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, Building2, Globe2, ExternalLink, Sparkles, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Globe2, ExternalLink, Sparkles, ShieldCheck, MapPin } from "lucide-react";
 
 export default function VuokramaaVsOmaMaa() {
   return (
@@ -11,89 +11,93 @@ export default function VuokramaaVsOmaMaa() {
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="pill uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4 text-[var(--accent)]" />
-            <span>Oma Asiantuntijabrändi &amp; Digitaalinen Koti</span>
+            <span>Oma Maa -taktiikka &amp; Digitaalinen Koti</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] font-display leading-tight">
             Rakenna menestyksesi kestävälle pohjalle – <span className="text-gradient-cyan">omalle maallesi.</span>
           </h2>
           <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
-            Fysioterapeutit, osteopaatit, terapeutit ja lääkärit saavuttavat parhaat tulokset, kun vastaanoton ja varausjärjestelmien rinnalla rakennetaan omaa, pitkäjänteistä asiantuntijabrändiä ja digitaalista kotia.
+            Ammattilaisen tärkein voimavara on oma verkkokoti. Kotisivusi kokoavat osaamisesi yhteen paikkaan, rakentavat nimeäsi nettiin ja tekoälyyn — ja ohjaavat asiakkaat sujuvasti juuri niihin toimipisteisiin ja vastaanotoille, joissa kulloinkin työskentelet.
           </p>
         </div>
 
-        {/* Side-by-Side Comparison */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* 3 Core Pillars of "Oma maa" */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           
-          {/* Card 1: External booking / channels */}
-          <div className="glass rounded-3xl p-8 space-y-6 border border-[var(--border)] bg-[var(--surface)]/40">
-            <div className="flex items-center justify-between border-b border-[var(--border)] pb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)]">
-                  <Building2 className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text)] font-display">VARAUSJÄRJESTELMÄT</h3>
-                  <span className="text-xs text-[var(--muted)] font-mono font-semibold">Toimiva kanava ajanvarauksille</span>
-                </div>
+          {/* Pillar 1: Oma alusta & tunnettuus */}
+          <div className="glass rounded-3xl p-8 space-y-6 border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)]">
+                <Globe2 className="w-6 h-6" />
               </div>
-              <span className="px-3 py-1 rounded-full bg-[var(--surface-elevated)] text-[var(--muted)] text-xs font-mono font-bold border border-[var(--border)]">
-                PÄIVITTÄINEN TYÖ
-              </span>
+              <div className="space-y-1">
+                <span className="text-xs text-[var(--accent)] font-mono font-bold uppercase tracking-wider">1. Oma Alusta</span>
+                <h3 className="text-xl font-bold text-[var(--text)] font-display">Näy omalla nimelläsi ja ehdoillasi</h3>
+              </div>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                Oma verkkosivusto antaa kliiniselle osaamisellesi, potilasohjeillesi ja erityisaloillesi arvokkaan ja selkeän kodin. Sinä olet asiantuntijana keskiössä.
+              </p>
             </div>
-
-            <p className="text-sm text-[var(--muted)] leading-relaxed">
-              Varausjärjestelmät ja lääkärikeskukset ovat erinomainen työkalu päivittäisen kalenterin hallintaan ja potilaiden sujuvaan vastaanottamiseen.
-            </p>
-
-            <ul className="space-y-4 text-xs sm:text-sm text-[var(--text)]">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[var(--accent)] shrink-0 mt-0.5" />
-                <span><strong>Suora kalenterinhallinta:</strong> Hoitaa potilasajanvaraukset ja vastaanottotilat sujuvasti.</span>
+            <ul className="space-y-2.5 text-xs text-[var(--text)] pt-4 border-t border-[var(--border)]">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                <span>100 % oma profiili ja digitaalinen identiteetti</span>
               </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[var(--accent)] shrink-0 mt-0.5" />
-                <span><strong>Täydentävä rooli:</strong> Toimii parhaiten silloin, kun rinnalla on oma tunnettu asiantuntijaprofiili.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[var(--accent)] shrink-0 mt-0.5" />
-                <span><strong>Keskittyminen vastaanottotyöhön:</strong> Tarjoaa puitteet kliinisen vastaanottotyön tekemiselle.</span>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                <span>Pysyvä auktoriteetti urasi kaikissa vaiheissa</span>
               </li>
             </ul>
           </div>
 
-          {/* Card 2: Owned Land Card (Oma maa) */}
-          <div className="glass rounded-3xl p-8 space-y-6 border border-[var(--success)]/40 bg-[var(--success)]/[0.03]">
-            <div className="flex items-center justify-between border-b border-[var(--border)] pb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[var(--success)]/10 border border-[var(--success)]/30 flex items-center justify-center text-[var(--success)]">
-                  <Globe2 className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text)] font-display">OMA DIGITAALINEN KOTI</h3>
-                  <span className="text-xs text-[var(--success)] font-mono font-semibold">Tekoälyoptimoitu (GEO) oma profiili</span>
-                </div>
+          {/* Pillar 2: Ohjaa paikkoihin missä työskentelet */}
+          <div className="glass rounded-3xl p-8 space-y-6 border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)]">
+                <MapPin className="w-6 h-6" />
               </div>
-              <span className="px-3 py-1 rounded-full bg-[var(--success)]/10 text-[var(--success)] text-xs font-mono font-bold">
-                100 % OMISTUS &amp; KASVU
-              </span>
+              <div className="space-y-1">
+                <span className="text-xs text-[var(--accent)] font-mono font-bold uppercase tracking-wider">2. Asiakasohjaus</span>
+                <h3 className="text-xl font-bold text-[var(--text)] font-display">Ohjaa sinne, missä työskentelet</h3>
+              </div>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                Vastaanotatpa lääkärikeskuksessa, useilla eri klinikoilla tai omalla vastaanotollasi, kotisivusi ohjaavat potilaat suoraan oikeisiin toimipisteisiin ja aikoihin.
+              </p>
             </div>
-
-            <p className="text-sm text-[var(--muted)] leading-relaxed">
-              Oma digitaalinen kiinteistösi kokoaa yhteen osaamisesi, suosituksesi ja potilasohjeesi — ja kerryttää arvoa suoraan sinulle.
-            </p>
-
-            <ul className="space-y-4 text-xs sm:text-sm text-[var(--text)]">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[var(--success)] shrink-0 mt-0.5" />
-                <span><strong>Omat asiakassuhteet:</strong> Luottamus ja potilassuhteet rakentuvat suoraan sinulle. Asiakkaat seuraavat sinua urasi kaikissa vaiheissa.</span>
+            <ul className="space-y-2.5 text-xs text-[var(--text)] pt-4 border-t border-[var(--border)]">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                <span>Suorat linkit eri toimipisteiden vastaanottoihin</span>
               </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[var(--success)] shrink-0 mt-0.5" />
-                <span><strong>Tekoälysuositukset (AEO/GEO):</strong> ChatGPT, Gemini ja Google suosittelevat sinua omalla nimelläsi, kun potilas hakee apua vaivaansa.</span>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                <span>Asiakkaat seuraavat sinua, vaikka toimipaikkasi vaihtuisivat</span>
               </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[var(--success)] shrink-0 mt-0.5" />
-                <span><strong>Täysi riippumattomuus ja arvo:</strong> Voit kytkeä minkä tahansa varausjärjestelmän ja rakentaa pysyvää digitaalista pääomaa itsellesi.</span>
+            </ul>
+          </div>
+
+          {/* Pillar 3: Näkyvyys nettiin & tekoälyyn */}
+          <div className="glass rounded-3xl p-8 space-y-6 border border-[var(--border)] hover:border-[var(--accent)]/40 transition-all flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--success)]/10 border border-[var(--success)]/20 flex items-center justify-center text-[var(--success)]">
+                <Sparkles className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs text-[var(--success)] font-mono font-bold uppercase tracking-wider">3. Tekoäly &amp; AEO</span>
+                <h3 className="text-xl font-bold text-[var(--text)] font-display">Rakenna pysyvää näkyvyyttä nettiin</h3>
+              </div>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                Tekoälyhakukoneet (ChatGPT, Gemini, Perplexity ja Google) suosittelevat sinua nimelläsi erikoisalasi asiantuntijana, kun tietosi on jäsennelty omaan verkkokotiisi.
+              </p>
+            </div>
+            <ul className="space-y-2.5 text-xs text-[var(--text)] pt-4 border-t border-[var(--border)]">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                <span>Löydettävyys tekoälyhaustä ja Googlen kärkisijoilta</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                <span>Kumuloituva digitaalinen pääoma ilman jatkuvia mainoskuluja</span>
               </li>
             </ul>
           </div>
@@ -108,10 +112,10 @@ export default function VuokramaaVsOmaMaa() {
               <span>Aitoja Esimerkkejä Omista Digitaalisista Kodeista</span>
             </div>
             <h3 className="text-2xl font-bold font-display text-[var(--text)]">
-              Miltä tekoäly- ja ihmiystävällinen oma kiinteistö näyttää?
+              Miltä asiantuntijan oma verkkokoti näyttää käytännössä?
             </h3>
             <p className="text-xs sm:text-sm text-[var(--muted)]">
-              Tutustu toteuttamiimme asiantuntijaprofiileihin, jotka rakentavat auktoriteettia sekä hakukoneille että potilaille:
+              Tutustu toteuttamiimme asiantuntijaprofiileihin, jotka rakentavat auktoriteettia ja ohjaavat potilaat suoraan ammattilaisen toimipisteisiin:
             </p>
           </div>
 
@@ -131,7 +135,7 @@ export default function VuokramaaVsOmaMaa() {
                 <ExternalLink className="w-4 h-4 text-[var(--muted)] group-hover:text-[var(--accent)] transition-colors" />
               </div>
               <p className="text-xs text-[var(--muted)] leading-relaxed">
-                OMT-Fysioterapeutti Janne Säkkisen kliininen asiantuntijaportaali. Optimoitu tekoälyindeksoinnille (AEO/GEO) ja suoralle potilasohjaukselle.
+                OMT-Fysioterapeutti Janne Säkkisen oma asiantuntijasivusto. Sivusto rakentaa vahvaa tekoälynäkyvyyttä (AEO/GEO) ja ohjaa potilaat suoraan vastaanottopaikkoihin (Terveystalo ja Norre Työterveys).
               </p>
               <div className="pt-2 border-t border-[var(--border)] flex flex-wrap gap-2 text-[11px] font-mono text-[var(--accent)] font-semibold">
                 <span>1,1M+ orgaanista näyttöä</span>
@@ -156,7 +160,7 @@ export default function VuokramaaVsOmaMaa() {
                 <ExternalLink className="w-4 h-4 text-[var(--muted)] group-hover:text-[var(--accent)] transition-colors" />
               </div>
               <p className="text-xs text-[var(--muted)] leading-relaxed">
-                Fysioterapian ja valmennuksen verkkokoti. Selkeä asiantuntijamallinnus, joka tekee palveluista ja ajanvarauksesta riippumattoman.
+                Kansainvälinen fysioterapian ja valmennuksen oma verkkokoti. Rakentaa omaa globaalia asiantuntijuutta ja ohjaa asiakkaat oikeisiin valmennus- ja konsultaatiokanaviin.
               </p>
               <div className="pt-2 border-t border-[var(--border)] flex flex-wrap gap-2 text-[11px] font-mono text-[var(--success)] font-semibold">
                 <span>200+ valmennus- &amp; potilasasiakasta</span>

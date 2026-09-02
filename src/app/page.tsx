@@ -65,10 +65,10 @@ export default function Home() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Miksi oma verkkokoti on tärkeä lisä vastaanoton ja varausjärjestelmän rinnalle?",
+        "name": "Miksi ammattilaisen kannattaa rakentaa oma verkkosivusto toimipisteiden rinnalle?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oma digitaalinen koti varmistaa, että asiantuntijabrändisi, potilassuhteesi ja ammatillinen luottamuksesi rakentuvat suoraan sinulle. Lisäksi ChatGPT, Perplexity ja Google suosittelevat sinua omalla nimelläsi asiantuntijana vain, kun sinulla on oma tekoälyoptimoitu verkkoprofiili."
+          "text": "Oma digitaalinen koti ankkuroi asiantuntijuutesi ja asiakassuhteesi sinulle itsellesi. Sivustoltasi voit ohjata asiakkaat ja potilaat aina niihin toimipisteisiin tai vastaanotoille, joissa kulloinkin työskentelet. Lisäksi ChatGPT, Perplexity ja Google suosittelevat sinua omalla nimelläsi asiantuntijana vain, kun sinulla on oma tekoälyoptimoitu verkkoprofiili."
         }
       },
       {
@@ -146,7 +146,7 @@ export default function Home() {
 
             {/* Hero Lede */}
             <p className="text-base sm:text-lg text-[var(--muted)] max-w-2xl leading-relaxed">
-              <strong>Rakenna oma digitaalinen kotisi:</strong> asiakassuhteet ja näkyvyys, jotka pysyvät sinulla. Tiedottajanne Oy rakentaa sinulle tekoälylle (ChatGPT, Gemini, Google AI) optimoidun digitaalisen profiilin, joka tuo potilaat ja asiakkaat suoraan luoksesi.
+              <strong>Rakenna oma digitaalinen kotisi:</strong> asiantuntijabrändi ja näkyvyys, jotka pysyvät sinulla. Tiedottajanne Oy rakentaa sinulle tekoälylle (ChatGPT, Gemini, Google AI) optimoidun oman verkkokodin, josta ohjaat asiakkaat ja potilaat suoraan niihin paikkoihin, joissa työskentelet.
             </p>
 
             {/* Primary CTA + Secondary Link */}

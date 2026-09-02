@@ -13,8 +13,8 @@ export default function SoteFaqSection() {
 
   const faqs: FaqItem[] = [
     {
-      question: "Miksi oma verkkokoti on tärkeä lisä vastaanoton ja varausjärjestelmän rinnalle?",
-      answer: "Oma digitaalinen koti varmistaa, että asiantuntijabrändisi, potilassuhteesi ja ammatillinen luottamuksesi rakentuvat suoraan sinulle. Lisäksi ChatGPT, Perplexity ja Google suosittelevat sinua omalla nimelläsi asiantuntijana vain silloin, kun sinulla on oma tekoälyoptimoitu verkkoprofiili.",
+      question: "Miksi ammattilaisen kannattaa rakentaa oma verkkosivusto toimipisteiden rinnalle?",
+      answer: "Oma digitaalinen koti varmistaa, että asiantuntijuutesi ja näkyvyytesi rakentuvat suoraan sinulle. Voit ohjata potilaat ja asiakkaat sieltä suoraan niihin lääkärikeskuksiin, klinikoille tai toimipisteisiin, joissa kulloinkin työskentelet. Lisäksi ChatGPT, Perplexity ja Google suosittelevat sinua omalla nimelläsi asiantuntijana vain silloin, kun sinulla on oma tekoälyoptimoitu verkkoprofiili.",
     },
     {
       question: "Mitä 'Näe ennen kuin maksat' -lupaus ja 30 päivän takuu tarkoittavat?",

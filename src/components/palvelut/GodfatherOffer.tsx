@@ -91,7 +91,7 @@ export default function GodfatherOffer() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
-                  <span><strong>Varausjärjestelmän Integrointi:</strong> Ohjaa asiakkaat nykyiseen tai uuteen ajanvaraukseesi.</span>
+                  <span><strong>Ohjaus Toimipisteisiisi:</strong> Selkeät linkitykset ja ohjaus lääkärikeskuksiin, klinikoille tai vastaanotoille, joissa työskentelet.</span>
                 </li>
               </ul>
 
