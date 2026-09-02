@@ -1,4 +1,9 @@
-﻿## Päivitys: 02.09.2026 08:53
+﻿## Päivitys: 02.09.2026 08:59
+- Näkyvyysdiagnoosin täydellinen poisto & suora Stripe-osto (tiedottajanne): Poistettu "Näkyvyysdiagnoosi"-maininnat ja varausmodal kokonaan.
+- Päivitetty pää-CTA muotoon "Tilaa AI-optimoidut sivut (499 €)" ohjaten suoraan 499 € Stripe Checkout -osoitteeseen (buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04) Hero-osiossa ja Navbarissa.
+- Auditointi: Next.js tuotantobuild (16/16 sivua), AA-kontrastitestaus 0 virhettä kaikissa näkymissä.
+--------------------------------------------------
+## Päivitys: 02.09.2026 08:53
 - Päivitetty SOTE-myyntisivu /palvelut (tiedottajanne): Suorat Stripe-ostolinkit (499 € AI-sivut: buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04, 39 €/kk ylläpito & 200 €/h somekoutsaus: buy.stripe.com/00wcN5gsYcM629s4jH0Ny06).
 - Lisätty pää-CTA "Varaa ilmainen Näkyvyysdiagnoosi (45 min)" modal-kartoituslomakkeella, B2B-hinnoittelu (alv 0%), "Näe ennen kuin maksat" -lupaus, 30 pv tyytyväisyystakuu sekä ftsakkinen.com ja ptsakkinen.com GEO-referenssikortit.
 - Auditointi: Next.js tuotantobuild (16/16 sivua), AA-kontrastitestaus 0 virhettä kaikissa näkymissä.
@@ -25,4 +30,5 @@
 # 04_DECISION_CHANGELOG.md (Tiedottajanne Oy â€” paikallinen kopio)
 
 TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevista pÃ¤Ã¤tÃ¶slokimerkinnÃ¶istÃ¤. Kanoninen, kaikkien projektien yhteinen loki yllÃ¤pidetÃ¤Ã¤n Google Drivessa (`G:\My Drive\AI - automaatiot\04_DECISION_CHANGELOG.md`, ks. `03_DEV_AND_SYSTEMS.md` / `config/rules.md`, kohta 2). Uusin merkintÃ¤ ylimpÃ¤nÃ¤.
+
 

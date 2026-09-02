@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "AI-Kotisivut SOTE-Ammatinharjoittajille — Oma Maa vs. Vuokramaa | Tiedottajanne Oy",
-    description: "Täysin oma tekoälylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille. Varaa ilmainen 45 min Näkyvyysdiagnoosi.",
+    description: "Täysin oma tekoälylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille. Tilaa AI-optimoidut sivut (499 € + alv 0%).",
     url: "https://www.tiedottajanne.fi/palvelut",
     siteName: "Tiedottajanne Oy",
     locale: "fi_FI",

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Video, Send } from "lucide-react";
+import { Menu, X, Video, CreditCard } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
 
 export default function Navbar() {
@@ -61,17 +61,19 @@ export default function Navbar() {
 
           {/* CTA & Mobile Menu Trigger */}
           <div className="flex items-center gap-3">
-            <Link
-              href="/palvelut#godfather-offer"
-              className="hidden sm:inline-flex btn btn--primary px-5 py-2.5 text-xs sm:text-sm items-center gap-2 whitespace-nowrap"
+            <a
+              href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex btn btn--primary px-5 py-2.5 text-xs sm:text-sm items-center gap-2 whitespace-nowrap cursor-pointer"
             >
-              <Send className="w-4 h-4 text-[var(--accent-ink)]" />
-              <span>Hanki AI-Kotisivut (499 €)</span>
-            </Link>
+              <CreditCard className="w-4 h-4 text-[var(--accent-ink)]" />
+              <span>Tilaa AI-sivut (499 €)</span>
+            </a>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2.5 rounded-2xl bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] hover:text-[var(--accent)] transition-colors"
+              className="lg:hidden p-2.5 rounded-2xl bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] hover:text-[var(--accent)] transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
               aria-label="Avaa valikko"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -97,14 +99,16 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="pt-2">
-            <Link
-              href="/palvelut#godfather-offer"
+            <a
+              href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="btn btn--primary w-full py-3.5 text-sm flex items-center justify-center gap-2"
+              className="btn btn--primary w-full py-3.5 text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
-              <Send className="w-4 h-4 text-[var(--accent-ink)]" />
-              <span>Hanki AI-Kotisivut (499 €)</span>
-            </Link>
+              <CreditCard className="w-4 h-4 text-[var(--accent-ink)]" />
+              <span>Tilaa AI-sivut (499 €)</span>
+            </a>
           </div>
         </div>
       )}

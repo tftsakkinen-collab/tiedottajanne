@@ -1,6 +1,6 @@
 "use client";
 
-import { HelpCircle, ChevronDown, CheckCircle2 } from "lucide-react";
+import { HelpCircle, ChevronDown, CheckCircle2, CreditCard } from "lucide-react";
 import { useState } from "react";
 
 interface FaqItem {
@@ -17,20 +17,20 @@ export default function SoteFaqSection() {
       answer: "Profiili ison talon sivuilla on vuokramaata. Et omista digitaalista identiteettiäsi, ja jos vaihdat toimipistettä tai kliinistä ryhmää, asiakasvirtasi katkeaa. Lisäksi ChatGPT ja Gemini eivät osaa suositella sinua erillisenä asiantuntijana ilman omaa indeksoitua verkkokotia.",
     },
     {
-      question: "Mitä 'Näe ennen kuin maksat' -lupaus tarkoittaa?",
-      answer: "Lupaamme, että pääset näkemään ja hyväksymään valmiin AI-optimoidun kotisivustosi ennen kuin huoleton 39 €/kk ylläpito aktivoituu. Lisäksi kaikilla toteutuksillamme on 30 päivän täysi tyytyväisyystakuu.",
+      question: "Mitä 'Näe ennen kuin maksat' -lupaus ja 30 päivän takuu tarkoittavat?",
+      answer: "Lupaamme, että pääset näkemään ja hyväksymään valmiin AI-optimoidun kotisivustosi ennen kuin huoleton 39 €/kk ylläpito aktivoituu. Lisäksi kaikilla toteutuksillamme on 30 päivän täysi tyytyväisyystakuu — kynnys tilaukselle on tehty olemattomaksi.",
     },
     {
-      question: "Miten ilmainen 45 minuutin Näkyvyysdiagnoosi toimii?",
-      answer: "Näkyvyysdiagnoosi on maksuton 45 min etätapaaminen (Google Meet), jossa selvitämme kuka todella omistaa brändisi tällä hetkellä ja miltä näytät tekoälyhakukoneissa (ChatGPT, Gemini, Google AI). Diagnoosi ei velvoita ostamaan mitään.",
+      question: "Mitä 499 € Kertaperustus sisältää?",
+      answer: "499 € (+ alv 0%) kertaperustus sisältää avaimet käteen -sivustorakenne, asiantuntijaprofiilin luonnin, eettiset potilasohjeistukset ja SEO/GEO-optimoidut tekstit tekoälyhakukoneille (ChatGPT, Gemini, Google AI).",
     },
     {
       question: "Miksi 499 € tarjous on rajattu vain 10 ensimmäiselle?",
-      answer: "499 € (+ alv 0%) on testiryhmähinta, jolla keräämme 10 uutta vahvaa sote-alan ammatinharjoittajareferenssiä. Kun 10 paikkaa on myyty, hinta nousee normaaliin 998 euroon.",
+      answer: "499 € (+ alv 0%) on testiryhmähinta, jolla keräämme 10 uutta vahvaa sote-alan ammatinharjoittajareferenssiä. Kun 10 paikkaa on täytetty, hinta nousee normaaliin 998 euroon.",
     },
     {
-      question: "Miten maksaminen tapahtuu Stripe-kassan kautta?",
-      answer: "Ostopainiketta klikkaamalla siirryt turvalliseen Stripe Checkout -kassaan. Maksu ilmoitetaan B2B-muodossa (alv 0 %, lisätään kassalla). Saat kuitin ja aloituskyselyn välittömästi sähköpostiisi.",
+      question: "Miten tilaaminen ja maksaminen tapahtuu Stripe-kassalla?",
+      answer: "Painamalla 'Tilaa AI-optimoidut sivut (499 €)' siirryt suoraan turvalliseen Stripe Checkout -kassaan. Maksu ilmoitetaan B2B-muodossa (alv 0 %, vero lisätään kassalla). Saat kuitin ja aloituskyselyn välittömästi sähköpostiisi.",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function SoteFaqSection() {
             Usein kysytyt kysymykset
           </h2>
           <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
-            Haluamme, että päätöksenteko on sinulle täysin läpinäkyvää ja huoletonta.
+            Haluamme, että tilaaminen on sinulle täysin läpinäkyvää, turvallista ja huoletonta.
           </p>
         </div>
 
@@ -92,11 +92,13 @@ export default function SoteFaqSection() {
           </h3>
           <div>
             <a
-              href="#godfather-offer"
-              className="btn btn--primary btn--lg text-sm sm:text-base font-bold shadow-xl inline-flex items-center gap-2"
+              href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--primary btn--lg text-sm sm:text-base font-bold shadow-xl inline-flex items-center gap-2 cursor-pointer"
             >
-              <CheckCircle2 className="w-5 h-5 text-[var(--accent-ink)]" />
-              <span>Lukitse 499 € Testiryhmäetu Tästä</span>
+              <CreditCard className="w-5 h-5 text-[var(--accent-ink)]" />
+              <span>Tilaa AI-optimoidut sivut (499 €) — Stripe</span>
             </a>
           </div>
         </div>
