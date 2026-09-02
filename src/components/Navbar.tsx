@@ -61,15 +61,13 @@ export default function Navbar() {
 
           {/* CTA & Mobile Menu Trigger */}
           <div className="flex items-center gap-3">
-            <a
-              href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/palvelut#godfather-offer"
               className="hidden sm:inline-flex btn btn--primary px-5 py-2.5 text-xs sm:text-sm items-center gap-2 whitespace-nowrap cursor-pointer"
             >
               <CreditCard className="w-4 h-4 text-[var(--accent-ink)]" />
               <span>Tilaa AI-sivut (499 €)</span>
-            </a>
+            </Link>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -99,16 +97,14 @@ export default function Navbar() {
             ))}
           </nav>
           <div className="pt-2">
-            <a
-              href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/palvelut#godfather-offer"
               onClick={() => setMobileMenuOpen(false)}
               className="btn btn--primary w-full py-3.5 text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <CreditCard className="w-4 h-4 text-[var(--accent-ink)]" />
               <span>Tilaa AI-sivut (499 €)</span>
-            </a>
+            </Link>
           </div>
         </div>
       )}
