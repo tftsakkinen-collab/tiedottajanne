@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="md:col-span-2 space-y-3">
             <h4 className="text-xs font-semibold text-[var(--text)] uppercase tracking-wider">Pikalinkit</h4>
             <ul className="space-y-1 text-xs">
-              <li><Link href="/#palvelut" className="min-h-[44px] py-2 flex items-center text-[var(--muted)] hover:text-[var(--accent)] transition-colors">Palvelut</Link></li>
+              <li><Link href="/palvelut" className="min-h-[44px] py-2 flex items-center text-[var(--muted)] hover:text-[var(--accent)] transition-colors">Palvelut &amp; Hinnoittelu</Link></li>
               <li><Link href="/referenssit" className="min-h-[44px] py-2 flex items-center text-[var(--muted)] hover:text-[var(--accent)] transition-colors">Referenssit</Link></li>
               <li><Link href="/yhteystiedot" className="min-h-[44px] py-2 flex items-center text-[var(--muted)] hover:text-[var(--accent)] transition-colors">Yhteystiedot</Link></li>
               <li><Link href="/kasikirja" className="min-h-[44px] py-2 flex items-center text-[var(--muted)] hover:text-[var(--accent)] transition-colors">SOTE-Käsikirja</Link></li>

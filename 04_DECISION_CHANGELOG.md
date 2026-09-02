@@ -1,4 +1,8 @@
-﻿## Päivitys: 30.08.2026 08:56
+﻿## Päivitys: 02.09.2026 08:05
+- Luotu konvertoiva SOTE-myyntisivu reitille /palvelut (tiedottajanne): Toteutettu "Oma maa vs. Vuokramaa" -konsepti, 499 € Perustajatarjous (10 ensimmäiselle, FOMO), 29 €/kk huoleton ylläpito sekä 200 €/h somekoulutuksen lisämyynti valmiilla Stripe-ostopainikepaikolla.
+- Auditointi: Next.js tuotantobuild (16/16 sivua), AA-kontrastitestaus 0 virhettä kaikissa näkymissä.
+--------------------------------------------------
+## Päivitys: 30.08.2026 08:56
 - Korjattu valokuvien ja YouTube-pikkukuvien lataus (tiedottajanne): Päivitetty ProofOfWork.tsx:n GALLERY_PHOTOS viittaamaan olemassa oleviin public/assets/ -kuviin /images/ sijaan, ja määritelty YouTube-kuvadomainit (img.youtube.com & i.ytimg.com) next.config.mjs:n remotePatterns-konfiguraatioon.
 - Auditointi: AA-kontrastitestaus 0 virhettä kaikissa näkymissä.
 --------------------------------------------------
@@ -81,5 +85,6 @@ TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ ko
 ## PÃ¤ivitys: 29.08.2026 21:16
 Poistettu feature-korttien jÃ¤lkeinen tyhjÃ¤ alue, kytketty SÃ¤kkinen design system OKLCH-tokenit taustoihin, yhtenÃ¤istetty vÃ¤rit, korjattu mobiili kosketusalueet (>=44px) ja auditoitu kontrastit (0 virhettÃ¤).
 --------------------------------------------------
+
 
 
