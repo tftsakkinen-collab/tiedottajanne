@@ -18,7 +18,7 @@ export default function SoteFaqSection() {
     },
     {
       question: "Mitä 'Näe ennen kuin maksat' -lupaus ja 30 päivän takuu tarkoittavat?",
-      answer: "Lupaamme, että pääset näkemään ja hyväksymään valmiin AI-optimoidun kotisivustosi ennen kuin huoleton 39 €/kk ylläpito aktivoituu. Lisäksi kaikilla toteutuksillamme on 30 päivän täysi tyytyväisyystakuu — kynnys tilaukselle on tehty olemattomaksi.",
+      answer: "Lupaamme, että pääset näkemään ja hyväksymään valmiin AI-optimoidun kotisivustosi ennen kuin huoleton 29 €/kk ylläpito aktivoituu. Lisäksi kaikilla toteutuksillamme on 30 päivän täysi tyytyväisyystakuu — kynnys tilaukselle on tehty olemattomaksi.",
     },
     {
       question: "Mitä 499 € Kertaperustus sisältää?",

@@ -7,7 +7,7 @@ import SoteFaqSection from "@/components/palvelut/SoteFaqSection";
 
 export const metadata: Metadata = {
   title: "AI-Kotisivut SOTE-Ammatinharjoittajille — Oma Maa vs. Vuokramaa | Tiedottajanne Oy",
-  description: "Omista digitaalinen identiteettisi ja asiakasvirrasi. AI-optimoitu (GEO) oma profiili 499 € perustajahintaan + 39 €/kk huoleton ylläpito. Näe ennen kuin maksat & 30 pv takuu.",
+  description: "Omista digitaalinen identiteettisi ja asiakasvirrasi. AI-optimoitu (GEO) oma profiili 499 € perustajahintaan + 29 €/kk huoleton ylläpito. Näe ennen kuin maksat & 30 pv takuu.",
   metadataBase: new URL("https://www.tiedottajanne.fi"),
   alternates: {
     canonical: "https://www.tiedottajanne.fi/palvelut",
@@ -55,7 +55,7 @@ export default function PalvelutPage() {
       {/* Vuokramaa vs. Oma Maa Analysis & Reference Cards */}
       <VuokramaaVsOmaMaa />
 
-      {/* The Godfather Offer: 499 € + 39 €/mo */}
+      {/* The Godfather Offer: 499 € + 29 €/mo */}
       <GodfatherOffer />
 
       {/* Somekoutsaus Upsell: 200 € / h */}

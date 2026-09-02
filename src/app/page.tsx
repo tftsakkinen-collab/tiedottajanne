@@ -232,7 +232,7 @@ export default function Home() {
                   <div>
                     <h4 className="text-lg font-bold text-[var(--text)] font-display">Huoleton Ylläpito</h4>
                     <div className="text-xl font-extrabold text-[var(--text)] font-display mt-1">
-                      39 € <span className="text-xs font-sans font-normal text-[var(--muted)]">/ kk + alv 0%</span>
+                      29 € <span className="text-xs font-sans font-normal text-[var(--muted)]">/ kk + alv 0%</span>
                     </div>
                   </div>
                   <p className="text-xs text-[var(--muted)]">
@@ -244,7 +244,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="btn btn--outline btn--sm w-full text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer"
                   >
-                    <span>Tilaa Ylläpito (39 €/kk)</span>
+                    <span>Tilaa Ylläpito (29 €/kk)</span>
                   </a>
                 </div>
 

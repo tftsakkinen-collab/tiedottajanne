@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, ArrowRight, Flame, Zap, Lock, CreditCard, ShieldCheck, HeartHandshake } from "lucide-react";
+import { CheckCircle2, ArrowRight, Flame, Zap, Lock, CreditCard, ShieldCheck } from "lucide-react";
 
 export default function GodfatherOffer() {
   return (
@@ -33,7 +33,7 @@ export default function GodfatherOffer() {
             <span>RISKITÖN LUPAUS: "NÄE ENNEN KUIN MAKSAT" &amp; 30 PÄIVÄN TYYTYVÄISYYSTAKUU</span>
           </div>
           <p className="text-xs sm:text-sm text-[var(--text)] leading-relaxed max-w-2xl mx-auto">
-            Huoleton ylläpito (39 €/kk) ja lopullinen hyväksyntä aktivoituvat vasta, kun olet nähnyt ja hyväksynyt valmiit kotisivusi. Jos et ole tyytyväinen, sinulla on 30 päivän täysi tyytyväisyystakuu.
+            Huoleton ylläpito (29 €/kk) ja lopullinen hyväksyntä aktivoituvat vasta, kun olet nähnyt ja hyväksynyt valmiit kotisivusi. Jos et ole tyytyväinen, sinulla on 30 päivän täysi tyytyväisyystakuu.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export default function GodfatherOffer() {
 
           </div>
 
-          {/* Mandatory Add-on: Huoleton Ylläpito (39 € / kk) */}
+          {/* Mandatory Add-on: Huoleton Ylläpito (29 € / kk) */}
           <div className="lg:col-span-5 glass rounded-3xl p-8 sm:p-10 border border-[var(--border)] relative flex flex-col justify-between">
             
             <div className="space-y-6">
@@ -138,7 +138,7 @@ export default function GodfatherOffer() {
               {/* Price Tag */}
               <div className="space-y-1">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl sm:text-4xl font-extrabold text-[var(--text)] font-display">39 €</span>
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[var(--text)] font-display">29 €</span>
                   <span className="text-xs text-[var(--muted)] font-mono">/ kk + alv 0%</span>
                 </div>
                 <div className="text-[11px] text-[var(--success)] font-mono font-semibold">
@@ -173,7 +173,7 @@ export default function GodfatherOffer() {
                 className="btn btn--outline btn--lg w-full text-sm font-bold flex items-center justify-center gap-2 cursor-pointer"
               >
                 <CreditCard className="w-4 h-4 text-[var(--accent)]" />
-                <span>TILAA YLLÄPITO (39 €/KK) — STRIPE</span>
+                <span>TILAA YLLÄPITO (29 €/KK) — STRIPE</span>
               </a>
               <div className="text-[11px] text-[var(--muted)] text-center font-mono">
                 Automaattinen veloitus. Voit perua milloin tahansa.

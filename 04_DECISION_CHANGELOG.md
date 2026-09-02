@@ -1,4 +1,8 @@
-﻿## Päivitys: 02.09.2026 09:33
+﻿## Päivitys: 02.09.2026 09:57
+- Ylläpitohinnan korjaus (tiedottajanne): Korjattu Huoleton ylläpito -tuotteen hinta kaikkialla koodikannassa ja metatiedoissa takaisin muotoon 29 € / kk (+ alv 0%).
+- Auditointi: Next.js tuotantobuild (16/16 sivua läpi virheettömästi).
+--------------------------------------------------
+## Päivitys: 02.09.2026 09:33
 - Etusivun (app/page.tsx) osiotoiston korjaus: Poistettu päällekkäiset tuntiohjausosiot ja synkronoitu etusivun sisältö 100% uuden "Oma maa vs. Vuokramaa" & Godfather Offer -strategian (499 € AI-sivut, 39 €/kk ylläpito, 200 €/h somekoutsaus) mukaiseksi.
 - Auditointi: Next.js tuotantobuild (16/16 sivua läpi virheettömästi), AA-kontrastitestaus 0 virhettä /palvelut.
 --------------------------------------------------
@@ -38,6 +42,7 @@
 # 04_DECISION_CHANGELOG.md (Tiedottajanne Oy â€” paikallinen kopio)
 
 TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevista pÃ¤Ã¤tÃ¶slokimerkinnÃ¶istÃ¤. Kanoninen, kaikkien projektien yhteinen loki yllÃ¤pidetÃ¤Ã¤n Google Drivessa (`G:\My Drive\AI - automaatiot\04_DECISION_CHANGELOG.md`, ks. `03_DEV_AND_SYSTEMS.md` / `config/rules.md`, kohta 2). Uusin merkintÃ¤ ylimpÃ¤nÃ¤.
+
 
 
 
