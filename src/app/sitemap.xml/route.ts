@@ -1,11 +1,13 @@
 export async function GET() {
-  const baseUrl = "https://www.tiedottajanne.fi";
+  const baseUrl = "https://www.tiedottajanne.com";
   const routes = [
     "",
     "/palvelut",
     "/referenssit",
     "/tyokalut",
     "/yhteystiedot",
+    "/kasikirja",
+    "/promptit",
     "/tietosuoja",
     "/evasteet",
   ];

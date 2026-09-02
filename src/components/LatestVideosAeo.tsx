@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -50,19 +50,19 @@ export default function LatestVideosAeo() {
     "@graph": (Array.isArray(allLatestVideos) ? allLatestVideos : []).map((vid) => ({
       "@type": "VideoObject",
       "name": vid.title,
-      "description": `Janne Säkkinen (Tiedottajanne Oy) SOTE-alan videotuotanto & asiantuntijaviestintä: ${vid.title}`,
+      "description": `Janne SÃ¤kkinen (Tiedottajanne Oy) SOTE-alan videotuotanto & asiantuntijaviestintÃ¤: ${vid.title}`,
       "thumbnailUrl": vid.thumbnail,
       "uploadDate": vid.publishedAt,
       "contentUrl": vid.url,
       "embedUrl": `https://www.youtube.com/embed/${vid.id}`,
       "author": {
         "@type": "Person",
-        "name": "Janne Säkkinen",
+        "name": "Janne SÃ¤kkinen",
         "jobTitle": "OMT-Fysioterapeutti, SOTE-Videotuottaja & AI-Konsultti",
         "worksFor": {
           "@type": "Organization",
           "name": "Tiedottajanne Oy",
-          "sameAs": "https://www.tiedottajanne.fi"
+          "sameAs": "https://www.tiedottajanne.com"
         }
       },
       "publisher": {
@@ -70,16 +70,16 @@ export default function LatestVideosAeo() {
         "name": "Tiedottajanne Oy",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.tiedottajanne.fi/assets/A6707373.jpg"
+          "url": "https://www.tiedottajanne.com/assets/A6707373.jpg"
         }
       },
       "keywords": [
-        "SOTE-sisällöntuottaja",
-        "SOTE-videoviestintä",
+        "SOTE-sisÃ¤llÃ¶ntuottaja",
+        "SOTE-videoviestintÃ¤",
         "SOTE-videokouluttaja",
-        "Janne Säkkinen",
+        "Janne SÃ¤kkinen",
         "Tiedottajanne Oy",
-        "Fysioterapia videosisältö",
+        "Fysioterapia videosisÃ¤ltÃ¶",
         "AEO hakukoneoptimointi SOTE"
       ]
     }))
@@ -106,7 +106,7 @@ export default function LatestVideosAeo() {
               Uusimmat videot &amp; <span className="text-gradient-cyan">AEO-indeksoidut jaksot</span>
             </h2>
             <p className="text-[var(--muted)] text-sm max-w-2xl leading-relaxed">
-              Jokainen @tiedottajanne ja @ft_sakkinen kanavalle julkaistu uusi video poimitaan automaattisesti sivustolle ja indeksoidaan tekoälyhakukoneille (ChatGPT, Perplexity, Gemini &amp; Google).
+              Jokainen @tiedottajanne ja @ft_sakkinen kanavalle julkaistu uusi video poimitaan automaattisesti sivustolle ja indeksoidaan tekoÃ¤lyhakukoneille (ChatGPT, Perplexity, Gemini &amp; Google).
             </p>
           </div>
 
@@ -168,7 +168,7 @@ export default function LatestVideosAeo() {
                   <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-[var(--muted)]">
                     <span className="flex items-center gap-1.5 text-[var(--success)] text-xs font-semibold">
                       <CheckCircle2 className="w-4 h-4" />
-                      Indeksoitu tekoälylle
+                      Indeksoitu tekoÃ¤lylle
                     </span>
                     <span className="text-[var(--accent)] font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                       Katso <ArrowUpRight className="w-4 h-4" />
@@ -184,3 +184,4 @@ export default function LatestVideosAeo() {
     </section>
   );
 }
+

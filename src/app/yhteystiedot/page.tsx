@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ConsultingBookingSection from "@/components/ConsultingBookingSection";
 import { Mail, Phone, MapPin, Building2, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
-  title: "Yhteystiedot & Tarjouspyyntö | Tiedottajanne Oy",
-  description: "Ota yhteyttä Tiedottajanne Oy:hyn. Tilaa henkilökohtainen Google Meet -tuntisparraus (200 € / h) tai pyydä tarjous SOTE-videokoulutuksesta.",
+  title: "Yhteystiedot & TarjouspyyntÃ¶ | Tiedottajanne Oy",
+  description: "Ota yhteyttÃ¤ Tiedottajanne Oy:hyn. Tilaa henkilÃ¶kohtainen Google Meet -tuntisparraus (200 â‚¬ / h) tai pyydÃ¤ tarjous SOTE-videokoulutuksesta.",
   alternates: {
-    canonical: "https://www.tiedottajanne.fi/yhteystiedot",
+    canonical: "https://www.tiedottajanne.com/yhteystiedot",
   },
   openGraph: {
-    title: "Yhteystiedot & Tarjouspyyntö | Tiedottajanne Oy",
-    description: "Ota yhteyttä Tiedottajanne Oy:hyn. Tilaa henkilökohtainen Google Meet -tuntisparraus (200 € / h) tai pyydä tarjous SOTE-videokoulutuksesta.",
-    url: "https://www.tiedottajanne.fi/yhteystiedot",
+    title: "Yhteystiedot & TarjouspyyntÃ¶ | Tiedottajanne Oy",
+    description: "Ota yhteyttÃ¤ Tiedottajanne Oy:hyn. Tilaa henkilÃ¶kohtainen Google Meet -tuntisparraus (200 â‚¬ / h) tai pyydÃ¤ tarjous SOTE-videokoulutuksesta.",
+    url: "https://www.tiedottajanne.com/yhteystiedot",
   },
 };
 
@@ -23,7 +23,7 @@ export default function YhteystiedotPage() {
     "name": "Tiedottajanne Oy",
     "legalName": "Tiedottajanne Oy",
     "taxID": "3305813-7",
-    "url": "https://www.tiedottajanne.fi",
+    "url": "https://www.tiedottajanne.com",
     "email": SITE_CONFIG.contactEmail,
     "telephone": SITE_CONFIG.contactPhone,
     "address": {
@@ -34,10 +34,10 @@ export default function YhteystiedotPage() {
     },
     "founder": {
       "@type": "Person",
-      "name": "Janne Säkkinen",
+      "name": "Janne SÃ¤kkinen",
       "jobTitle": "OMT-Fysioterapeutti, Toimitusjohtaja",
     },
-    "priceRange": "200 €",
+    "priceRange": "200 â‚¬",
   };
 
   const breadcrumbSchema = {
@@ -48,13 +48,13 @@ export default function YhteystiedotPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Etusivu",
-        "item": "https://www.tiedottajanne.fi",
+        "item": "https://www.tiedottajanne.com",
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Yhteystiedot",
-        "item": "https://www.tiedottajanne.fi/yhteystiedot",
+        "item": "https://www.tiedottajanne.com/yhteystiedot",
       },
     ],
   };
@@ -79,11 +79,11 @@ export default function YhteystiedotPage() {
             <span>Yhteystiedot &amp; tilaus</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight font-display">
-            Ota yhteyttä &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">pyydä koulutustarjous</span>
+            Ota yhteyttÃ¤ &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">pyydÃ¤ koulutustarjous</span>
           </h1>
           {/* AEO Lead Paragraph */}
           <p className="text-slate-200 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            Tiedottajanne Oy palvelee SOTE-alan ammattilaisia ja yrityksiä valtakunnallisesti. Voit tilata henkilökohtaisen Google Meet -tuntisparrauksen (200 € / h) tai jättää tarjouspyynnön alla olevalla lomakkeella tai suoraan sähköpostitse osoitteeseen {SITE_CONFIG.contactEmail}.
+            Tiedottajanne Oy palvelee SOTE-alan ammattilaisia ja yrityksiÃ¤ valtakunnallisesti. Voit tilata henkilÃ¶kohtaisen Google Meet -tuntisparrauksen (200 â‚¬ / h) tai jÃ¤ttÃ¤Ã¤ tarjouspyynnÃ¶n alla olevalla lomakkeella tai suoraan sÃ¤hkÃ¶postitse osoitteeseen {SITE_CONFIG.contactEmail}.
           </p>
         </div>
 
@@ -94,3 +94,4 @@ export default function YhteystiedotPage() {
     </div>
   );
 }
+

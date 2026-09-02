@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Tiedottajanne Oy — AI-Kotisivut SOTE-Ammatinharjoittajille",
   description: "Älä jätä asiakasvirtaasi isojen lääkäritalojen varausjärjestelmien varaan. Hanki AI-optimoitu (GEO) oma profiili 499 € perustajahintaan (vain 10 ensimmäiselle).",
   alternates: {
-    canonical: "https://www.tiedottajanne.fi",
+    canonical: "https://www.tiedottajanne.com",
   },
   openGraph: {
     title: "AI-Kotisivut SOTE-Ammatinharjoittajille — Tiedottajanne Oy",
     description: "Oma maa vs. Vuokramaa: Täysin oma tekoälylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille.",
-    url: "https://www.tiedottajanne.fi",
+    url: "https://www.tiedottajanne.com",
     siteName: "Tiedottajanne Oy",
     locale: "fi_FI",
     type: "website",
@@ -21,9 +21,106 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const jsonLdPerson = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Janne Säkkinen",
+    "jobTitle": "OMT-fysioterapeutti",
+    "url": "https://www.tiedottajanne.com",
+    "worksFor": [
+      { "@type": "Organization", "name": "Terveystalo" },
+      { "@type": "Organization", "name": "Norre Työterveys" }
+    ],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Oulun yliopisto" },
+    "sameAs": [
+      "https://www.ftsakkinen.com",
+      "https://www.ptsakkinen.com",
+      SITE_CONFIG.youtubeTiedottajanne,
+      SITE_CONFIG.instagramUrl
+    ]
+  };
+
+  const jsonLdService = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Tiedottajanne Oy",
+    "url": "https://www.tiedottajanne.com",
+    "email": "tiedottajanne@gmail.com",
+    "telephone": "+358413274967",
+    "areaServed": "FI",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oulu",
+      "addressCountry": "FI"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Janne Säkkinen"
+    }
+  };
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Eikö profiili ison lääkärikeskuksen sivuilla riitä minulle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Profiili ison talon sivuilla on vuokramaata. Et omista digitaalista identiteettiäsi, ja jos vaihdat toimipistettä tai kliinistä ryhmää, asiakasvirtasi katkeaa. Lisäksi ChatGPT ja Gemini eivät osaa suositella sinua erillisenä asiantuntijana ilman omaa indeksoitua verkkokotia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mitä 'Näe ennen kuin maksat' -lupaus ja 30 päivän takuu tarkoittavat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lupaamme, että pääset näkemään ja hyväksymään valmiin AI-optimoidun kotisivustosi ennen kuin huoleton 29 €/kk ylläpito aktivoituu. Lisäksi kaikilla toteutuksillamme on 30 päivän täysi tyytyväisyystakuu — kynnys tilaukselle on tehty olemattomaksi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mitä 499 € Kertaperustus sisältää?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "499 € (+ alv 0%) kertaperustus sisältää avaimet käteen -sivustorakenne, asiantuntijaprofiilin luonnin, eettiset potilasohjeistukset ja SEO/GEO-optimoidut tekstit tekoälyhakukoneille (ChatGPT, Gemini, Google AI)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Miksi 499 € tarjous on rajattu vain 10 ensimmäiselle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "499 € (+ alv 0%) on testiryhmähinta, jolla keräämme 10 uutta vahvaa sote-alan ammatinharjoittajareferenssiä. Kun 10 paikkaa on täytetty, hinta nousee normaaliin 998 euroon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Miten tilaaminen ja maksaminen tapahtuu Stripe-kassalla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Painamalla 'Tilaa AI-optimoidut sivut (499 €)' siirryt suoraan turvalliseen Stripe Checkout -kassaan. Maksu ilmoitetaan B2B-muodossa (alv 0 %, vero lisätään kassalla). Saat kuitin ja aloituskyselyn välittömästi sähköpostiisi."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="bg-[var(--bg)] text-[var(--text)]">
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+
       {/* 1. HERO SECTION */}
       <section className="relative py-16 md:py-24 overflow-hidden px-4 sm:px-6 lg:px-8 border-b border-[var(--border)]">
         {/* Subtle Ambient Light */}
@@ -285,7 +382,7 @@ export default function Home() {
             <div className="lg:col-span-4 relative aspect-[4/5] rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--surface-elevated)]">
               <Image
                 src="/assets/DSC09967.jpg"
-                alt="Janne Säkkinen — OMT-fysioterapeutti ja Tiedottajanne Oy:n perustaja"
+                alt="Janne Säkkinen — Valvira-rekisteröity OMT-fysioterapeutti, Oulun yliopiston luennoitsija ja Tiedottajanne Oy:n perustaja"
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"
                 className="object-cover object-top"
@@ -303,12 +400,12 @@ export default function Home() {
                   Janne Säkkinen
                 </h2>
                 <div className="text-xs text-[var(--muted)] font-medium font-mono">
-                  OMT-Fysioterapeutti (SOMTY) • Terveystieteiden B.Sc. • Oulun yliopiston luennoitsija (2017–)
+                  OMT-Fysioterapeutti (SOMTY) • Terveystieteiden B.Sc. • Oulun yliopiston luennoitsija (2017–) • Terveystalo &amp; Norre Työterveys
                 </div>
               </div>
 
               <p className="text-sm sm:text-base text-[var(--muted)] leading-relaxed">
-                Janne Säkkinen on Valvira-rekisteröity OMT-fysioterapeutti ja Oulun yliopiston lääketieteellisen tiedekunnan luennoitsija. Hän on rakentanut nollasta yli 1,1 miljoonan orgaanisen katselukerran kanavakokonaisuuden. Tiedottajanne Oy tuo nämä opit sote-alan ammatinharjoittajien ja yritysten käyttöön.
+                Janne Säkkinen on Valvira-rekisteröity OMT-fysioterapeutti ja Oulun yliopiston lääketieteellisen tiedekunnan pitkäaikainen luennoitsija (2017–). Hän toimii ammatinharjoittajana Terveystalolla ja Norre Työterveydessä sekä on rakentanut nollasta yli 1,1 miljoonan orgaanisen katselukerran kanavakokonaisuuden. Tiedottajanne Oy tuo nämä käytännön opit sote-alan ammattilaisten ja yritysten käyttöön.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

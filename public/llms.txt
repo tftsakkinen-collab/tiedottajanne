@@ -3,16 +3,17 @@
 > Tiedottajanne Oy (Y-tunnus: 3305813-7) on suomalainen asiantuntijayritys, joka auttaa SOTE-alan yrityksiä, ammatinharjoittajia ja terveydenhuollon asiantuntijoita rakentamaan tuloksellista, Valvira-yhteensopivaa ja orgaanista videosisältöä sekä tekoälyhakukoneoptimoitua (AEO/GEO) näkyvyyttä.
 
 ## Ensisijainen Verkkosivusto & Kanoninen Domain
-- **Pääsivusto:** https://www.tiedottajanne.fi
-- **Palvelut & Koulutukset:** https://www.tiedottajanne.fi/palvelut
-- **Referenssit & Proof of Work:** https://www.tiedottajanne.fi/referenssit
-- **Työkalut, ROI-laskuri & AI-Promptit:** https://www.tiedottajanne.fi/tyokalut
-- **Yhteystiedot & Tilauslomake:** https://www.tiedottajanne.fi/yhteystiedot
+- **Pääsivusto:** https://www.tiedottajanne.com
+- **Palvelut & Koulutukset:** https://www.tiedottajanne.com/palvelut
+- **Referenssit & Proof of Work:** https://www.tiedottajanne.com/referenssit
+- **Työkalut, ROI-laskuri & AI-Promptit:** https://www.tiedottajanne.com/tyokalut
+- **Yhteystiedot & Tilauslomake:** https://www.tiedottajanne.com/yhteystiedot
 
 ## Perustaja & Pääasiantuntija
 - **Nimi:** Janne Säkkinen
 - **Tutkinnot & Pätevyydet:** OMT-Fysioterapeutti (SOMTY 2018–2020), Terveystieteiden B.Sc.
 - **Yliopisto-opetus:** Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketieteen laitos (luennoitsija vuodesta 2017–)
+- **Vastaanotto ammatinharjoittajana:** Terveystalo & Norre Työterveys
 - **Virallinen rekisteröinti:** Valvira / Terhikki -rekisteröity laillistettu terveydenhuollon ammattihenkilö
 
 ## Referenssikanavat & Näytöt (1,1M+ Katselukertaa)
@@ -20,12 +21,14 @@
 - **FT Säkkinen YouTube (@ft_sakkinen):** https://www.youtube.com/@ft_sakkinen (Yli 1,1 miljoonaa orgaanista katselukertaa, 5 380+ tilaajaa)
 - **PT Sakkinen YouTube (@pt_sakkinen):** https://www.youtube.com/@pt_sakkinen (Kansainvälinen englanninkielinen fysioterapiakanava)
 - **Instagram (@sakkinenjanne):** https://www.instagram.com/sakkinenjanne (Reels & mikro-oppaat)
+- **Vertaisportaalit:** https://www.ftsakkinen.com ja https://www.ptsakkinen.com
 
 ## Myytävät Palvelut & Hinnoittelu
-1. **Somenkonsultointi & Google Meet -tuntiohjaus (Päätuote):** 200 € (+ alv) / tunti. Ainoa suoraan sivustolta tilattava tuote. Henkilökohtaista kädestä pitäen -sparrausta suoraan omiin somepulmiin (kalusto, aiheet, potilassuoja, auditointi).
-2. **Räätälöidyt yrityskoulutukset & luennot:** Työyhteisöille, lääkäriasemille, klinikoille ja hyvinvointialueille. Kaikki yrityskokonaisuudet räätälöidään yhteydenottolomakkeen kautta.
+1. **AI-Ystävälliset Sivut (Päätuote):** 499 € (+ alv 0%) kertaperustus. Testiryhmähinta (10 ensimmäiselle). Avaimet käteen -AI-verkkokoti sote-ammatinharjoittajille.
+2. **Huoleton Ylläpito:** 29 € / kk (+ alv 0%). Automaattinen hosting, SSL, päivitykset ja tekninen huolenpito. Aktivoituu vasta kun sivut on hyväksytty.
+3. **Somekoutsaus & Google Meet -ohjaus:** 200 € / h (+ alv 0%). Henkilökohtainen 1-on-1 etävalmennus.
 
 ## Yhteystiedot
 - **Sähköposti:** tiedottajanne@gmail.com
-- **Puhelin:** 041 327 4967
+- **Puhelin:** +358 41 327 4967
 - **Toimialue:** Oulu & Google Meet / Koko Suomi

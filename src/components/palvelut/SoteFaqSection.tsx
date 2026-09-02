@@ -52,7 +52,7 @@ export default function SoteFaqSection() {
           </p>
         </div>
 
-        {/* FAQ Accordion */}
+        {/* FAQ Accordion with semantic H3 headings */}
         <div className="space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
@@ -65,9 +65,9 @@ export default function SoteFaqSection() {
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none min-h-[44px]"
                 >
-                  <span className="font-semibold text-sm sm:text-base text-[var(--text)] font-display">
+                  <h3 className="font-semibold text-sm sm:text-base text-[var(--text)] font-display m-0 p-0 leading-snug">
                     {faq.question}
-                  </span>
+                  </h3>
                   <ChevronDown
                     className={`w-5 h-5 text-[var(--accent)] shrink-0 transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""

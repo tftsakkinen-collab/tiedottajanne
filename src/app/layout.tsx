@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -28,18 +28,18 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tiedottajanne Oy — SOTE-Alan Videotuotanto & Tekoälyviestintä",
+    default: "Tiedottajanne Oy â€” SOTE-Alan Videotuotanto & TekoÃ¤lyviestintÃ¤",
     template: "%s | Tiedottajanne Oy",
   },
-  description: "SOTE-alan videotuotantoa, tuotteistetut videokoulutukset ja Google Meet -tuntiohjaus Janne Säkkiseltä. Yli 1,1M orgaanista katselukertaa ja Valvira-etiikka.",
-  metadataBase: new URL("https://www.tiedottajanne.fi"),
+  description: "SOTE-alan videotuotantoa, tuotteistetut videokoulutukset ja Google Meet -tuntiohjaus Janne SÃ¤kkiseltÃ¤. Yli 1,1M orgaanista katselukertaa ja Valvira-etiikka.",
+  metadataBase: new URL("https://www.tiedottajanne.com"),
   alternates: {
-    canonical: "https://www.tiedottajanne.fi",
+    canonical: "https://www.tiedottajanne.com",
   },
   openGraph: {
-    title: "Tiedottajanne Oy — SOTE-Alan Videotuotanto & Tekoälyviestintä",
-    description: "Miten SOTE-alan ammattilaiset ja yritykset rakentavat asiantuntija-auktoriteettia YouTubessa, Instagramissa ja tekoälyhakukoneissa.",
-    url: "https://www.tiedottajanne.fi",
+    title: "Tiedottajanne Oy â€” SOTE-Alan Videotuotanto & TekoÃ¤lyviestintÃ¤",
+    description: "Miten SOTE-alan ammattilaiset ja yritykset rakentavat asiantuntija-auktoriteettia YouTubessa, Instagramissa ja tekoÃ¤lyhakukoneissa.",
+    url: "https://www.tiedottajanne.com",
     siteName: "Tiedottajanne Oy",
     locale: "fi_FI",
     type: "website",
@@ -59,7 +59,7 @@ export default function RootLayout({
     "name": SITE_CONFIG.companyName,
     "legalName": "Tiedottajanne Oy",
     "vatID": "FI33058137",
-    "url": "https://www.tiedottajanne.fi",
+    "url": "https://www.tiedottajanne.com",
     "email": SITE_CONFIG.contactEmail,
     "telephone": SITE_CONFIG.contactPhone,
     "founder": {
@@ -107,3 +107,4 @@ export default function RootLayout({
     </html>
   );
 }
+

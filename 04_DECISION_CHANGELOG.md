@@ -1,4 +1,12 @@
-﻿## Päivitys: 02.09.2026 09:57
+﻿## Päivitys: 02.09.2026 10:53
+- Tiedottajanne.com-sivuston 4-vaiheinen auditointi ja SEO/AEO-päivitys:
+  1. Domain-korjaus: Kaikki viittaukset vaihdettu muotoon tiedottajanne.com (.fi -> .com), sitemap.xml päivitetty (/kasikirja, /promptit mukana) ja robots.txt sitemap-linkki korjattu.
+  2. JSON-LD Structured Data: Lisätty etusivulle 3 syntaktisesti validia lohkoa (Person, ProfessionalService, FAQPage).
+  3. Sisältörakenne: Etusivun Janne Säkkinen -profiilissa neutraali 3. persoonan faktateksti, FAQ-kysymykset muotoiltu semanttisiksi H3-otsikoiksi ja referenssikorteille lisätty konkreettiset numeeriset faktaelementit.
+  4. AI & AksesSimplified: robots.txt:ään lisätty tekoälybottien Allow-säännöt (GPTBot, ClaudeBot, Google-Extended, PerplexityBot, CCBot), llms.txt päivitetty UTF-8-muodossa ja kuva-alt-tekstit auditoitu.
+- Auditointi: Next.js tuotantobuild (16/16 sivua läpi virheettömästi), AA-kontrastitestaus 0 virhettä /palvelut.
+--------------------------------------------------
+## Päivitys: 02.09.2026 09:57
 - Ylläpitohinnan korjaus (tiedottajanne): Korjattu Huoleton ylläpito -tuotteen hinta kaikkialla koodikannassa ja metatiedoissa takaisin muotoon 29 € / kk (+ alv 0%).
 - Auditointi: Next.js tuotantobuild (16/16 sivua läpi virheettömästi).
 --------------------------------------------------
@@ -42,6 +50,7 @@
 # 04_DECISION_CHANGELOG.md (Tiedottajanne Oy â€” paikallinen kopio)
 
 TÃ¤mÃ¤ on paikallinen (`tiedottajanne`-repo) kopio Tiedottajanne Oy:tÃ¤ koskevista pÃ¤Ã¤tÃ¶slokimerkinnÃ¶istÃ¤. Kanoninen, kaikkien projektien yhteinen loki yllÃ¤pidetÃ¤Ã¤n Google Drivessa (`G:\My Drive\AI - automaatiot\04_DECISION_CHANGELOG.md`, ks. `03_DEV_AND_SYSTEMS.md` / `config/rules.md`, kohta 2). Uusin merkintÃ¤ ylimpÃ¤nÃ¤.
+
 
 
 

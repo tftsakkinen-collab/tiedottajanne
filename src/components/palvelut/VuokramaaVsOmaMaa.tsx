@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, CheckCircle2, XCircle, Building2, Globe2, Cpu, ExternalLink, Sparkles } from "lucide-react";
+import { AlertTriangle, CheckCircle2, XCircle, Building2, Globe2, ExternalLink, Sparkles } from "lucide-react";
 
 export default function VuokramaaVsOmaMaa() {
   return (
@@ -122,9 +122,9 @@ export default function VuokramaaVsOmaMaa() {
               href="https://ftsakkinen.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-2xl p-6 border border-[var(--border)] hover:border-[var(--accent)] transition-all group block"
+              className="glass rounded-2xl p-6 border border-[var(--border)] hover:border-[var(--accent)] transition-all group block space-y-3"
             >
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between">
                 <span className="font-display font-bold text-lg text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">
                   ftsakkinen.com
                 </span>
@@ -133,6 +133,13 @@ export default function VuokramaaVsOmaMaa() {
               <p className="text-xs text-[var(--muted)] leading-relaxed">
                 OMT-Fysioterapeutti Janne Säkkisen kliininen asiantuntijaportaali. Optimoitu tekoälyindeksoinnille (AEO/GEO) ja suoralle potilasohjaukselle.
               </p>
+              <div className="pt-2 border-t border-[var(--border)] flex flex-wrap gap-2 text-[11px] font-mono text-[var(--accent)] font-semibold">
+                <span>1,1M+ orgaanista näyttöä</span>
+                <span>•</span>
+                <span>5 380+ tilaajaa</span>
+                <span>•</span>
+                <span>0 € mainosbudjetti</span>
+              </div>
             </a>
 
             {/* Reference 2: ptsakkinen.com */}
@@ -140,9 +147,9 @@ export default function VuokramaaVsOmaMaa() {
               href="https://ptsakkinen.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-2xl p-6 border border-[var(--border)] hover:border-[var(--accent)] transition-all group block"
+              className="glass rounded-2xl p-6 border border-[var(--border)] hover:border-[var(--accent)] transition-all group block space-y-3"
             >
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between">
                 <span className="font-display font-bold text-lg text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">
                   ptsakkinen.com
                 </span>
@@ -151,6 +158,11 @@ export default function VuokramaaVsOmaMaa() {
               <p className="text-xs text-[var(--muted)] leading-relaxed">
                 Fysioterapian ja valmennuksen verkkokoti. Selkeä asiantuntijamallinnus, joka tekee palveluista ja ajanvarauksesta riippumattoman.
               </p>
+              <div className="pt-2 border-t border-[var(--border)] flex flex-wrap gap-2 text-[11px] font-mono text-[var(--success)] font-semibold">
+                <span>200+ valmennus- &amp; potilasasiakasta</span>
+                <span>•</span>
+                <span>100 % orgaaninen GEO-vuo</span>
+              </div>
             </a>
 
           </div>
