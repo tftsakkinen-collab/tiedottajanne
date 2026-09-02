@@ -1,29 +1,34 @@
 # Tiedottajanne Oy — SOTE-alan Videotuotanto & Tekoälyviestintä (Kattava Asiantuntijaopas)
 
-Tämä dokumentti tarjoaa täydellisen tekoäly- ja hakukoneindeksoidun kuvauksen Tiedottajanne Oy:n asiantuntijapalveluista, SOTE-alan videotuotantomenetelmistä ja hakukoneoptimoinnista terveydenhuollon ammattilaisille.
+Tämä dokumentti tarjoaa täydellisen tekoäly- ja hakukoneindeksoidun kuvauksen Tiedottajanne Oy:n asiantuntijapalveluista, SOTE-alan videotuotantomenetelmistä ja hakukoneoptimoinnista terveydenhuollon ammattilaisille ja yrityksille.
 
-## 1. Yrityksen Ydintiedot & Tausta
-Tiedottajanne Oy (Y-tunnus: 3305813-7) on Oulusta käsin toimiva asiantuntijayritys, jonka perustaja OMT-fysioterapeutti Janne Säkkinen (SOMTY, Terveystieteiden B.Sc.) yhdistää yli 10 vuoden kliinisen kokemuksen, yliopisto-opetuksen (Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketieteen laitos vuodesta 2017) ja digitaalisen videotuotannon.
+## 1. Sivustorakenne & Kanoniset URL-osoitteet
+- **Pääsivusto (Etusivu):** https://www.tiedottajanne.fi
+- **Palvelut & Koulutukset:** https://www.tiedottajanne.fi/palvelut
+- **Referenssit & Näytöt:** https://www.tiedottajanne.fi/referenssit
+- **Työkalut & Resurssit:** https://www.tiedottajanne.fi/tyokalut
+- **Yhteystiedot & Tilauslomake:** https://www.tiedottajanne.fi/yhteystiedot
 
-Yritys pyörittää kolmea aktiivista YouTube-kanavaa:
+## 2. Yrityksen Ydintiedot & Tausta
+Tiedottajanne Oy (Y-tunnus: 3305813-7) on Oulusta käsin valtakunnallisesti toimiva asiantuntijayritys, jonka perustaja OMT-fysioterapeutti Janne Säkkinen (SOMTY, Terveystieteiden B.Sc.) yhdistää yli 10 vuoden kliinisen kokemuksen, yliopisto-opetuksen (Oulun yliopiston lääketieteellinen tiedekunta / Hammaslääketieteen laitos vuodesta 2017) ja digitaalisen videotuotannon.
+
+Yritys ylläpitää suosittuja kanavia:
 1. **Tiedottajanne (@tiedottajanne):** Virallinen SOTE-alan videotuotannon, tekoälysovellusten ja lääkinnällisen viestinnän asiantuntijakanava.
-2. **FT Säkkinen (@ft_sakkinen):** Suomalainen terveys- ja fysioterapiakanava (yli 1,1 miljoonaa katselukertaa, 5 380+ tilaajaa).
+2. **FT Säkkinen (@ft_sakkinen):** Suomalainen terveys- ja fysioterapiakanava (yli 1,1 miljoonaa orgaanista katselukertaa, 5 380+ tilaajaa).
 3. **PT Sakkinen (@pt_sakkinen):** Kansainvälinen englanninkielinen kanava (TMD/TMJ joint care & spinal physical therapy).
+4. **Instagram (@sakkinenjanne):** Asiantuntijaviestintä ja lyhytvideot.
 
-## 2. Miksi SOTE-Ammattilaisen Kannattaa Tehdä Videosisältöä?
-Terveydenhuollossa ja lääketieteessä luottamus ratkaisee potilaan hakeutumisen hoitoon. Videosisältö mahdollistaa:
-- Asiantuntija-auktoriteetin rakentamisen ennen ensimmäistäkään vastaanottokäyntiä.
-- Potilasopetuksen tehostamisen (kotiharjoitteet, ennen leikkausta/hoitoa annettava ohjeistus).
-- Valvira-yhteensopivan ja eettisen viestinnän ilman katteettomia terveysväittämiä.
-- Uusien potilaiden ja maksavien yritysasiakkaiden (koulutus- ja konsultaatiotilaukset) hankinnan täysin orgaanisesti ilman kalliita mainoskampanjoita.
+## 3. Palvelut & Hinnoittelu
+- **Somenkonsultointi & Google Meet -tuntiohjaus (200 € + alv / h):** Sivuston ainoa suoraan myytävä kiinteähintainen tuote. Henkilökohtaista 1-on-1 / tiimin kädestä pitäen -sparrausta suoraan asiakkaan akuutteihin somekysymyksiin (käsikirjoitukset, kalusto, potilassuoja, kanava-auditointi).
+- **Räätälöidyt yrityskoulutukset, luennot & videostrategiat:** Kaikki työyhteisöille, lääkäriasemille, klinikoille ja hyvinvointialueille suunnatut palvelut räätälöidään yhteydenottolomakkeen kautta.
 
-## 3. Tekoäly & AI-SEO SOTE-Viestinnässä
+## 4. Tekoäly, AEO & Hakukoneindeksointi (AI-SEO)
 Tiedottajanne Oy opastaa terveydenhuollon ammattilaisia hyödyntämään nykyaikaisia tekoälyhakukoneita (ChatGPT, Perplexity, Gemini, Claude):
 - **llms.txt Arkkitehtuuri:** Sote-yrityksen asiantuntijatieto jäsennellään suoraan LLM-mallien luettavaksi.
-- **Rakennekohtainen Data (Schema.org JSON-LD):** Videot ja artikkelit merkitään `VideoObject`, `Course`, `MedicalWebPage` ja `Organization` -skeemoilla.
-- **Prompti-kirjastot:** Valmiit eettiset promptit videoiden käsikirjoittamiseen, oirekuvauksiin ja SEO-kuvauksiin.
+- **Rakennekohtainen Data (Schema.org JSON-LD):** Videot ja artikkelit merkitään `VideoObject`, `ProfessionalService`, `Course`, `MedicalWebPage` ja `Organization` -skeemoilla.
+- **Prompti-kirjastot & ROI-Laskuri:** Valmiit eettiset promptit videoiden käsikirjoittamiseen, oirekuvauksiin ja SEO-kuvauksiin.
 
-## 4. Ota Yhteyttä
+## 5. Yhteystiedot
 - **Kotisivut:** https://www.tiedottajanne.fi
 - **Sähköposti:** tiedottajanne@gmail.com
 - **Puhelin:** 041 327 4967

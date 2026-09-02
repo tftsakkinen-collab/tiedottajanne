@@ -50,17 +50,17 @@ export default function SoteStrategyGuide() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[var(--accent)]/20 border border-[var(--accent)]/40 text-[var(--accent)] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[var(--accent)]/20 border border-[var(--accent)]/40 text-[var(--accent)] text-xs font-semibold uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4" />
-            <span>SOTE-SOMEN 4 PILARIA</span>
+            <span>SOTE-somen 4 pilaria</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[var(--text)] tracking-wide">
-            RESEPTI <span className="text-gradient-cyan">MENESTYKSEKKÄÄSEEN</span> SOTE-VIDEOTUOTANTOON
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[var(--text)] tracking-tight">
+            Resepti <span className="text-gradient-cyan">menestyksekkääseen</span> SOTE-videotuotantoon
           </h2>
           <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
             Terveydenhuollon videotuotanto eroaa tavallisesta viihdesomesta. Se vaatii kliinistä tarkkuutta, eettisyyttä ja tekoälyajan hakukoneoptimointia.
@@ -81,7 +81,7 @@ export default function SoteStrategyGuide() {
                     <div className="w-10 h-10 rounded-xl bg-[var(--surface-elevated)] border border-[var(--accent)]/40 text-[var(--accent)] flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-2xl font-mono font-bold text-[var(--accent)]/40">
+                    <span className="text-2xl font-display font-bold text-[var(--accent)]/40">
                       {p.step}
                     </span>
                   </div>

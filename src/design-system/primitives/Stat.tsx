@@ -25,7 +25,7 @@ export const Stat: React.FC<StatProps> = ({
     <div className={`p-4 rounded-[var(--radius)] bg-[var(--surface)] border border-[var(--border)] text-left ${className}`}>
       {icon && <div className="text-[var(--primary)] mb-2">{icon}</div>}
       {value && (
-        <div className="text-2xl sm:text-3xl font-extrabold text-[var(--primary)] font-mono">
+        <div className="text-2xl sm:text-3xl font-extrabold text-[var(--primary)] font-display">
           {value}
         </div>
       )}

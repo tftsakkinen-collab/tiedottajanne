@@ -59,76 +59,51 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* Desktop Right Action */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <a
-              href={SITE_CONFIG.youtubeTiedottajanne}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-xs font-medium text-[var(--text)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/10 transition-all min-h-[44px]"
-            >
-              <Video className="w-4 h-4 text-[#ef4444]" />
-              <span>@tiedottajanne</span>
-            </a>
+          {/* CTA & Mobile Menu Trigger */}
+          <div className="flex items-center gap-3">
             <Link
-              href="/yhteystiedot"
-              className="btn btn--primary px-5 py-2.5 text-xs sm:text-sm flex items-center gap-2 whitespace-nowrap"
+              href="/palvelut#godfather-offer"
+              className="hidden sm:inline-flex btn btn--primary px-5 py-2.5 text-xs sm:text-sm items-center gap-2 whitespace-nowrap"
             >
               <Send className="w-4 h-4 text-[var(--accent-ink)]" />
-              <span>Pyydä Koulutustarjous</span>
+              <span>Hanki AI-Kotisivut (499 €)</span>
             </Link>
+
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2.5 rounded-2xl bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] hover:text-[var(--accent)] transition-colors"
+              aria-label="Avaa valikko"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle navigation"
-            className="lg:hidden p-2.5 rounded-xl bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] hover:text-[var(--accent)] transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[var(--surface)]/95 backdrop-blur-2xl border-b border-[var(--border)] px-6 pt-4 pb-8 space-y-5 animate-in slide-in-from-top-2 duration-200">
-          <nav className="flex flex-col space-y-1">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all min-h-[44px] flex items-center ${
-                    isActive
-                      ? "bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30"
-                      : "text-[var(--muted)] hover:bg-[var(--surface-elevated)] hover:text-[var(--text)]"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
+        <div className="lg:hidden border-t border-[var(--border)] bg-[var(--surface)] p-6 space-y-4 shadow-2xl animate-in slide-in-from-top-4">
+          <nav className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-3 rounded-2xl text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-elevated)] hover:text-[var(--accent)] transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
           </nav>
-          <div className="pt-2 flex flex-col gap-3">
-            <a
-              href={SITE_CONFIG.youtubeTiedottajanne}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text)] text-center text-xs font-semibold hover:border-[var(--accent)]/40 hover:text-[var(--accent)] transition-all flex items-center justify-center gap-2 min-h-[44px]"
-            >
-              <Video className="w-4 h-4 text-[#ef4444]" />
-              <span>YouTube: @tiedottajanne</span>
-            </a>
+          <div className="pt-2">
             <Link
-              href="/yhteystiedot"
+              href="/palvelut#godfather-offer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3.5 rounded-xl bg-[var(--text)] text-[var(--bg)] font-semibold text-center text-sm hover:opacity-90 transition-all shadow-lg flex items-center justify-center gap-2 min-h-[44px]"
+              className="btn btn--primary w-full py-3.5 text-sm flex items-center justify-center gap-2"
             >
-              <Send className="w-4 h-4 text-[var(--bg)]" />
-              <span>Pyydä Koulutustarjous</span>
+              <Send className="w-4 h-4 text-[var(--accent-ink)]" />
+              <span>Hanki AI-Kotisivut (499 €)</span>
             </Link>
           </div>
         </div>

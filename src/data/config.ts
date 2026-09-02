@@ -3,6 +3,7 @@ export const SITE_CONFIG = {
   companyName: "Tiedottajanne Oy",
   businessId: "3305813-7",
   domain: "tiedottajanne.fi",
+  canonicalUrl: "https://www.tiedottajanne.fi",
   authorName: "Janne Säkkinen",
   authorTitle: "OMT-Fysioterapeutti, Terveystieteiden B.Sc.",
   contactEmail: "tiedottajanne@gmail.com",

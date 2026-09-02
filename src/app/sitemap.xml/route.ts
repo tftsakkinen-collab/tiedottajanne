@@ -2,8 +2,12 @@ export async function GET() {
   const baseUrl = "https://www.tiedottajanne.fi";
   const routes = [
     "",
+    "/palvelut",
     "/referenssit",
+    "/tyokalut",
     "/yhteystiedot",
+    "/tietosuoja",
+    "/evasteet",
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

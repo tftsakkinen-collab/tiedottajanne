@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   --accent: oklch(75% 0.14 230);
   --accent-ink: oklch(18% 0.03 240);
   --accent-quiet: oklch(75% 0.14 230 / 0.12);
@@ -27,4 +28,27 @@ body.dark {
   --on-accent-quiet: oklch(75% 0.14 230);
   --primary: var(--accent);
   --primary-ink: var(--accent-ink);
+=======
+  --accent: #00d2ff;
+  --accent-hover: #38bdf8;
+  --accent-ink: #05080f;
+  --accent-quiet: rgba(0, 210, 255, 0.12);
+  --on-accent-quiet: #00d2ff;
+  --primary: #00d2ff;
+  --primary-ink: #05080f;
+  --growth: #10b981;
+}
+
+:root[data-theme="dark"],
+html.dark,
+body.dark {
+  --accent: #00d2ff;
+  --accent-hover: #38bdf8;
+  --accent-ink: #05080f;
+  --accent-quiet: rgba(0, 210, 255, 0.12);
+  --on-accent-quiet: #00d2ff;
+  --primary: #00d2ff;
+  --primary-ink: #05080f;
+  --growth: #10b981;
+>>>>>>> origin/main
 }

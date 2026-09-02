@@ -14,7 +14,7 @@ export default function AiPromptLibrary() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       {/* Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[20%] right-[-10%] w-[500px] h-[450px] bg-[var(--accent)]/10 blur-[140px] rounded-full" />
@@ -26,10 +26,10 @@ export default function AiPromptLibrary() {
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[var(--accent)]" />
-            <span>VALMIIT PROMPTIRUNGOT CHATGPT &amp; PERPLEXITY -MALLEILLE</span>
+            <span>Valmiit promptirungot ChatGPT &amp; Perplexity -malleille</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] leading-tight font-display">
-            SOTE-VIDEON <span className="text-gradient-cyan">AI-PROMPTIKIRJASTO</span>
+            SOTE-videon <span className="text-gradient-cyan">AI-promptikirjasto</span>
           </h2>
           <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
             Kopioi testatut tekoäly-promptit suoraan ChatGPT:hen tai Claudeen. Valvira-yhteensopivat rungot lääkäreille, fysioterapeuteille ja terveysteknologian asiantuntijoille.
@@ -41,41 +41,41 @@ export default function AiPromptLibrary() {
           {SOTE_PROMPTS.map((p) => (
             <div
               key={p.id}
-              className="glass rounded-3xl p-8 space-y-6 flex flex-col justify-between group"
+              className="liquid-glass rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between border border-white/10 hover:border-[#00d2ff]/40 shadow-lg transition-all group"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between gap-2 border-b border-[var(--border)] pb-4">
-                  <span className="text-xs font-mono font-semibold text-[var(--accent)] uppercase tracking-wider">
+                <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-4">
+                  <span className="text-xs font-semibold text-[#00d2ff] uppercase tracking-wider">
                     {p.category}
                   </span>
-                  <span className="text-[10px] px-2.5 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--muted)] font-semibold">
+                  <span className="text-[10px] px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/15 text-slate-300 font-semibold">
                     {p.roleTarget}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-[var(--text)] tracking-tight font-display">{p.title}</h3>
-                <p className="text-xs text-[var(--muted)] leading-relaxed">{p.description}</p>
+                <h3 className="text-xl font-bold text-white tracking-tight font-display">{p.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">{p.description}</p>
 
-                <div className="p-4 rounded-2xl bg-[var(--surface)] border border-[var(--border)] font-mono text-xs text-[var(--text)] space-y-2 relative overflow-hidden">
-                  <div className="text-[10px] text-[var(--accent)] uppercase tracking-wider font-semibold">PROMPT RUNKO:</div>
-                  <p className="leading-relaxed whitespace-pre-line select-all">{p.promptText}</p>
+                <div className="p-4 rounded-2xl bg-black/40 border border-white/10 text-xs text-slate-200 space-y-2 relative overflow-hidden">
+                  <div className="text-[10px] text-[#00d2ff] uppercase tracking-wider font-semibold">Prompt-runko:</div>
+                  <p className="leading-relaxed whitespace-pre-line select-all font-sans">{p.promptText}</p>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-[var(--border)]">
+              <div className="pt-4 border-t border-white/10 mt-2">
                 <button
                   onClick={() => handleCopy(p.id, p.promptText)}
-                  className="w-full py-3 px-4 rounded-2xl bg-[var(--text)] text-[var(--bg)] font-semibold text-xs sm:text-sm hover:opacity-90 transition-all flex items-center justify-center gap-2 min-h-[44px]"
+                  className="w-full py-3.5 px-6 rounded-2xl bg-white text-black font-semibold text-xs sm:text-sm hover:bg-[#00d2ff] hover:text-black transition-all flex items-center justify-center gap-2 min-h-[48px] cursor-pointer shadow-sm"
                 >
                   {copiedId === p.id ? (
                     <>
-                      <Check className="w-4 h-4 text-emerald-400" />
-                      <span>Kopioitu leikepöydälle!</span>
+                      <Check className="w-4 h-4 text-emerald-600" />
+                      <span className="text-black font-bold">Kopioitu leikepöydälle!</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4 text-[var(--bg)]" />
-                      <span>Kopioi Prompti</span>
+                      <Copy className="w-4 h-4 text-black" />
+                      <span>Kopioi prompti</span>
                     </>
                   )}
                 </button>

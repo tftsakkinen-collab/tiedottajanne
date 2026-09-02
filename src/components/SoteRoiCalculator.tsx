@@ -131,13 +131,13 @@ export default function SoteRoiCalculator() {
 
         {/* Tab 1: ROI Calculator */}
         {activeTab === "roi" && (
-          <div className="glass rounded-3xl p-8 sm:p-12 space-y-10 max-w-4xl mx-auto border border-[var(--border)]">
+          <div className="liquid-glass rounded-3xl p-6 sm:p-10 space-y-8 max-w-4xl mx-auto border border-white/10 shadow-lg">
             <div className="space-y-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <label className="text-xs sm:text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
+                <label className="text-xs sm:text-sm font-semibold text-slate-300 uppercase tracking-wider">
                   Arvioitu kuukausittainen orgaaninen katselumäärä:
                 </label>
-                <span className="text-2xl sm:text-3xl font-bold font-mono text-[var(--accent)]">
+                <span className="text-2xl sm:text-3xl font-bold font-display text-[#00d2ff]">
                   {monthlyViews.toLocaleString("fi-FI")} katselua / kk
                 </span>
               </div>
@@ -149,40 +149,40 @@ export default function SoteRoiCalculator() {
                 step={5000}
                 value={monthlyViews}
                 onChange={(e) => setMonthlyViews(Number(e.target.value))}
-                className="w-full h-3 bg-[var(--surface)] rounded-lg appearance-none cursor-pointer accent-[var(--accent)] border border-[var(--border)] min-h-[44px]"
+                className="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#00d2ff] border border-white/15 min-h-[44px] touch-pan-x"
               />
-              <div className="flex justify-between text-xs text-[var(--muted)] font-mono">
+              <div className="flex justify-between text-[11px] sm:text-xs text-slate-300 font-medium">
                 <span>5 000 katselua</span>
                 <span>50 000 katselua</span>
-                <span>200 000 katselua (Pääkanavat)</span>
+                <span>200 000+ (Pääkanavat)</span>
               </div>
             </div>
 
             {/* Results Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-6 border-t border-[var(--border)]">
-              <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5 text-center">
-                <span className="text-xs uppercase font-medium text-[var(--muted)] block">Vastaava Ads-arvo / kk:</span>
-                <div className="text-3xl font-bold font-display text-[var(--success)]">{adSavings.toLocaleString("fi-FI")} €</div>
-                <span className="text-[11px] text-[var(--muted)] block">Säästö suoraan leikkaamalla maksettua CPM-mainontaa</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-white/10">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1.5 text-center">
+                <span className="text-xs uppercase font-medium text-slate-300 block">Vastaava Ads-arvo / kk:</span>
+                <div className="text-3xl font-bold font-display text-emerald-400">{adSavings.toLocaleString("fi-FI")} €</div>
+                <span className="text-[11px] text-slate-300 block">Säästö suoraan leikkaamalla maksettua CPM-mainontaa</span>
               </div>
 
-              <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5 text-center">
-                <span className="text-xs uppercase font-medium text-[var(--muted)] block">Vuosittainen Mainossäästö:</span>
-                <div className="text-3xl font-bold font-display text-[var(--success)]">{annualSavings.toLocaleString("fi-FI")} €</div>
-                <span className="text-[11px] text-[var(--muted)] block">Säästö 12 kuukauden orgaanisella näkyvyydellä</span>
+              <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1.5 text-center">
+                <span className="text-xs uppercase font-medium text-slate-300 block">Vuosittainen mainossäästö:</span>
+                <div className="text-3xl font-bold font-display text-emerald-400">{annualSavings.toLocaleString("fi-FI")} €</div>
+                <span className="text-[11px] text-slate-300 block">Säästö 12 kuukauden orgaanisella näkyvyydellä</span>
               </div>
 
-              <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5 text-center">
-                <span className="text-xs uppercase font-medium text-[var(--muted)] block">Potentiaaliset Kyselyt / kk:</span>
-                <div className="text-3xl font-bold font-display text-[var(--accent)]">~{estimatedLeads} kpl</div>
-                <span className="text-[11px] text-[var(--muted)] block">Aitoja sote-potilas- ja asiakaskyselyitä</span>
+              <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1.5 text-center">
+                <span className="text-xs uppercase font-medium text-slate-300 block">Potentiaaliset kyselyt / kk:</span>
+                <div className="text-3xl font-bold font-display text-[#00d2ff]">~{estimatedLeads} kpl</div>
+                <span className="text-[11px] text-slate-300 block">Aitoja sote-potilas- ja asiakaskyselyitä</span>
               </div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-xs sm:text-sm text-[var(--muted)] flex items-start sm:items-center gap-3.5">
-              <ShieldCheck className="w-5 h-5 text-[var(--accent)] shrink-0 mt-0.5 sm:mt-0" />
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 text-xs sm:text-sm text-slate-200 flex items-start sm:items-center gap-3.5">
+              <ShieldCheck className="w-5 h-5 text-[#00d2ff] shrink-0 mt-0.5 sm:mt-0" />
               <span>
-                <strong className="text-[var(--text)]">Tiedottajanne Oy:n periaate:</strong> Orgaaninen laatu ja AEO-hakukonenäkyvyys (YouTube &amp; Google) tuovat kestävää luottamusta sote-alan asiakkaille ilman jatkuvia eurojen pumppaamista pikamainoksiin.
+                <strong className="text-white">Tiedottajanne Oy:n periaate:</strong> Orgaaninen laatu ja AEO-hakukonenäkyvyys (YouTube &amp; Google) tuovat kestävää luottamusta sote-alan asiakkaille ilman jatkuvaa rahan pumppaamista pikamainoksiin.
               </span>
             </div>
           </div>
@@ -190,15 +190,15 @@ export default function SoteRoiCalculator() {
 
         {/* Tab 2: SOTE Quiz */}
         {activeTab === "quiz" && (
-          <div className="glass rounded-3xl p-8 sm:p-12 space-y-8 max-w-3xl mx-auto border border-[var(--border)]">
+          <div className="liquid-glass rounded-3xl p-6 sm:p-10 space-y-8 max-w-3xl mx-auto border border-white/10 shadow-lg">
             <div className="space-y-2 text-center">
-              <h3 className="text-2xl font-bold text-[var(--text)] tracking-tight font-display">SOTE-Somen Nykytilan 4 Kysymyksen Testi</h3>
-              <p className="text-xs sm:text-sm text-[var(--muted)]">Vastaa rehellisesti alla oleviin 4 kysymykseen nähdäksesi klinikkasi tai asiantuntijuutesi valmiuden.</p>
+              <h3 className="text-2xl font-bold text-white tracking-tight font-display">SOTE-somen nykytilan 4 kysymyksen testi</h3>
+              <p className="text-xs sm:text-sm text-slate-300">Vastaa rehellisesti alla oleviin 4 kysymykseen nähdäksesi klinikkasi tai asiantuntijuutesi valmiuden.</p>
             </div>
 
             <div className="space-y-4">
-              <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-3">
-                <p className="text-sm font-semibold text-[var(--text)]">1. Tuottaako klinikkasi / yrityksesi säännöllisesti opetus- tai asiantuntijavideoita YouTubessa tai somessa?</p>
+              <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
+                <p className="text-sm font-semibold text-white">1. Tuottaako klinikkasi / yrityksesi säännöllisesti opetus- tai asiantuntijavideoita YouTubessa tai somessa?</p>
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setQ1(true)}
@@ -208,15 +208,15 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ1(false)}
-                    className={`btn btn--sm ${q1 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q1 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-3">
-                <p className="text-sm font-semibold text-[var(--text)]">2. Hyödynnättekö tekoälyä (ChatGPT / Perplexity) potilasohjeissa, tekstin stilisoinnissa ja kuvauskentissä?</p>
+              <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
+                <p className="text-sm font-semibold text-white">2. Hyödynnättekö tekoälyä (ChatGPT / Perplexity) potilasohjeissa, tekstin stilisoinnissa ja kuvauskentissä?</p>
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setQ2(true)}
@@ -226,15 +226,15 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ2(false)}
-                    className={`btn btn--sm ${q2 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q2 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-3">
-                <p className="text-sm font-semibold text-[var(--text)]">3. Ovatko videonne ja artikkelinne haku- ja AEO-optimoituja (Google &amp; YouTube Search)?</p>
+              <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
+                <p className="text-sm font-semibold text-white">3. Ovatko videonne ja artikkelinne haku- ja AEO-optimoituja (Google &amp; YouTube Search)?</p>
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setQ3(true)}
@@ -244,15 +244,15 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ3(false)}
-                    className={`btn btn--sm ${q3 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q3 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-3">
-                <p className="text-sm font-semibold text-[var(--text)]">4. Onko videotuotannon Valvira-yhteensopivuus ja eettiset vastuuvapauslausekkeet tarkastettu?</p>
+              <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
+                <p className="text-sm font-semibold text-white">4. Onko videotuotannon Valvira-yhteensopivuus ja eettiset vastuuvapauslausekkeet tarkastettu?</p>
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setQ4(true)}
@@ -262,7 +262,7 @@ export default function SoteRoiCalculator() {
                   </button>
                   <button
                     onClick={() => setQ4(false)}
-                    className={`btn btn--sm ${q4 === false ? "bg-[var(--danger)] text-white" : "btn--outline"}`}
+                    className={`btn btn--sm ${q4 === false ? "bg-white/20 text-white border-white/40 font-semibold" : "btn--outline"}`}
                   >
                     Ei vielä
                   </button>
@@ -271,10 +271,10 @@ export default function SoteRoiCalculator() {
             </div>
 
             {/* Quiz Result Box */}
-            <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-center space-y-3">
-              <div className="text-xs uppercase font-mono text-[var(--muted)]">Testituloksesi:</div>
-              <div className="text-4xl font-bold font-display text-[var(--accent)]">{calculateScore()} / 100 pistettä</div>
-              <p className="text-xs text-[var(--muted)] max-w-md mx-auto leading-relaxed">
+            <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 text-center space-y-3">
+              <div className="text-xs uppercase font-semibold text-slate-300">Testituloksesi:</div>
+              <div className="text-4xl font-bold font-display text-[#00d2ff]">{calculateScore()} / 100 pistettä</div>
+              <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
                 {calculateScore() >= 80
                   ? "Erinomaista! Kanavasi ja viestintäsi ovat jo erittäin vahvalla pohjalla. Pyydä meiltä sparraus AI-automaatioiden hienosäätöön."
                   : "Paljon potentiaalia! Orgaanisen näkyvyyden ja tekoälyvalmiuksien nostaminen tuo merkittäviä mainossäästöjä sote-yrityksellesi."}
@@ -285,29 +285,29 @@ export default function SoteRoiCalculator() {
 
         {/* Tab 3: Dedicated Email Newsletter & Collaboration Signup */}
         {activeTab === "newsletter" && (
-          <div className="glass rounded-3xl p-8 sm:p-12 space-y-8 max-w-3xl mx-auto border border-[var(--border)]">
+          <div className="liquid-glass rounded-3xl p-6 sm:p-10 space-y-8 max-w-3xl mx-auto border border-white/10 shadow-lg">
             <div className="space-y-3 text-center">
-              <span className="pill tracking-wider uppercase">
-                Yhteistyö &amp; Sometyöpajat
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/15 text-slate-300 text-xs font-semibold uppercase tracking-wider">
+                Yhteistyö &amp; sometyöpajat
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)] tracking-tight font-display">Liity SOTE-Viestintä &amp; Sometyöpajan Postituslistalle</h3>
-              <p className="text-xs sm:text-sm text-[var(--muted)] max-w-lg mx-auto leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-display">Liity SOTE-viestintä &amp; sometyöpajan postituslistalle</h3>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
                 Saat sähköpostiisi ilmaisia SOTE-videostrategioita, uudet AI-promptit ja tiedon tulevista asiantuntijavalmennuksista.
               </p>
             </div>
 
             {isSubmitted ? (
-              <div className="p-8 rounded-2xl bg-[var(--surface)] border border-[var(--success)]/40 text-[var(--text)] space-y-3 text-center shadow-lg">
-                <div className="inline-flex items-center gap-2 text-[var(--success)] font-bold text-lg">
+              <div className="p-8 rounded-2xl bg-white/[0.03] border border-emerald-500/40 text-white space-y-3 text-center shadow-lg">
+                <div className="inline-flex items-center gap-2 text-emerald-400 font-bold text-lg">
                   <CheckCircle2 className="w-6 h-6" />
                   <span>Kiitos liittymisestä!</span>
                 </div>
-                <p className="text-sm text-[var(--muted)] leading-relaxed">
+                <p className="text-sm text-slate-300 leading-relaxed">
                   Olet mukana SOTE-viestintäverkostossamme. Lähetämme ensimmäiset opasmateriaalit sähköpostiisi pian.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="mt-3 text-xs font-semibold text-[var(--accent)] underline hover:text-[var(--text)] transition-colors min-h-[44px]"
+                  className="mt-3 text-xs font-semibold text-[#00d2ff] underline hover:text-white transition-colors min-h-[44px]"
                 >
                   Lähetä uusi pyyntö
                 </button>
@@ -315,35 +315,35 @@ export default function SoteRoiCalculator() {
             ) : (
               <form onSubmit={handleNewsletterSubmit} className="space-y-4 max-w-md mx-auto">
                 <div>
-                  <label className="block text-xs font-semibold text-[var(--muted)] mb-1.5">Nimi</label>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">Nimi</label>
                   <input
                     type="text"
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Matti Meikäläinen"
-                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-sm text-[var(--text)] focus:outline-none focus:border-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--accent)] transition-colors"
+                    className="w-full min-h-[48px] px-4 py-3 rounded-2xl bg-black/40 border border-white/15 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[var(--muted)] mb-1.5">Sähköposti *</label>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">Sähköposti *</label>
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="matti@klinikka.fi"
-                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-sm text-[var(--text)] focus:outline-none focus:border-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--accent)] transition-colors"
+                    className="w-full min-h-[48px] px-4 py-3 rounded-2xl bg-black/40 border border-white/15 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[var(--muted)] mb-1.5">Rooli / Organisaatio</label>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">Rooli / Organisaatio</label>
                   <select
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
-                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-sm text-[var(--text)] focus:outline-none focus:border-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--accent)] transition-colors"
+                    className="w-full min-h-[48px] px-4 py-3 rounded-2xl bg-[#0c121c] border border-white/15 text-sm text-white focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                   >
                     <option value="SOTE-yritys / Klinikka">SOTE-yritys / Klinikka</option>
                     <option value="Fysioterapeutti / Osteopaatti">Fysioterapeutti / Osteopaatti</option>
@@ -354,26 +354,26 @@ export default function SoteRoiCalculator() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[var(--muted)] mb-1.5">Viesti / Toiveet (Valinnainen)</label>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">Viesti / Toiveet (Valinnainen)</label>
                   <textarea
                     rows={3}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Kerro tiimisi tarpeista..."
-                    className="w-full min-h-[44px] px-4 py-3 rounded-2xl bg-[var(--surface)] border border-[var(--border)] text-sm text-[var(--text)] focus:outline-none focus:border-[var(--accent)] focus-visible:ring-2 focus-visible:ring-[var(--accent)] transition-colors"
+                    className="w-full min-h-[48px] px-4 py-3 rounded-2xl bg-black/40 border border-white/15 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-[#00d2ff] focus-visible:ring-2 focus-visible:ring-[#00d2ff] transition-colors"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="btn btn--primary w-full py-4 text-sm shadow-md"
+                  className="w-full py-4 px-6 rounded-2xl bg-white text-black font-semibold text-sm hover:bg-[#00d2ff] hover:text-black transition-all flex items-center justify-center gap-2 min-h-[48px] shadow-lg cursor-pointer"
                 >
-                  <Send className="w-4 h-4 text-[var(--accent-ink)]" />
-                  <span>{isLoading ? "Lähetetään..." : "Liity verkostoon &amp; Tilaa Teho-ohjeet"}</span>
+                  <Send className="w-4 h-4 text-black" />
+                  <span>{isLoading ? "Lähetetään..." : "Liity verkostoon & tilaa teho-ohjeet"}</span>
                 </button>
 
-                <p className="text-[11px] text-[var(--muted)] text-center">
+                <p className="text-[11px] text-slate-300 text-center">
                   Ei roskapostia. Voit poistua listalta milloin tahansa 1-klikauksella.
                 </p>
               </form>

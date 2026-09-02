@@ -4,17 +4,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Elegant Dark Ambient Studio Background */
+.bg-ambient-mesh {
+  background-color: #06090e;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 210, 255, 0.09) 0px, transparent 45%),
+    radial-gradient(at 100% 25%, rgba(1, 68, 137, 0.14) 0px, transparent 50%),
+    radial-gradient(at 30% 75%, rgba(0, 210, 255, 0.06) 0px, transparent 50%),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px;
+  background-attachment: fixed;
+}
+
 /* Gradient Text Utilities */
 .text-gradient-cyan {
-  background: linear-gradient(135deg, var(--text) 20%, var(--accent) 100%);
+  background: linear-gradient(135deg, #ffffff 20%, #A4F4FD 60%, #00d2ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-emerald {
-  background: linear-gradient(135deg, var(--text) 20%, #a7f3d0 70%, #34d399 100%);
+  background: linear-gradient(135deg, #ffffff 20%, #a7f3d0 70%, #34d399 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* High-End Glassmorphism */
+.liquid-glass {
+  background: rgba(12, 18, 28, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.liquid-glass:hover {
+  border-color: rgba(0, 210, 255, 0.35);
 }
 
 /* Custom Scrollbar */
@@ -22,13 +46,13 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: #06090e;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: var(--radius-sm);
-  border: 2px solid var(--bg);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  border: 2px solid #06090e;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: #00d2ff;
 }

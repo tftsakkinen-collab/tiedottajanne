@@ -38,19 +38,15 @@ interface SocialStats {
 const GALLERY_PHOTOS = [
   {
     src: "/assets/Janne_0705_2022-2196.jpg",
-    alt: "Janne Säkkinen kouluttamassa SOTE-ammattilaisia",
-  },
-  {
-    src: "/assets/Janne_0705_2022-2201.jpg",
-    alt: "OMT-fysioterapeutti Janne Säkkinen videokuvauksissa",
+    alt: "Janne Säkkinen — OMT-Fysioterapeutti ja Tiedottajanne Oy:n perustaja",
   },
   {
     src: "/assets/Janne_0705_2022-2226.jpg",
-    alt: "Tekoälyvideotuotannon työpaja terveydenhuollon asiantuntijoille",
+    alt: "Videotuotannon, käsikirjoituksen ja digitaalisen viestinnän suunnittelu",
   },
   {
     src: "/assets/DSC09790.jpg",
-    alt: "Fysioterapiaviestinnän ja digitaalisen sisällöntuotannon koulutus",
+    alt: "Käytännön kliininen opetus ja SOTE-viestinnän koulutus",
   },
 ];
 
@@ -105,7 +101,7 @@ export default function ProofOfWork() {
   }, []);
 
   return (
-    <section className="py-12 md:py-16 bg-[var(--bg)] border-b border-[var(--border)] relative overflow-hidden">
+    <section className="py-12 md:py-16 border-b border-[var(--border)] relative overflow-hidden">
       {/* Ambient Light */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-[10%] left-[-15%] w-[600px] h-[500px] bg-[var(--accent)]/10 blur-[140px] rounded-full" />
@@ -140,7 +136,7 @@ export default function ProofOfWork() {
                   </div>
                   <span className="text-xs font-semibold text-[var(--text)] tracking-wide">YouTube: @ft_sakkinen</span>
                 </div>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-mono font-semibold">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-semibold">
                   <Award className="w-3.5 h-3.5" />
                   Pääkanava (FI)
                 </span>
@@ -180,7 +176,7 @@ export default function ProofOfWork() {
                   </div>
                   <span className="text-xs font-semibold text-[var(--text)] tracking-wide">YouTube: @pt_sakkinen</span>
                 </div>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] text-xs font-mono font-semibold">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--text)] text-xs font-semibold">
                   Global (EN)
                 </span>
               </div>
@@ -219,7 +215,7 @@ export default function ProofOfWork() {
                   </div>
                   <span className="text-xs font-semibold text-[var(--text)] tracking-wide">TikTok &amp; Shorts</span>
                 </div>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--success)]/10 border border-[var(--success)]/30 text-[var(--success)] text-xs font-mono font-semibold">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--success)]/10 border border-[var(--success)]/30 text-[var(--success)] text-xs font-semibold">
                   <ArrowUpRight className="w-3.5 h-3.5" />
                   {stats?.tiktok?.viewsGrowth ?? "+210 %"}
                 </span>
@@ -283,7 +279,7 @@ export default function ProofOfWork() {
               <span className="text-xs text-[var(--muted)] block font-medium">Hakukonenäkyvyys (SEO)</span>
             </div>
             <div className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-1.5">
-              <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--warning)]">8.4 %</span>
+              <span className="text-2xl sm:text-3xl font-bold font-display text-[var(--accent)]">8.4 %</span>
               <span className="text-xs text-[var(--muted)] block font-medium">Sitoutumisaste (Engagement)</span>
             </div>
           </div>
@@ -297,13 +293,13 @@ export default function ProofOfWork() {
                 Valmennukset &amp; asiantuntijatyö
               </h3>
             </div>
-            <div className="text-xs text-[var(--accent)] font-mono flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-[var(--surface)] border border-[var(--border)]">
+            <div className="text-xs text-[var(--accent)] font-semibold flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-[var(--surface)] border border-[var(--border)]">
               <CheckCircle2 className="w-4 h-4" />
               <span>Valvira-laillistettu OMT-fysioterapeutti</span>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {GALLERY_PHOTOS.map((photo, idx) => (
               <div
                 key={idx}
@@ -313,7 +309,7 @@ export default function ProofOfWork() {
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
               </div>

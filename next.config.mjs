@@ -18,6 +18,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/kasikirja",
+        destination: "/tyokalut",
+        permanent: true,
+      },
+      {
+        source: "/promptit",
+        destination: "/tyokalut",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

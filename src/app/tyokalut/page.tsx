@@ -1,48 +1,178 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import SoteRoiCalculator from "@/components/SoteRoiCalculator";
 import AiPromptLibrary from "@/components/AiPromptLibrary";
 import SoteGlossary from "@/components/SoteGlossary";
-import Link from "next/link";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { Wrench, Sparkles, BookOpen, ArrowRight, ShieldCheck, CheckCircle2, Camera, Mic, Video } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SOTE AI-Promptikirjasto & Sanasto — Tiedottajanne Oy",
-  description: "Ilmaiset SOTE-alan AI-promptit, tekoälykäsikirjoituksen pohjat ja terveydenhuollon digitaalinen sanasto ammattilaisille.",
+  title: "SOTE-Viestinnän Työkalut & Resurssit | Tiedottajanne Oy",
+  description: "Ilmaiset SOTE-somen työkalut: ROI-laskuri, nykytilan testi, AI-promptikirjasto ChatGPT:lle sekä kliinisen viestinnän sanasto ja käsikirja.",
+  alternates: {
+    canonical: "https://www.tiedottajanne.fi/tyokalut",
+  },
+  openGraph: {
+    title: "SOTE-Viestinnän Työkalut & Resurssit | Tiedottajanne Oy",
+    description: "Ilmaiset SOTE-somen työkalut: ROI-laskuri, nykytilan testi, AI-promptikirjasto ChatGPT:lle sekä kliinisen viestinnän sanasto ja käsikirja.",
+    url: "https://www.tiedottajanne.fi/tyokalut",
+  },
 };
 
 export default function TyokalutPage() {
-  return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-12">
-        {/* Navigation back */}
-        <div>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--surface)] text-[var(--text)] border border-[var(--border)] text-sm font-semibold hover:border-[var(--primary)] transition-all min-h-[44px]"
-          >
-            <ArrowLeft className="w-4 h-4 text-[var(--primary)] shrink-0" />
-            <span>Takaisin etusivulle</span>
-          </Link>
-        </div>
+  const guideSections = [
+    {
+      title: "1. Laitteisto & Minimikalusto (Kamerat, Mikit & Valot)",
+      icon: Camera,
+      points: [
+        "Puhelin (iPhone / Samsung 4K 60fps) riittää täysin aloitukseen. Tärkeintä on hyvä ääni ja valo.",
+        "Mikrofoni: Røde Wireless GO II / DJI Mic tai langallinen nappimikrofoni (Lavalier).",
+        "Valaistus: 1 pehmeä rengasvalo (Ring light) tai LED-paneeli viistosti kasvojen edessä.",
+        "Jalusta: Tukeva pöytä- tai lattiajalusta silmien korkeudella (eye level creates authority).",
+      ],
+    },
+    {
+      title: "2. Valvira-Etiikka & Potilassuoja",
+      icon: ShieldCheck,
+      points: [
+        "Vältä kattavia parantumislupauksia. Käytä ilmaisua 'moni saa apua' tai 'harjoitteet voivat helpottaa oireita'.",
+        "Lisää aina vastuuvapauslauseke: 'Tämä video on yleistä potilasopetusta eikä korvaa yksilöllistä tutkimusta'.",
+        "Potilastarinat ja ennen/jälkeen -kuvat vaativat aina kirjallisen suostumuksen.",
+        "Ammatillinen titteli (esim. OMT-Fysioterapeutti, Erikoislääkäri) tuo välittömän auktoriteetin.",
+      ],
+    },
+    {
+      title: "3. Videon Rakenne (AIDA-Malli SOTE-Alalla)",
+      icon: Video,
+      points: [
+        "0–3 s (Koukku): Sanoita potilaan oire suoraan ('Tuntuuko leukanivelessä naksumista aamuisin?').",
+        "3–15 s (Ongelman syy): Selitä biomekaaninen tai kliininen syy ymmärrettävästi.",
+        "15–45 s (Ratkaisu): Näytä 1 konkreettinen harjoite tai kliininen vinkki ruudulla.",
+        "45–60 s (Call to Action): Ohjaa varaamaan aika tai tutustumaan lisäoppaisiin.",
+      ],
+    },
+  ];
 
-        {/* Page Header */}
-        <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border)] bg-[var(--surface)] text-xs font-semibold text-[var(--primary)]">
-            <Sparkles className="w-4 h-4 text-[var(--primary)]" />
-            <span>Digitaalinen Työkalupakki</span>
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Etusivu",
+        "item": "https://www.tiedottajanne.fi",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Työkalut & Resurssit",
+        "item": "https://www.tiedottajanne.fi/tyokalut",
+      },
+    ],
+  };
+
+  return (
+    <div className="py-12 md:py-20 min-h-screen text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        {/* Page Title & AEO Lead Paragraph */}
+        <div className="text-center space-y-4 max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
+            <Wrench className="w-4 h-4" />
+            <span>Maksuttomat Työkalut &amp; Oppaat</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-display font-bold text-[var(--text)] tracking-tight">
-            SOTE AI-Promptikirjasto &amp; Sanasto
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+            SOTE-Viestinnän Työkalut &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">AI-Resurssit</span>
           </h1>
-          <p className="text-[var(--muted)] text-base sm:text-lg leading-relaxed">
-            Testatut tekoälypromptit videotuotantoon, Valvira-yhteensopiviin käsikirjoituksiin ja SOTE-alan digitaalisen viestinnän termistöön.
+          {/* AEO Lead Paragraph */}
+          <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+            Tiedottajanne Oy tarjoaa maksuttomia digitaalisia työkaluja ja resursseja terveydenhuollon asiantuntijoille: SOTE-somen ROI- ja mainossäästölaskurin, 4 kysymyksen nykytilatestin, eettisen AI-promptikirjaston sekä kliinisen viestintäsanaston ja käsikirjan.
           </p>
         </div>
 
-        {/* Tools Components */}
-        <div className="space-y-16">
+        {/* 1. SOTE ROI & Quiz Calculator */}
+        <div id="roi-laskuri">
+          <SoteRoiCalculator />
+        </div>
+
+        {/* 2. AI Prompts Library */}
+        <div id="promptit">
           <AiPromptLibrary />
+        </div>
+
+        {/* 3. SOTE-Some Käsikirja */}
+        <div id="kasikirja" className="space-y-8 max-w-5xl mx-auto">
+          <div className="text-center space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
+              <BookOpen className="w-4 h-4" />
+              <span>SOTE-Some Käsikirja</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+              Videotuotannon &amp; Valvira-etiikan tiivistelmä
+            </h2>
+            <p className="text-sm text-white/60 max-w-2xl mx-auto">
+              Keskeiset ohjeistukset ammattilaiselle: laitevalinnat, eettiset linjaukset ja tehokas videorakenne.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {guideSections.map((sec, idx) => {
+              const Icon = sec.icon;
+              return (
+                <div key={idx} className="liquid-glass rounded-3xl p-7 space-y-4 flex flex-col justify-between border border-white/10">
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00d2ff]/20 to-[#014489]/30 border border-[#00d2ff]/30 text-[#00d2ff] flex items-center justify-center">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white tracking-tight leading-snug">{sec.title}</h3>
+                    <ul className="space-y-2 pt-2 text-xs text-white/70">
+                      {sec.points.map((pt, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#00d2ff] shrink-0 mt-0.5" />
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 4. SOTE Glossary */}
+        <div id="sanasto">
           <SoteGlossary />
         </div>
+
+        {/* Bottom CTA */}
+        <div className="liquid-glass rounded-3xl p-8 sm:p-12 border border-[#00d2ff]/30 text-center space-y-6 max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 text-xs font-semibold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4" />
+            <span>Henkilökohtainen ohjaus</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+            Kaipaatko räätälöityä sparrausta työkalujen käyttöönottoon?
+          </h2>
+          <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Varaa henkilökohtainen Google Meet -tuntisparraus (200 € / h) tai pyydä tarjous tiimikoulutuksesta.
+          </p>
+          <div className="pt-2">
+            <Link
+              href="/yhteystiedot"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold text-sm hover:bg-white/90 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-[0.98] min-h-[48px]"
+            >
+              <span>Varaa Konsultointi / Pyydä Tarjous</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
       </div>
     </div>
   );
