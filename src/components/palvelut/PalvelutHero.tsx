@@ -20,12 +20,12 @@ export default function PalvelutHero() {
 
         {/* Hero Headline */}
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-[1.08] max-w-4xl text-[var(--text)]">
-          Näytkö tekoälylle vai oletko vain <span className="text-gradient-cyan">nimi ison talon varauslistassa?</span>
+          Näy tekoälylle omalla nimelläsi – <span className="text-gradient-cyan">rakenna näkyvyyttä, joka on sinun.</span>
         </h1>
 
         {/* Hero Lede / Value Proposition */}
         <p className="mt-6 text-base sm:text-lg md:text-xl text-[var(--muted)] max-w-3xl leading-relaxed font-sans">
-          <strong>Oma maa vs. Vuokramaa:</strong> Älä jätä asiakasvirtaasi ja digitaalista identiteettiäsi ison lääkärikeskuksen varausjärjestelmän armoille. Tiedottajanne Oy rakentaa sinulle täysin oman, tekoälylle (ChatGPT, Gemini, Google AI) optimoidun digitaalisen kiinteistön, joka tuo potilaat suoraan sinulle.
+          <strong>Rakenna oma digitaalinen kotisi:</strong> asiakassuhteet ja näkyvyys, jotka pysyvät sinulla. Tiedottajanne Oy rakentaa sinulle tekoälylle (ChatGPT, Gemini, Google AI) optimoidun digitaalisen kiinteistön, joka tuo potilaat ja asiakkaat suoraan luoksesi.
         </p>
 
         {/* Dual Call to Action Buttons */}

@@ -6,13 +6,13 @@ import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
   title: "Tiedottajanne Oy — AI-Kotisivut SOTE-Ammatinharjoittajille",
-  description: "Älä jätä asiakasvirtaasi isojen lääkäritalojen varausjärjestelmien varaan. Hanki AI-optimoitu (GEO) oma profiili 499 € perustajahintaan (vain 10 ensimmäiselle).",
+  description: "Rakenna oma digitaalinen kotisi: asiakassuhteet ja näkyvyys, jotka pysyvät sinulla. Hanki tekoälylle (GEO) optimoitu oma profiili 499 € perustajahintaan (vain 10 ensimmäiselle).",
   alternates: {
     canonical: "https://www.tiedottajanne.com",
   },
   openGraph: {
     title: "AI-Kotisivut SOTE-Ammatinharjoittajille — Tiedottajanne Oy",
-    description: "Oma maa vs. Vuokramaa: Täysin oma tekoälylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille.",
+    description: "Rakenna oma digitaalinen kotisi: asiakassuhteet ja näkyvyys, jotka pysyvät sinulla. Tekoälylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille.",
     url: "https://www.tiedottajanne.com",
     siteName: "Tiedottajanne Oy",
     locale: "fi_FI",
@@ -65,10 +65,10 @@ export default function Home() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Eikö profiili ison lääkärikeskuksen sivuilla riitä minulle?",
+        "name": "Miksi oma verkkokoti on tärkeä lisä vastaanoton ja varausjärjestelmän rinnalle?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Profiili ison talon sivuilla on vuokramaata. Et omista digitaalista identiteettiäsi, ja jos vaihdat toimipistettä tai kliinistä ryhmää, asiakasvirtasi katkeaa. Lisäksi ChatGPT ja Gemini eivät osaa suositella sinua erillisenä asiantuntijana ilman omaa indeksoitua verkkokotia."
+          "text": "Oma digitaalinen koti varmistaa, että asiantuntijabrändisi, potilassuhteesi ja ammatillinen luottamuksesi rakentuvat suoraan sinulle. Lisäksi ChatGPT, Perplexity ja Google suosittelevat sinua omalla nimelläsi asiantuntijana vain, kun sinulla on oma tekoälyoptimoitu verkkoprofiili."
         }
       },
       {
@@ -141,12 +141,12 @@ export default function Home() {
 
             {/* Hero H1 */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] font-display text-[var(--text)]">
-              Näytkö tekoälylle vai oletko vain <span className="text-gradient-cyan">nimi ison talon varauslistassa?</span>
+              Näy tekoälylle omalla nimelläsi – <span className="text-gradient-cyan">rakenna näkyvyyttä, joka on sinun.</span>
             </h1>
 
             {/* Hero Lede */}
             <p className="text-base sm:text-lg text-[var(--muted)] max-w-2xl leading-relaxed">
-              <strong>Oma maa vs. Vuokramaa:</strong> Älä vuokraa näkyvyyttäsi isojen lääkärikeskusten varausjärjestelmissä. Tiedottajanne Oy rakentaa sinulle täysin oman, tekoälylle (ChatGPT, Gemini, Google AI) optimoidun digitaalisen profiilin, joka ohjaa potilaat suoraan sinulle.
+              <strong>Rakenna oma digitaalinen kotisi:</strong> asiakassuhteet ja näkyvyys, jotka pysyvät sinulla. Tiedottajanne Oy rakentaa sinulle tekoälylle (ChatGPT, Gemini, Google AI) optimoidun digitaalisen profiilin, joka tuo potilaat ja asiakkaat suoraan luoksesi.
             </p>
 
             {/* Primary CTA + Secondary Link */}
@@ -165,7 +165,7 @@ export default function Home() {
                 href="/palvelut"
                 className="btn btn--outline btn--lg text-sm sm:text-base font-semibold flex items-center justify-center gap-2"
               >
-                <span>Lue lisää (Oma maa vs. Vuokramaa)</span>
+                <span>Lue lisää oman digitaalisen kodin eduista</span>
               </Link>
             </div>
 
@@ -233,7 +233,7 @@ export default function Home() {
                     <span className="w-2.5 h-2.5 rounded-full bg-[var(--success)] animate-pulse" />
                     <span className="font-medium text-[var(--text)]">Orgaaninen tekoälynäkyvyys:</span>
                   </div>
-                  <span className="font-bold text-[var(--success)] font-display text-sm">100 % Oma maa</span>
+                  <span className="font-bold text-[var(--success)] font-display text-sm">Oma digitaalinen koti</span>
                 </div>
               </div>
 
@@ -435,7 +435,7 @@ export default function Home() {
           
           <div className="space-y-4">
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--text)] font-display">
-              Siirry vuokramaalta <span className="text-gradient-cyan">omalle maalle tänään.</span>
+              Rakenna menestyksesi <span className="text-gradient-cyan">kestävälle pohjalle – omalle maallesi.</span>
             </h2>
             <p className="text-sm sm:text-base text-[var(--muted)] max-w-xl mx-auto leading-relaxed">
               Lukitse 499 € testiryhmähinta (10 ensimmäiselle sote-ammatinharjoittajalle). "Näe ennen kuin maksat" -lupaus ja 30 päivän tyytyväisyystakuu.

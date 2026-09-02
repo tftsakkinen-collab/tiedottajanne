@@ -13,8 +13,8 @@ export default function SoteFaqSection() {
 
   const faqs: FaqItem[] = [
     {
-      question: "Eikö profiili ison lääkärikeskuksen sivuilla riitä minulle?",
-      answer: "Profiili ison talon sivuilla on vuokramaata. Et omista digitaalista identiteettiäsi, ja jos vaihdat toimipistettä tai kliinistä ryhmää, asiakasvirtasi katkeaa. Lisäksi ChatGPT ja Gemini eivät osaa suositella sinua erillisenä asiantuntijana ilman omaa indeksoitua verkkokotia.",
+      question: "Miksi oma verkkokoti on tärkeä lisä vastaanoton ja varausjärjestelmän rinnalle?",
+      answer: "Oma digitaalinen koti varmistaa, että asiantuntijabrändisi, potilassuhteesi ja ammatillinen luottamuksesi rakentuvat suoraan sinulle. Lisäksi ChatGPT, Perplexity ja Google suosittelevat sinua omalla nimelläsi asiantuntijana vain silloin, kun sinulla on oma tekoälyoptimoitu verkkoprofiili.",
     },
     {
       question: "Mitä 'Näe ennen kuin maksat' -lupaus ja 30 päivän takuu tarkoittavat?",
@@ -88,7 +88,7 @@ export default function SoteFaqSection() {
         {/* Final CTA Strip */}
         <div className="pt-8 text-center space-y-4">
           <h3 className="text-xl font-bold text-[var(--text)] font-display">
-            Oletko valmis siirtymään vuokramaalta omalle maalle?
+            Oletko valmis rakentamaan menestyksesi omalle maallesi?
           </h3>
           <div>
             <a

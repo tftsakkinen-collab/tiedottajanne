@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import PalvelutHero from "@/components/palvelut/PalvelutHero";
 import VuokramaaVsOmaMaa from "@/components/palvelut/VuokramaaVsOmaMaa";
 import GodfatherOffer from "@/components/palvelut/GodfatherOffer";
@@ -6,15 +6,15 @@ import SomeKoulutusUpsell from "@/components/palvelut/SomeKoulutusUpsell";
 import SoteFaqSection from "@/components/palvelut/SoteFaqSection";
 
 export const metadata: Metadata = {
-  title: "AI-Kotisivut SOTE-Ammatinharjoittajille â€” Oma Maa vs. Vuokramaa | Tiedottajanne Oy",
-  description: "Omista digitaalinen identiteettisi ja asiakasvirrasi. AI-optimoitu (GEO) oma profiili 499 â‚¬ perustajahintaan + 29 â‚¬/kk huoleton yllÃ¤pito. NÃ¤e ennen kuin maksat & 30 pv takuu.",
+  title: "AI-Kotisivut SOTE-Ammatinharjoittajille — Rakenna Oma Digitaalinen Kotisi | Tiedottajanne Oy",
+  description: "Omista digitaalinen identiteettisi ja asiakasvirrasi. AI-optimoitu (GEO) oma profiili 499 € perustajahintaan + 29 €/kk huoleton ylläpito. Näe ennen kuin maksat & 30 pv takuu.",
   metadataBase: new URL("https://www.tiedottajanne.com"),
   alternates: {
     canonical: "https://www.tiedottajanne.com/palvelut",
   },
   openGraph: {
-    title: "AI-Kotisivut SOTE-Ammatinharjoittajille â€” Oma Maa vs. Vuokramaa | Tiedottajanne Oy",
-    description: "TÃ¤ysin oma tekoÃ¤lylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille. Tilaa AI-optimoidut sivut (499 â‚¬ + alv 0%).",
+    title: "AI-Kotisivut SOTE-Ammatinharjoittajille — Rakenna Oma Digitaalinen Kotisi | Tiedottajanne Oy",
+    description: "Täysin oma tekoälylle (ChatGPT, Gemini) optimoitu kotisivusto sote-alan ammatinharjoittajille. Tilaa AI-optimoidut sivut (499 € + alv 0%).",
     url: "https://www.tiedottajanne.com/palvelut",
     siteName: "Tiedottajanne Oy",
     locale: "fi_FI",
@@ -26,8 +26,8 @@ export default function PalvelutPage() {
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "AI-YstÃ¤vÃ¤lliset Sivut SOTE-Ammatinharjoittajille (TestiryhmÃ¤etu)",
-    "description": "Avaimet kÃ¤teen -AI-kotisivukokonaisuus sote-alan ammatinharjoittajille. Generative Engine Optimization (ChatGPT, Gemini, Google AI), Valvira- & Kela-yhteensopiva.",
+    "name": "AI-Ystävälliset Sivut SOTE-Ammatinharjoittajille (Testiryhmäetu)",
+    "description": "Avaimet käteen -AI-kotisivukokonaisuus sote-alan ammatinharjoittajille. Generative Engine Optimization (ChatGPT, Gemini, Google AI), Valvira- & Kela-yhteensopiva.",
     "brand": {
       "@type": "Brand",
       "name": "Tiedottajanne Oy",
@@ -52,13 +52,13 @@ export default function PalvelutPage() {
       {/* Hero Section */}
       <PalvelutHero />
 
-      {/* Vuokramaa vs. Oma Maa Analysis & Reference Cards */}
+      {/* Oma maa / Digitaalinen koti -analyysi */}
       <VuokramaaVsOmaMaa />
 
-      {/* The Godfather Offer: 499 â‚¬ + 29 â‚¬/mo */}
+      {/* The Godfather Offer: 499 € + 29 €/kk */}
       <GodfatherOffer />
 
-      {/* Somekoutsaus Upsell: 200 â‚¬ / h */}
+      {/* Somenkoulutus: 200 € / h */}
       <SomeKoulutusUpsell />
 
       {/* FAQ & Objection Handling */}

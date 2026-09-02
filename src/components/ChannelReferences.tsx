@@ -18,10 +18,10 @@ export default function ChannelReferences() {
             <span>Käytännön näytöt &amp; referenssit</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] leading-tight font-display">
-            Opeta SOTEa <span className="text-gradient-cyan">aidoilla referenssikanavilla</span>
+            Rakenna omaa asiantuntijabrändiäsi <span className="text-gradient-cyan">testatuilla opeilla</span>
           </h2>
           <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
-            Teoria ei yksin riitä terveydenhuollossa. Tiedottajanne Oy:n opit ja videostrategiat perustuvat aitoihin, satojatuhansia ihmisiä tavoittaneisiin suomen- ja englanninkielisiin videokanaviin.
+            Vahva ammatillinen osaaminen herää eloon vaikuttavalla videoviestinnällä. Tiedottajanne Oy:n opit ja videostrategiat antavat sinulle suorat työkalut oman kanavasi ja näkyvyytesi rakentamiseen.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function ChannelReferences() {
 
                 <div className="p-4 rounded-2xl bg-[var(--surface)] border border-[var(--border)] space-y-2">
                   <span className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wider block">
-                    Mitä tästä oppii SOTE-ammattilaiselle:
+                    Miten voit soveltaa tätä omaan asiantuntijabrändiisi:
                   </span>
                   <ul className="space-y-1.5 text-xs text-slate-200">
                     {c.keyLearnings.map((t, i) => (

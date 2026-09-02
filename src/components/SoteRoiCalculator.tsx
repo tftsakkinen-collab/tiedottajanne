@@ -163,7 +163,7 @@ export default function SoteRoiCalculator() {
               <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1.5 text-center">
                 <span className="text-xs uppercase font-medium text-slate-300 block">Vastaava Ads-arvo / kk:</span>
                 <div className="text-3xl font-bold font-display text-emerald-400">{adSavings.toLocaleString("fi-FI")} €</div>
-                <span className="text-[11px] text-slate-300 block">Säästö suoraan leikkaamalla maksettua CPM-mainontaa</span>
+                <span className="text-[11px] text-slate-300 block">Arvo, jonka luot suoraan omalla orgaanisella näkyvyydelläsi ja brändipääomallasi</span>
               </div>
 
               <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-1.5 text-center">
@@ -182,7 +182,7 @@ export default function SoteRoiCalculator() {
             <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 text-xs sm:text-sm text-slate-200 flex items-start sm:items-center gap-3.5">
               <ShieldCheck className="w-5 h-5 text-[#00d2ff] shrink-0 mt-0.5 sm:mt-0" />
               <span>
-                <strong className="text-white">Tiedottajanne Oy:n periaate:</strong> Orgaaninen laatu ja AEO-hakukonenäkyvyys (YouTube &amp; Google) tuovat kestävää luottamusta sote-alan asiakkaille ilman jatkuvaa rahan pumppaamista pikamainoksiin.
+                <strong className="text-white">Tiedottajanne Oy:n periaate:</strong> Orgaaninen laatu ja AEO-hakukonenäkyvyys (YouTube &amp; Google) rakentavat pysyvää luottamusta ja omaa asiantuntijabrändiä, joka kasvaa ja kantaa vuodesta toiseen kestävällä pohjalla.
               </span>
             </div>
           </div>
@@ -277,7 +277,7 @@ export default function SoteRoiCalculator() {
               <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
                 {calculateScore() >= 80
                   ? "Erinomaista! Kanavasi ja viestintäsi ovat jo erittäin vahvalla pohjalla. Pyydä meiltä sparraus AI-automaatioiden hienosäätöön."
-                  : "Paljon potentiaalia! Orgaanisen näkyvyyden ja tekoälyvalmiuksien nostaminen tuo merkittäviä mainossäästöjä sote-yrityksellesi."}
+                  : "Upea mahdollisuus kehittyä! Oman orgaanisen näkyvyyden ja tekoälyvalmiuksien vahvistaminen avaa suuren potentiaalin oman asiantuntijabrändisi kasvulle."}
               </p>
             </div>
           </div>
