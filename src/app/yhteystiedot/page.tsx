@@ -1,17 +1,17 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import ConsultingBookingSection from "@/components/ConsultingBookingSection";
 import { Mail, Phone, MapPin, Building2, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG } from "@/data/config";
 
 export const metadata: Metadata = {
-  title: "Yhteystiedot & TarjouspyyntÃ¶ | Tiedottajanne Oy",
-  description: "Ota yhteyttÃ¤ Tiedottajanne Oy:hyn. Tilaa henkilÃ¶kohtainen Google Meet -tuntisparraus (200 â‚¬ / h) tai pyydÃ¤ tarjous SOTE-videokoulutuksesta.",
+  title: "Yhteystiedot & Tarjouspyyntö | Tiedottajanne Oy",
+  description: "Ota yhteyttä Tiedottajanne Oy:hyn. Tilaa henkilökohtainen Google Meet -tuntisparraus (200 € / h) tai pyydä tarjous SOTE-videokoulutuksesta.",
   alternates: {
     canonical: "https://www.tiedottajanne.com/yhteystiedot",
   },
   openGraph: {
-    title: "Yhteystiedot & TarjouspyyntÃ¶ | Tiedottajanne Oy",
-    description: "Ota yhteyttÃ¤ Tiedottajanne Oy:hyn. Tilaa henkilÃ¶kohtainen Google Meet -tuntisparraus (200 â‚¬ / h) tai pyydÃ¤ tarjous SOTE-videokoulutuksesta.",
+    title: "Yhteystiedot & Tarjouspyyntö | Tiedottajanne Oy",
+    description: "Ota yhteyttä Tiedottajanne Oy:hyn. Tilaa henkilökohtainen Google Meet -tuntisparraus (200 € / h) tai pyydä tarjous SOTE-videokoulutuksesta.",
     url: "https://www.tiedottajanne.com/yhteystiedot",
   },
 };
@@ -34,10 +34,10 @@ export default function YhteystiedotPage() {
     },
     "founder": {
       "@type": "Person",
-      "name": "Janne SÃ¤kkinen",
+      "name": "Janne Säkkinen",
       "jobTitle": "OMT-Fysioterapeutti, Toimitusjohtaja",
     },
-    "priceRange": "200 â‚¬",
+    "priceRange": "200 €",
   };
 
   const breadcrumbSchema = {
@@ -79,11 +79,11 @@ export default function YhteystiedotPage() {
             <span>Yhteystiedot &amp; tilaus</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight font-display">
-            Ota yhteyttÃ¤ &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">pyydÃ¤ koulutustarjous</span>
+            Ota yhteyttä &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">pyydä koulutustarjous</span>
           </h1>
           {/* AEO Lead Paragraph */}
           <p className="text-slate-200 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            Tiedottajanne Oy palvelee SOTE-alan ammattilaisia ja yrityksiÃ¤ valtakunnallisesti. Voit tilata henkilÃ¶kohtaisen Google Meet -tuntisparrauksen (200 â‚¬ / h) tai jÃ¤ttÃ¤Ã¤ tarjouspyynnÃ¶n alla olevalla lomakkeella tai suoraan sÃ¤hkÃ¶postitse osoitteeseen {SITE_CONFIG.contactEmail}.
+            Tiedottajanne Oy palvelee SOTE-alan ammattilaisia ja yrityksiä valtakunnallisesti. Voit tilata henkilökohtaisen Google Meet -tuntisparrauksen (200 € / h) tai jättää tarjouspyynnön alla olevalla lomakkeella tai suoraan sähköpostitse osoitteeseen {SITE_CONFIG.contactEmail}.
           </p>
         </div>
 

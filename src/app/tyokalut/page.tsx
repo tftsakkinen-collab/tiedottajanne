@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import SoteRoiCalculator from "@/components/SoteRoiCalculator";
 import AiPromptLibrary from "@/components/AiPromptLibrary";
@@ -6,14 +6,14 @@ import SoteGlossary from "@/components/SoteGlossary";
 import { Wrench, Sparkles, BookOpen, ArrowRight, ShieldCheck, CheckCircle2, Camera, Mic, Video } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SOTE-ViestinnÃ¤n TyÃ¶kalut & Resurssit | Tiedottajanne Oy",
-  description: "Ilmaiset SOTE-somen tyÃ¶kalut: ROI-laskuri, nykytilan testi, AI-promptikirjasto ChatGPT:lle sekÃ¤ kliinisen viestinnÃ¤n sanasto ja kÃ¤sikirja.",
+  title: "SOTE-Viestinnän Työkalut & Resurssit | Tiedottajanne Oy",
+  description: "Ilmaiset SOTE-somen työkalut: ROI-laskuri, nykytilan testi, AI-promptikirjasto ChatGPT:lle sekä kliinisen viestinnän sanasto ja käsikirja.",
   alternates: {
     canonical: "https://www.tiedottajanne.com/tyokalut",
   },
   openGraph: {
-    title: "SOTE-ViestinnÃ¤n TyÃ¶kalut & Resurssit | Tiedottajanne Oy",
-    description: "Ilmaiset SOTE-somen tyÃ¶kalut: ROI-laskuri, nykytilan testi, AI-promptikirjasto ChatGPT:lle sekÃ¤ kliinisen viestinnÃ¤n sanasto ja kÃ¤sikirja.",
+    title: "SOTE-Viestinnän Työkalut & Resurssit | Tiedottajanne Oy",
+    description: "Ilmaiset SOTE-somen työkalut: ROI-laskuri, nykytilan testi, AI-promptikirjasto ChatGPT:lle sekä kliinisen viestinnän sanasto ja käsikirja.",
     url: "https://www.tiedottajanne.com/tyokalut",
   },
 };
@@ -24,30 +24,30 @@ export default function TyokalutPage() {
       title: "1. Laitteisto & Minimikalusto (Kamerat, Mikit & Valot)",
       icon: Camera,
       points: [
-        "Puhelin (iPhone / Samsung 4K 60fps) riittÃ¤Ã¤ tÃ¤ysin aloitukseen. TÃ¤rkeintÃ¤ on hyvÃ¤ Ã¤Ã¤ni ja valo.",
-        "Mikrofoni: RÃ¸de Wireless GO II / DJI Mic tai langallinen nappimikrofoni (Lavalier).",
-        "Valaistus: 1 pehmeÃ¤ rengasvalo (Ring light) tai LED-paneeli viistosti kasvojen edessÃ¤.",
-        "Jalusta: Tukeva pÃ¶ytÃ¤- tai lattiajalusta silmien korkeudella (eye level creates authority).",
+        "Puhelin (iPhone / Samsung 4K 60fps) riittää täysin aloitukseen. Tärkeintä on hyvä ääni ja valo.",
+        "Mikrofoni: Røde Wireless GO II / DJI Mic tai langallinen nappimikrofoni (Lavalier).",
+        "Valaistus: 1 pehmeä rengasvalo (Ring light) tai LED-paneeli viistosti kasvojen edessä.",
+        "Jalusta: Tukeva pöytä- tai lattiajalusta silmien korkeudella (eye level creates authority).",
       ],
     },
     {
       title: "2. Valvira-Etiikka & Potilassuoja",
       icon: ShieldCheck,
       points: [
-        "VÃ¤ltÃ¤ kattavia parantumislupauksia. KÃ¤ytÃ¤ ilmaisua 'moni saa apua' tai 'harjoitteet voivat helpottaa oireita'.",
-        "LisÃ¤Ã¤ aina vastuuvapauslauseke: 'TÃ¤mÃ¤ video on yleistÃ¤ potilasopetusta eikÃ¤ korvaa yksilÃ¶llistÃ¤ tutkimusta'.",
-        "Potilastarinat ja ennen/jÃ¤lkeen -kuvat vaativat aina kirjallisen suostumuksen.",
-        "Ammatillinen titteli (esim. OMT-Fysioterapeutti, ErikoislÃ¤Ã¤kÃ¤ri) tuo vÃ¤littÃ¶mÃ¤n auktoriteetin.",
+        "Vältä kattavia parantumislupauksia. Käytä ilmaisua 'moni saa apua' tai 'harjoitteet voivat helpottaa oireita'.",
+        "Lisää aina vastuuvapauslauseke: 'Tämä video on yleistä potilasopetusta eikä korvaa yksilöllistä tutkimusta'.",
+        "Potilastarinat ja ennen/jälkeen -kuvat vaativat aina kirjallisen suostumuksen.",
+        "Ammatillinen titteli (esim. OMT-Fysioterapeutti, Erikoislääkäri) tuo välittömän auktoriteetin.",
       ],
     },
     {
       title: "3. Videon Rakenne (AIDA-Malli SOTE-Alalla)",
       icon: Video,
       points: [
-        "0â€“3 s (Koukku): Sanoita potilaan oire suoraan ('Tuntuuko leukanivelessÃ¤ naksumista aamuisin?').",
-        "3â€“15 s (Ongelman syy): SelitÃ¤ biomekaaninen tai kliininen syy ymmÃ¤rrettÃ¤vÃ¤sti.",
-        "15â€“45 s (Ratkaisu): NÃ¤ytÃ¤ 1 konkreettinen harjoite tai kliininen vinkki ruudulla.",
-        "45â€“60 s (Call to Action): Ohjaa varaamaan aika tai tutustumaan lisÃ¤oppaisiin.",
+        "0–3 s (Koukku): Sanoita potilaan oire suoraan ('Tuntuuko leukanivelessä naksumista aamuisin?').",
+        "3–15 s (Ongelman syy): Selitä biomekaaninen tai kliininen syy ymmärrettävästi.",
+        "15–45 s (Ratkaisu): Näytä 1 konkreettinen harjoite tai kliininen vinkki ruudulla.",
+        "45–60 s (Call to Action): Ohjaa varaamaan aika tai tutustumaan lisäoppaisiin.",
       ],
     },
   ];
@@ -65,7 +65,7 @@ export default function TyokalutPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "TyÃ¶kalut & Resurssit",
+        "name": "Työkalut & Resurssit",
         "item": "https://www.tiedottajanne.com/tyokalut",
       },
     ],
@@ -84,14 +84,14 @@ export default function TyokalutPage() {
         <div className="text-center space-y-4 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
             <Wrench className="w-4 h-4" />
-            <span>Maksuttomat TyÃ¶kalut &amp; Oppaat</span>
+            <span>Maksuttomat Työkalut &amp; Oppaat</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-            SOTE-ViestinnÃ¤n TyÃ¶kalut &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">AI-Resurssit</span>
+            SOTE-Viestinnän Työkalut &amp; <span className="bg-gradient-to-r from-white via-[#A4F4FD] to-[#00d2ff] bg-clip-text text-transparent">AI-Resurssit</span>
           </h1>
           {/* AEO Lead Paragraph */}
           <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            Tiedottajanne Oy tarjoaa maksuttomia digitaalisia tyÃ¶kaluja ja resursseja terveydenhuollon asiantuntijoille: SOTE-somen ROI- ja mainossÃ¤Ã¤stÃ¶laskurin, 4 kysymyksen nykytilatestin, eettisen AI-promptikirjaston sekÃ¤ kliinisen viestintÃ¤sanaston ja kÃ¤sikirjan.
+            Tiedottajanne Oy tarjoaa maksuttomia digitaalisia työkaluja ja resursseja terveydenhuollon asiantuntijoille: SOTE-somen ROI- ja mainossäästölaskurin, 4 kysymyksen nykytilatestin, eettisen AI-promptikirjaston sekä kliinisen viestintäsanaston ja käsikirjan.
           </p>
         </div>
 
@@ -105,15 +105,15 @@ export default function TyokalutPage() {
           <AiPromptLibrary />
         </div>
 
-        {/* 3. SOTE-Some KÃ¤sikirja */}
+        {/* 3. SOTE-Some Käsikirja */}
         <div id="kasikirja" className="space-y-8 max-w-5xl mx-auto">
           <div className="text-center space-y-3">
             <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-[#00d2ff]/30 bg-[#00d2ff]/10 text-[#00d2ff] text-xs font-semibold uppercase tracking-wider">
               <BookOpen className="w-4 h-4" />
-              <span>SOTE-Some KÃ¤sikirja</span>
+              <span>SOTE-Some Käsikirja</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-              Videotuotannon &amp; Valvira-etiikan tiivistelmÃ¤
+              Videotuotannon &amp; Valvira-etiikan tiivistelmä
             </h2>
             <p className="text-sm text-white/60 max-w-2xl mx-auto">
               Keskeiset ohjeistukset ammattilaiselle: laitevalinnat, eettiset linjaukset ja tehokas videorakenne.
@@ -154,20 +154,20 @@ export default function TyokalutPage() {
         <div className="liquid-glass rounded-3xl p-8 sm:p-12 border border-[#00d2ff]/30 text-center space-y-6 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-4 h-4" />
-            <span>HenkilÃ¶kohtainen ohjaus</span>
+            <span>Henkilökohtainen ohjaus</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
-            Kaipaatko rÃ¤Ã¤tÃ¤lÃ¶ityÃ¤ sparrausta tyÃ¶kalujen kÃ¤yttÃ¶Ã¶nottoon?
+            Kaipaatko räätälöityä sparrausta työkalujen käyttöönottoon?
           </h2>
           <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Varaa henkilÃ¶kohtainen Google Meet -tuntisparraus (200 â‚¬ / h) tai pyydÃ¤ tarjous tiimikoulutuksesta.
+            Varaa henkilökohtainen Google Meet -tuntisparraus (200 € / h) tai pyydä tarjous tiimikoulutuksesta.
           </p>
           <div className="pt-2">
             <Link
               href="/yhteystiedot"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold text-sm hover:bg-white/90 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-[0.98] min-h-[48px]"
             >
-              <span>Varaa Konsultointi / PyydÃ¤ Tarjous</span>
+              <span>Varaa Konsultointi / Pyydä Tarjous</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

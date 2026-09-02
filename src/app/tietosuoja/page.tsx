@@ -1,9 +1,9 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { Shield, ArrowLeft } from "lucide-react";
 
 export const metadata = {
   title: "Tietosuojaseloste | Tiedottajanne Oy",
-  description: "Tiedottajanne Oy:n tietosuojaseloste ja henkilÃ¶tietojen kÃ¤sittelyperiaatteet.",
+  description: "Tiedottajanne Oy:n tietosuojaseloste ja henkilötietojen käsittelyperiaatteet.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -22,33 +22,33 @@ export default function PrivacyPolicyPage() {
               </div>
               <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text)] tracking-tight font-display">Tietosuojaseloste</h1>
             </div>
-            <p className="text-xs text-[var(--muted)]">PÃ¤ivitetty: 23. elokuuta 2026</p>
+            <p className="text-xs text-[var(--muted)]">Päivitetty: 23. elokuuta 2026</p>
           </div>
 
           <div className="space-y-6 text-sm leading-relaxed text-[var(--muted)]">
             <section className="space-y-2">
-              <h2 className="text-lg font-semibold text-[var(--text)] font-display">1. RekisterinpitÃ¤jÃ¤</h2>
-              <p>Tiedottajanne Oy (Y-tunnus: 3305813-7)<br />SÃ¤hkÃ¶posti: janne@tiedottajanne.com</p>
+              <h2 className="text-lg font-semibold text-[var(--text)] font-display">1. Rekisterinpitäjä</h2>
+              <p>Tiedottajanne Oy (Y-tunnus: 3305813-7)<br />Sähköposti: janne@tiedottajanne.com</p>
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-lg font-semibold text-[var(--text)] font-display">2. KerÃ¤ttÃ¤vÃ¤t henkilÃ¶tiedot</h2>
-              <p>KÃ¤sittelemme vain henkilÃ¶tietoja, jotka annat vapaaehtoisesti ota yhteyttÃ¤ -lomakkeella tai uutiskirjeen tilauksen yhteydessÃ¤ (esim. nimi, sÃ¤hkÃ¶postiosoite, puhelinnumero ja viestin sisÃ¤ltÃ¶).</p>
+              <h2 className="text-lg font-semibold text-[var(--text)] font-display">2. Kerättävät henkilötiedot</h2>
+              <p>Käsittelemme vain henkilötietoja, jotka annat vapaaehtoisesti ota yhteyttä -lomakkeella tai uutiskirjeen tilauksen yhteydessä (esim. nimi, sähköpostiosoite, puhelinnumero ja viestin sisältö).</p>
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-lg font-semibold text-[var(--text)] font-display">3. HenkilÃ¶tietojen kÃ¤yttÃ¶tarkoitus</h2>
-              <p>Tietoja kÃ¤ytetÃ¤Ã¤n yhteydenottopyyntÃ¶ihin vastaamiseen, palvelutarjousten laatimiseen, asiakassuhteen hoitamiseen sekÃ¤ sovitusti viestinnÃ¤n ja uutiskirjeiden lÃ¤hettÃ¤miseen.</p>
+              <h2 className="text-lg font-semibold text-[var(--text)] font-display">3. Henkilötietojen käyttötarkoitus</h2>
+              <p>Tietoja käytetään yhteydenottopyyntöihin vastaamiseen, palvelutarjousten laatimiseen, asiakassuhteen hoitamiseen sekä sovitusti viestinnän ja uutiskirjeiden lähettämiseen.</p>
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-lg font-semibold text-[var(--text)] font-display">4. Tietojen sÃ¤ilytys ja suojaus</h2>
-              <p>HenkilÃ¶tietojasi kÃ¤sitellÃ¤Ã¤n luottamuksellisesti ja suojatusti. Tietoja ei luovuteta ulkopuolisille kolmansille osapuolille ilman lakisÃ¤Ã¤teistÃ¤ velvoitetta tai eksplisiittistÃ¤ suostumusta.</p>
+              <h2 className="text-lg font-semibold text-[var(--text)] font-display">4. Tietojen säilytys ja suojaus</h2>
+              <p>Henkilötietojasi käsitellään luottamuksellisesti ja suojatusti. Tietoja ei luovuteta ulkopuolisille kolmansille osapuolille ilman lakisääteistä velvoitetta tai eksplisiittistä suostumusta.</p>
             </section>
 
             <section className="space-y-2">
-              <h2 className="text-lg font-semibold text-[var(--text)] font-display">5. RekisterÃ¶idyn oikeudet</h2>
-              <p>Sinulla on oikeus tarkastaa itseÃ¤si koskevat henkilÃ¶tiedot, pyytÃ¤Ã¤ tietojen korjaamista tai poistamista sekÃ¤ kieltÃ¤Ã¤ tietojesi kÃ¤yttÃ¶ suoramarkkinointiin ottamalla yhteyttÃ¤ rekisterinpitÃ¤jÃ¤Ã¤n.</p>
+              <h2 className="text-lg font-semibold text-[var(--text)] font-display">5. Rekisteröidyn oikeudet</h2>
+              <p>Sinulla on oikeus tarkastaa itseäsi koskevat henkilötiedot, pyytää tietojen korjaamista tai poistamista sekä kieltää tietojesi käyttö suoramarkkinointiin ottamalla yhteyttä rekisterinpitäjään.</p>
             </section>
           </div>
         </div>

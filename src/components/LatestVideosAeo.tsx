@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -50,14 +50,14 @@ export default function LatestVideosAeo() {
     "@graph": (Array.isArray(allLatestVideos) ? allLatestVideos : []).map((vid) => ({
       "@type": "VideoObject",
       "name": vid.title,
-      "description": `Janne SÃ¤kkinen (Tiedottajanne Oy) SOTE-alan videotuotanto & asiantuntijaviestintÃ¤: ${vid.title}`,
+      "description": `Janne Säkkinen (Tiedottajanne Oy) SOTE-alan videotuotanto & asiantuntijaviestintä: ${vid.title}`,
       "thumbnailUrl": vid.thumbnail,
       "uploadDate": vid.publishedAt,
       "contentUrl": vid.url,
       "embedUrl": `https://www.youtube.com/embed/${vid.id}`,
       "author": {
         "@type": "Person",
-        "name": "Janne SÃ¤kkinen",
+        "name": "Janne Säkkinen",
         "jobTitle": "OMT-Fysioterapeutti, SOTE-Videotuottaja & AI-Konsultti",
         "worksFor": {
           "@type": "Organization",
@@ -74,12 +74,12 @@ export default function LatestVideosAeo() {
         }
       },
       "keywords": [
-        "SOTE-sisÃ¤llÃ¶ntuottaja",
-        "SOTE-videoviestintÃ¤",
+        "SOTE-sisällöntuottaja",
+        "SOTE-videoviestintä",
         "SOTE-videokouluttaja",
-        "Janne SÃ¤kkinen",
+        "Janne Säkkinen",
         "Tiedottajanne Oy",
-        "Fysioterapia videosisÃ¤ltÃ¶",
+        "Fysioterapia videosisältö",
         "AEO hakukoneoptimointi SOTE"
       ]
     }))
@@ -106,7 +106,7 @@ export default function LatestVideosAeo() {
               Uusimmat videot &amp; <span className="text-gradient-cyan">AEO-indeksoidut jaksot</span>
             </h2>
             <p className="text-[var(--muted)] text-sm max-w-2xl leading-relaxed">
-              Jokainen @tiedottajanne ja @ft_sakkinen kanavalle julkaistu uusi video poimitaan automaattisesti sivustolle ja indeksoidaan tekoÃ¤lyhakukoneille (ChatGPT, Perplexity, Gemini &amp; Google).
+              Jokainen @tiedottajanne ja @ft_sakkinen kanavalle julkaistu uusi video poimitaan automaattisesti sivustolle ja indeksoidaan tekoälyhakukoneille (ChatGPT, Perplexity, Gemini &amp; Google).
             </p>
           </div>
 
@@ -168,7 +168,7 @@ export default function LatestVideosAeo() {
                   <div className="pt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-[var(--muted)]">
                     <span className="flex items-center gap-1.5 text-[var(--success)] text-xs font-semibold">
                       <CheckCircle2 className="w-4 h-4" />
-                      Indeksoitu tekoÃ¤lylle
+                      Indeksoitu tekoälylle
                     </span>
                     <span className="text-[var(--accent)] font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                       Katso <ArrowUpRight className="w-4 h-4" />
