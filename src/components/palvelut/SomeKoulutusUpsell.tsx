@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap, ArrowRight, CheckCircle2, Video, Sparkles, UserCheck, CreditCard } from "lucide-react";
+import { GraduationCap, ArrowRight, CheckCircle2, Video, CreditCard } from "lucide-react";
 
 export default function SomeKoulutusUpsell() {
   return (
@@ -11,13 +11,13 @@ export default function SomeKoulutusUpsell() {
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="pill tracking-wider uppercase">
             <GraduationCap className="w-4 h-4 text-[var(--accent)]" />
-            <span>Lisäpalvelu / Upsell — Henkilökohtainen Sparraus</span>
+            <span>Lisäpalvelu — Henkilökohtainen Somekoutsaus</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] font-display leading-tight">
-            Nosta näkyvyytesi seuraavalle tasolle: <span className="text-gradient-cyan">Somekoulutus &amp; Valmennus</span>
+            Nosta näkyvyytesi seuraavalle tasolle: <span className="text-gradient-cyan">Somekoutsaus &amp; Valmennus</span>
           </h2>
           <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
-            Haluatko oppia tekemään vaikuttavia lyhytvideoita ja voittaa kamerakammon? Ota avuksesi henkilökohtainen 1-on-1 etävalmennus.
+            Kädestä pitäen -valmennusta kamerakammon selättämiseen, lyhytvideoihin (Shorts, Reels, TikTok) ja ammattibrändin rakentamiseen sosiaalisessa mediassa.
           </p>
         </div>
 
@@ -34,13 +34,13 @@ export default function SomeKoulutusUpsell() {
                   <Video className="w-3.5 h-3.5" />
                   <span>TUOTE 3: 1-ON-1 ETÄVALMENNUS</span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)] font-display">Somekoulutus &amp; Brändisparraus</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)] font-display">Somekoutsaus (200 € / h)</h3>
               </div>
 
               <div className="space-y-1">
                 <div className="flex items-baseline gap-3">
                   <span className="text-4xl font-extrabold text-[var(--text)] font-display">200 €</span>
-                  <span className="text-sm text-[var(--muted)] font-mono">/ tunti (+ alv 0% sote-koulutus)</span>
+                  <span className="text-sm text-[var(--muted)] font-mono">/ tunti + alv 0% (B2B)</span>
                 </div>
                 <p className="text-xs text-[var(--muted)]">
                   Intensiivinen etätapaaminen Google Meet / Zoom -yhteydellä.
@@ -48,19 +48,19 @@ export default function SomeKoulutusUpsell() {
               </div>
 
               <p className="text-sm text-[var(--muted)] leading-relaxed">
-                Valmennuksessa OMT-fysioterapeutti ja sote-videotuottaja Janne Säkkinen opastaa sinua kädestä pitäen, miten luot kameran edessä luottamusta herättävää kliinistä sisältöä ilman turhaa hifistelyä.
+                Valmennuksessa OMT-fysioterapeutti ja sote-videotuottaja Janne Säkkinen opastaa sinua henkilökohtaisesti, miten viestit luontevasti ja eettisesti asiantuntijana ilman turhaa hifistelyä.
               </p>
 
               {/* Stripe Button */}
               <div className="pt-2">
                 <a
-                  href="https://buy.stripe.com/200_coaching_session"
+                  href="https://buy.stripe.com/00wcN5gsYcM629s4jH0Ny06"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn--outline btn--lg w-full text-sm sm:text-base font-bold flex items-center justify-center gap-2"
+                  className="btn btn--outline btn--lg w-full text-sm sm:text-base font-bold flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <CreditCard className="w-4 h-4 text-[var(--accent)]" />
-                  <span>VARAA 1h SPARRAUS (200 €) — STRIPE</span>
+                  <span>TILAA SOMEKOUTSAUS (200 € / H) — STRIPE</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -74,19 +74,19 @@ export default function SomeKoulutusUpsell() {
               <ul className="space-y-3 text-xs sm:text-sm text-[var(--text)]">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
-                  <span><strong>Kamerakammon selättäminen:</strong> Miten esiinnyt luontevasti ja vakuuttavasti videolla.</span>
+                  <span><strong>Kamerakammon selättäminen:</strong> Luonteva esiintyminen ja kliinisen oppisi tiivistäminen.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
-                  <span><strong>Shorts &amp; Reels -formaatit:</strong> Miten tiivistät kliinisen oppisi 60 sekuntiin ilman myötähäpeää.</span>
+                  <span><strong>Shorts &amp; Reels -formaatit:</strong> Vaikuttavat 60 sekunnin asiantuntijavideot.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
-                  <span><strong>Valvira-yhteensopiva viestintä:</strong> Eettiset rajat, potilasyksityisyys ja asiantuntija-auktoriteetti.</span>
+                  <span><strong>Valvira-yhteensopiva viestintä:</strong> Eettiset rajat, potilasyksityisyys ja auktoriteetti.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
-                  <span><strong>Sisältökalenteri &amp; AI-promptit:</strong> Saat valmiit käsikirjoitusrungot käyttöösi.</span>
+                  <span><strong>Sisältökalenteri &amp; Promptit:</strong> Valmiit käsikirjoitusmallit ja tekoälyavustajat.</span>
                 </li>
               </ul>
             </div>

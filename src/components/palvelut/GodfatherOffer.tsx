@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2, ArrowRight, Flame, Zap, Lock, CreditCard } from "lucide-react";
+import { CheckCircle2, ArrowRight, Flame, Zap, Lock, CreditCard, ShieldCheck, HeartHandshake } from "lucide-react";
 
 export default function GodfatherOffer() {
   return (
@@ -16,106 +16,168 @@ export default function GodfatherOffer() {
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--warning)]/40 bg-[var(--warning)]/10 text-[var(--warning)] text-xs font-semibold uppercase tracking-wider">
             <Flame className="w-4 h-4 text-[var(--warning)] animate-pulse" />
-            <span>The Godfather Offer — Tarjous josta on typerää kieltäytyä</span>
+            <span>The Godfather Offer — Ensimmäiselle 10 Asiakkaan Testiryhmälle</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text)] font-display leading-tight">
             Oma AI-Kotisivusto <span className="text-gradient-cyan">avaimet käteen -pakettina</span>
           </h2>
           <p className="text-[var(--muted)] text-sm sm:text-base leading-relaxed">
-            Hoidamme koko teknisen toteutuksen, AEO-tekoälyoptimoinnin ja sote-vaatimukset valmiiksi. Sinulle jää vain oman brändisi ja asiakasvirran omistaminen.
+            Hoidamme koko teknisen toteutuksen, GEO-tekoälyoptimoinnin ja sote-vaatimukset valmiiksi. Hinnat ilmoitetaan B2B-muodossa (alv 0 %, lisätään kassalla).
           </p>
         </div>
 
-        {/* Pricing Card Showcase */}
-        <div className="max-w-4xl mx-auto glass rounded-3xl p-8 sm:p-12 border-2 border-[var(--accent)]/40 shadow-2xl relative">
-          
-          {/* Badge */}
-          <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full bg-[var(--accent)] text-[var(--accent-ink)] font-bold text-xs sm:text-sm shadow-lg tracking-wider uppercase flex items-center gap-2">
-            <Zap className="w-4 h-4 text-[var(--accent-ink)]" />
-            <span>PERUSTAJAPAKETTI — VAIN 10 ENSIMMÄISELLE</span>
+        {/* Guarantee Callout Banner */}
+        <div className="max-w-4xl mx-auto p-6 rounded-3xl bg-[var(--success)]/10 border border-[var(--success)]/30 text-center space-y-2">
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-[var(--success)]">
+            <ShieldCheck className="w-4 h-4 text-[var(--success)]" />
+            <span>RISKITÖN LUPAUS: "NÄE ENNEN KUIN MAKSAT" &amp; 30 PÄIVÄN TYYTYVÄISYYSTAKUU</span>
           </div>
+          <p className="text-xs sm:text-sm text-[var(--text)] leading-relaxed max-w-2xl mx-auto">
+            Huoleton ylläpito (39 €/kk) ja lopullinen hyväksyntä aktivoituvat vasta, kun olet nähnyt ja hyväksynyt valmiit kotisivusi. Jos et ole tyytyväinen, sinulla on 30 päivän täysi tyytyväisyystakuu.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-4">
+        {/* Pricing Cards Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto items-stretch">
+          
+          {/* Main Product Card: AI-Ystävälliset Sivut (499 €) */}
+          <div className="lg:col-span-7 glass rounded-3xl p-8 sm:p-10 border-2 border-[var(--accent)]/40 shadow-2xl relative flex flex-col justify-between">
             
-            {/* Left Column: Pricing Details */}
-            <div className="md:col-span-7 space-y-6">
+            <div className="space-y-6">
               
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full bg-[var(--accent)]/15 text-[var(--accent)] text-xs font-mono font-bold uppercase">
+                  TUOTE 1 (PÄÄTUOTE)
+                </span>
+                <span className="text-xs text-[var(--warning)] font-mono font-bold uppercase flex items-center gap-1">
+                  <Flame className="w-3.5 h-3.5 text-[var(--warning)]" />
+                  VAIN 10 PAIKKAA
+                </span>
+              </div>
+
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold uppercase text-[var(--accent)]">Tuote 1 &amp; Tuote 2: Täysi Kotisivukokonaisuus</span>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)] font-display">AI-Kotisivut &amp; Ylläpito</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)] font-display">
+                  AI-Ystävälliset Sivut
+                </h3>
+                <p className="text-xs text-[var(--muted)]">
+                  Täydellinen avaimet käteen -toteutus tekoäly- ja hakukoneoptimoinnilla.
+                </p>
               </div>
 
               {/* Price Tag */}
               <div className="space-y-1">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-2">
                   <span className="text-4xl sm:text-5xl font-extrabold text-[var(--text)] font-display">499 €</span>
-                  <span className="text-lg text-[var(--muted)] line-through font-mono">998 €</span>
-                  <span className="px-2.5 py-1 rounded-md bg-[var(--success)]/10 text-[var(--success)] text-xs font-bold font-mono">
-                    SÄÄSTÄ 499 €
-                  </span>
+                  <span className="text-xs text-[var(--muted)] font-mono">+ alv 0% (Kertamaksu)</span>
                 </div>
-                <div className="text-xs text-[var(--muted)] font-mono">
-                  + Huoleton ylläpito <strong>29 € / kk</strong> (Automaattinen hosting, tietoturva &amp; päivitykset)
+                <div className="text-xs text-[var(--success)] font-mono font-semibold">
+                  ✓ Normaali hinta testiryhmän jälkeen 998 €
                 </div>
               </div>
 
-              {/* Urgency Callout */}
-              <div className="p-4 rounded-2xl bg-[var(--warning)]/10 border border-[var(--warning)]/30 text-[var(--warning)] text-xs space-y-1">
-                <div className="font-bold flex items-center gap-1.5">
-                  <Flame className="w-4 h-4 text-[var(--warning)]" />
-                  <span>KIIREELLISYYS (FOMO): 10 ensimmäisen paikan täytyttyä hinta on 998 €!</span>
-                </div>
-                <p className="leading-snug">
-                  Tämä hinta koskee vain ensimmäisiä perustaja-asiakkaitamme. Kun 10 paikkaa on täynnä, hinta tuplaantuu välittömästi.
-                </p>
-              </div>
-
-              {/* Stripe Checkout Button Placeholder */}
-              <div className="space-y-3 pt-2">
-                <a
-                  href="https://buy.stripe.com/499_founder_offer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--primary btn--lg w-full text-base sm:text-lg font-bold shadow-xl flex items-center justify-center gap-3 group"
-                >
-                  <CreditCard className="w-5 h-5 text-[var(--accent-ink)]" />
-                  <span>OSTA NYT — LUKITSE 499 € HINTA (STRIPE)</span>
-                  <ArrowRight className="w-5 h-5 text-[var(--accent-ink)] group-hover:translate-x-1 transition-transform" />
-                </a>
-                <div className="text-[11px] text-[var(--muted)] text-center font-mono flex items-center justify-center gap-2">
-                  <Lock className="w-3.5 h-3.5 text-[var(--accent)]" />
-                  <span>Turvallinen Stripe Checkout 256-bit SSL-salauksella</span>
-                </div>
-              </div>
+              {/* Features Included */}
+              <ul className="space-y-3 text-xs sm:text-sm text-[var(--text)] pt-2">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                  <span><strong>Sivuston Rakenne &amp; Visuaalisuus:</strong> Responsiivinen, salamannopea toteutus (Next.js/React).</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                  <span><strong>Asiantuntijaprofiilin Luonti:</strong> Eettinen ja vakuuttava kliinisen osaamisesi tuotteistus.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                  <span><strong>SEO &amp; GEO-Optimoidut Tekstit:</strong> Generative Engine Optimization ChatGPT:lle, Geminille ja Googlelle.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
+                  <span><strong>Varausjärjestelmän Integrointi:</strong> Ohjaa asiakkaat nykyiseen tai uuteen ajanvaraukseesi.</span>
+                </li>
+              </ul>
 
             </div>
 
-            {/* Right Column: Included Features */}
-            <div className="md:col-span-5 space-y-4 pt-6 md:pt-0 border-t md:border-t-0 md:border-l border-[var(--border)] md:pl-8">
-              <span className="text-xs font-bold uppercase tracking-wider text-[var(--text)] block font-display">Mitä pakettiin sisältyy:</span>
+            {/* Direct Stripe Button Product 1 */}
+            <div className="pt-8 space-y-2">
+              <a
+                href="https://buy.stripe.com/9B600j4Kg4fA8xQ8zX0Ny04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--primary btn--lg w-full text-base font-bold shadow-xl flex items-center justify-center gap-2 group cursor-pointer"
+              >
+                <CreditCard className="w-5 h-5 text-[var(--accent-ink)]" />
+                <span>OSTA AI-SIVUT (499 €) — STRIPE</span>
+                <ArrowRight className="w-4 h-4 text-[var(--accent-ink)] group-hover:translate-x-1 transition-transform" />
+              </a>
+              <div className="text-[11px] text-[var(--muted)] text-center font-mono flex items-center justify-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-[var(--accent)]" />
+                <span>Turvallinen Stripe Checkout (B2B alv 0% lisätään kassalla)</span>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Mandatory Add-on: Huoleton Ylläpito (39 € / kk) */}
+          <div className="lg:col-span-5 glass rounded-3xl p-8 sm:p-10 border border-[var(--border)] relative flex flex-col justify-between">
+            
+            <div className="space-y-6">
               
-              <ul className="space-y-3 text-xs sm:text-sm text-[var(--text)]">
+              <div className="px-3 py-1 rounded-full bg-[var(--surface-elevated)] border border-[var(--border)] text-[var(--muted)] text-xs font-mono font-bold uppercase inline-block">
+                TUOTE 2 (PAKOLLINEN LISÄ)
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-[var(--text)] font-display">
+                  Huoleton Ylläpito
+                </h3>
+                <p className="text-xs text-[var(--muted)] leading-relaxed">
+                  Me hoidamme kaiken teknisen huolenpidon, jotta voit keskittyä 100-prosenttisesti potilastyöhön.
+                </p>
+              </div>
+
+              {/* Price Tag */}
+              <div className="space-y-1">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl sm:text-4xl font-extrabold text-[var(--text)] font-display">39 €</span>
+                  <span className="text-xs text-[var(--muted)] font-mono">/ kk + alv 0%</span>
+                </div>
+                <div className="text-[11px] text-[var(--success)] font-mono font-semibold">
+                  ✓ Aktivoituu vasta kun sivut on hyväksytty
+                </div>
+              </div>
+
+              {/* Features Included */}
+              <ul className="space-y-3 text-xs text-[var(--text)] pt-2">
                 <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
-                  <span><strong>AI-Optimoitu Verkkokoti:</strong> Suorituskykyinen Next.js -rakenne, joka latautuu sekunnin murto-osassa (CLS &lt; 0.05).</span>
+                  <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                  <span><strong>Ultra-Nopea Hosting &amp; SSL:</strong> 256-bit tietoturvasertifikaatti ja salamannopea pilvipalvelu.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
-                  <span><strong>ChatGPT &amp; Gemini AEO:</strong> Indeksointimetat, jotta tekoälyt suosittelevat sinua alueellasi.</span>
+                  <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                  <span><strong>Järjestelmäpäivitykset:</strong> Automaattiset tietoturvakorjaukset ja varmuuskopiot.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
-                  <span><strong>SOTE-Sääntely &amp; Etiikka:</strong> Valvira- ja Kela-yhteensopivat pohjat ja lakisääteiset vastuuvapauslausekkeet.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
-                  <span><strong>Ajanvarauksen Integrointi:</strong> Linkitys nykyiseen varausjärjestelmääsi tai omaan kalenteriisi.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--success)] shrink-0 mt-0.5" />
-                  <span><strong>Huoleton 29 €/kk ylläpito:</strong> SSL-varmenne, pilvipalvelu, tietoturvapäivitykset ja varmuuskopiot.</span>
+                  <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                  <span><strong>Tekninen Tuki:</strong> Nopea apu ja pienet tekstimuutokset sisältyvät kuukausihintaan.</span>
                 </li>
               </ul>
+
+            </div>
+
+            {/* Direct Stripe Button Product 2 */}
+            <div className="pt-8 space-y-2">
+              <a
+                href="https://buy.stripe.com/00wcN5gsYcM629s4jH0Ny06"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--outline btn--lg w-full text-sm font-bold flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <CreditCard className="w-4 h-4 text-[var(--accent)]" />
+                <span>TILAA YLLÄPITO (39 €/KK) — STRIPE</span>
+              </a>
+              <div className="text-[11px] text-[var(--muted)] text-center font-mono">
+                Automaattinen veloitus. Voit perua milloin tahansa.
+              </div>
             </div>
 
           </div>

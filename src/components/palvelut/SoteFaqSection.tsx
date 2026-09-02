@@ -13,24 +13,24 @@ export default function SoteFaqSection() {
 
   const faqs: FaqItem[] = [
     {
-      question: "Eikö profiili ison lääkäritalon sivuilla riitä minulle?",
-      answer: "Profiili ison talon sivuilla on vuokramaata. Jos vaihdat klinikkaa tai sopimusehdot huononevat, et voi ottaa potilashistoriaasi ja asiakasluottamustasi mukaasi. Omat AI-kotisivut ovat sinun oma digitaalinen kiinteistösi, joka kerää asiakasvirran suoraan sinulle riippumatta siitä, missä vastaanotat.",
+      question: "Eikö profiili ison lääkärikeskuksen sivuilla riitä minulle?",
+      answer: "Profiili ison talon sivuilla on vuokramaata. Et omista digitaalista identiteettiäsi, ja jos vaihdat toimipistettä tai kliinistä ryhmää, asiakasvirtasi katkeaa. Lisäksi ChatGPT ja Gemini eivät osaa suositella sinua erillisenä asiantuntijana ilman omaa indeksoitua verkkokotia.",
     },
     {
-      question: "En ole tekninen ihminen — en osaa ylläpitää tai päivittää kotisivuja.",
-      answer: "Sinun ei tarvitsekaan! Siksi pakettiin kuuluu huoleton 29 € / kk ylläpitopalvelu. Me hoidamme ultra-nopean pilvihostingin, SSL-tietoturvan, järjestelmäpäivitykset ja teknisen tuen, jotta voit keskittyä 100 % potilastyöhösi.",
+      question: "Mitä 'Näe ennen kuin maksat' -lupaus tarkoittaa?",
+      answer: "Lupaamme, että pääset näkemään ja hyväksymään valmiin AI-optimoidun kotisivustosi ennen kuin huoleton 39 €/kk ylläpito aktivoituu. Lisäksi kaikilla toteutuksillamme on 30 päivän täysi tyytyväisyystakuu.",
     },
     {
-      question: "Miksi hinta on 499 € eikä 998 €?",
-      answer: "499 € on erikoisperustajatarjous, joka koskee vain ensimmäistä 10 sote-yrittäjää. Haluamme kerätä 10 uutta vahvaa referenssicasea. Kun nämä 10 paikkaa ovat täynnä, hinta nousee pysyvästi 998 euroon.",
+      question: "Miten ilmainen 45 minuutin Näkyvyysdiagnoosi toimii?",
+      answer: "Näkyvyysdiagnoosi on maksuton 45 min etätapaaminen (Google Meet), jossa selvitämme kuka todella omistaa brändisi tällä hetkellä ja miltä näytät tekoälyhakukoneissa (ChatGPT, Gemini, Google AI). Diagnoosi ei velvoita ostamaan mitään.",
     },
     {
-      question: "Kuinka nopeasti AI-kotisivuni ovat valmiina?",
-      answer: "Avaimet käteen -toteutus kestää yleensä 7–14 arkipäivää aloituskyselyn täyttämisestä. Hoidamme sivuston rakenteen, tekstien hienosäädön, Valvira-yhteensopivuuden ja AEO-tekoälyindeksoinnin puolestasi.",
+      question: "Miksi 499 € tarjous on rajattu vain 10 ensimmäiselle?",
+      answer: "499 € (+ alv 0%) on testiryhmähinta, jolla keräämme 10 uutta vahvaa sote-alan ammatinharjoittajareferenssiä. Kun 10 paikkaa on myyty, hinta nousee normaaliin 998 euroon.",
     },
     {
       question: "Miten maksaminen tapahtuu Stripe-kassan kautta?",
-      answer: "Kopiotuasi tai klikattuasi ostopainiketta siirryt turvalliseen Stripe Checkout -kassaan. Voit maksaa pankkikortilla, Apple Paylla tai luottokortilla. Maksettuasi saat sähköpostiisi aloituskyselyn ja kuitin välittömästi.",
+      answer: "Ostopainiketta klikkaamalla siirryt turvalliseen Stripe Checkout -kassaan. Maksu ilmoitetaan B2B-muodossa (alv 0 %, lisätään kassalla). Saat kuitin ja aloituskyselyn välittömästi sähköpostiisi.",
     },
   ];
 
@@ -96,7 +96,7 @@ export default function SoteFaqSection() {
               className="btn btn--primary btn--lg text-sm sm:text-base font-bold shadow-xl inline-flex items-center gap-2"
             >
               <CheckCircle2 className="w-5 h-5 text-[var(--accent-ink)]" />
-              <span>Lukitse 499 € Perustajaetu tästä</span>
+              <span>Lukitse 499 € Testiryhmäetu Tästä</span>
             </a>
           </div>
         </div>
